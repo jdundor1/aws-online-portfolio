@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joe Dundore - Professional Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom CSS for finer control and consistency */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a; /* Very dark gray, almost black - Deeper base */
+            color: #e5e7eb; /* Light gray for main text (gray-200) for better pop */
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            color: #f9fafb; /* White for section titles (gray-50) */
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -8px; /* Adjust as needed */
+            width: 50%; /* Half width underline */
+            height: 3px;
+            background-color: #06b6d4; /* Cyan 500 - Main accent blue/cyan */
+            border-radius: 9999px; /* Rounded ends */
+        }
+        /* Custom scrollbar for better aesthetics, works in modern browsers */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #374151; /* Dark gray track */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #6b7280; /* Medium gray */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9ca3af; /* Lighter gray on hover */
+        }
+    </style>
+</head>
+<body class="text-gray-200">
+
+    <header class="bg-gray-900 text-white shadow-lg">
+        <div class="container mx-auto p-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="text-2xl font-bold mb-4 md:mb-0">
+                Joe Dundore
+                <span class="block text-sm font-light opacity-80">Professional Portfolio</span>
+            </div>
+            <nav>
+                <ul class="flex flex-wrap justify-center space-x-4 md:space-x-6 text-lg">
+                    <li><a href="#about" class="hover:text-cyan-400 transition duration-300">About</a></li>
+                    <li><a href="#skills" class="hover:text-cyan-400 transition duration-300">Skills</a></li>
+                    <li><a href="#experience" class="hover:text-cyan-400 transition duration-300">Experience</a></li>
+                    <li><a href="#projects" class="hover:text-cyan-400 transition duration-300">Projects</a></li>
+                    <li><a href="#contact" class="hover:text-cyan-400 transition duration-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="bg-gradient-to-r from-gray-900 to-black text-white py-16 md:py-24 text-center shadow-inner">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-down">
+                Joe Dundore
+            </h1>
+            <p class="text-xl md:text-2xl font-light mb-8 max-w-3xl mx-auto opacity-90 animate-fade-in-up">
+                Highly dedicated, organized, and learner-focused professional offering inspirational leadership.
+            </p>
+            <a href="#contact" class="inline-block bg-cyan-500 text-white hover:bg-cyan-600 font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg">
+                Connect with Me
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 md:py-20 bg-gray-900 text-gray-200">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl section-title mb-8">About Me</h2>
+            <p class="text-lg leading-relaxed mb-4">
+                I am a passionate and driven professional committed to improving the quality of learning and development within the education sector. My expertise lies in designing innovative programs, developing robust curriculum, and implementing effective educational techniques.
+            </p>
+            <p class="text-lg leading-relaxed">
+                I believe in fostering a positive and innovative management environment, emphasizing open communication and the facilitation of continuous learning. My goal is to empower teams and individuals to achieve their full potential.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills" class="py-16 md:py-20 bg-gray-950 text-gray-200">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl section-title mb-8">Skills & Expertise</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md border-t-4 border-cyan-500 hover:shadow-xl transition duration-300">
+                    <h3 class="font-semibold text-xl mb-2 text-cyan-400">UX/UI Design</h3>
+                    <p class="text-gray-300">Crafting intuitive and engaging user experiences.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md border-t-4 border-cyan-500 hover:shadow-xl transition duration-300">
+                    <h3 class="font-semibold text-xl mb-2 text-cyan-400">Instructional Design & Development</h3>
+                    <p class="text-gray-300">Creating effective learning programs and curriculum.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md border-t-4 border-cyan-500 hover:shadow-xl transition duration-300">
+                    <h3 class="font-semibold text-xl mb-2 text-cyan-400">Project Management</h3>
+                    <p class="text-gray-300">Leading projects from conception to successful completion.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md border-t-4 border-cyan-500 hover:shadow-xl transition duration-300">
+                    <h3 class="font-semibold text-xl mb-2 text-cyan-400">Learning Theories & Techniques</h3>
+                    <p class="text-gray-300">Applying pedagogical principles for optimal learning outcomes.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md border-t-4 border-cyan-500 hover:shadow-xl transition duration-300">
+                    <h3 class="font-semibold text-xl mb-2 text-cyan-400">Coaching & Mentoring</h3>
+                    <p class="text-gray-300">Guiding individuals and teams towards growth.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md border-t-4 border-cyan-500 hover:shadow-xl transition duration-300">
+                    <h3 class="font-semibold text-xl mb-2 text-cyan-400">Program & Organizational Development</h3>
+                    <p class="text-gray-300">Building and enhancing effective programs and structures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-16 md:py-20 bg-gray-900 text-gray-200">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl section-title mb-8">Professional Experience</h2>
+            <div class="space-y-8">
+                <div class="bg-gray-950 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <h3 class="text-xl font-semibold text-cyan-400">Executive Director, Founder & Instructional Curriculum Coordinator</h3>
+                    <p class="text-lg text-gray-200">JoeyDCares Rock Orchestra (Non-Profit) & Awesome Kids Program (Non-Profit)</p>
+                    <p class="text-md text-gray-400 mb-4">Dates of Employment (e.g., 2010 - Present)</p>
+                    <ul class="list-disc list-inside text-gray-200 space-y-2">
+                        <li>Developed and implemented innovative educational programs.</li>
+                        <li>Led organizational development and fundraising efforts.</li>
+                        <li>Coordinated curriculum and instructional strategies.</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-950 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <h3 class="text-xl font-semibold text-cyan-400">Instrumental and General Music K-12 Educator</h3>
+                    <p class="text-lg text-gray-200">School District Name (e.g., XYZ School District)</p>
+                    <p class="text-md text-gray-400 mb-4">Dates of Employment (e.g., 2005 - 2010)</p>
+                    <ul class="list-disc list-inside text-gray-200 space-y-2">
+                        <li>Designed and delivered engaging music education curriculum.</li>
+                        <li>Managed student performance assessment and development.</li>
+                        <li>Fostered a positive learning environment.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-16 md:py-20 bg-gray-950 text-gray-200">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl section-title mb-8">Projects & Certifications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md border-l-4 border-cyan-500 hover:shadow-xl transition duration-300">
+                    <h3 class="font-semibold text-xl mb-2 text-cyan-400">Google Cloud Certifications</h3>
+                    <ul class="list-disc list-inside text-gray-200 space-y-1">
+                        <li>AI Powered Customer Support Chatbot 2025</li>
+                        <li>Getting Started with Compute Engine 2025</li>
+                        <li>Getting Started with Gemini 2024</li>
+                        <li>GCP Resume Challenge 2023 (unfinished)</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md border-l-4 border-cyan-500 hover:shadow-xl transition duration-300">
+                    <h3 class="font-semibold text-xl mb-2 text-cyan-400">AWS Task Scheduler with PartyRock 2025</h3>
+                    <p class="text-gray-300">Demonstrates proficiency in cloud automation and serverless architecture.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md border-l-4 border-cyan-500 hover:shadow-xl transition duration-300">
+                    <h3 class="font-semibold text-xl mb-2 text-cyan-400">Cybersecurity and Computer Languages</h3>
+                    <p class="text-gray-300">Foundational understanding in critical digital security and programming concepts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-gray-900 text-white py-16 md:py-20 text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Connect?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+                I'm actively seeking new career opportunities where I can apply my skills and leadership.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="mailto:jdundor@wgu.edu" class="inline-block bg-cyan-500 text-white hover:bg-cyan-600 font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg">
+                    Email Me
+                </a>
+                <a href="https://www.linkedin.com/in/joedundore" target="_blank" rel="noopener noreferrer" class="inline-block bg-gray-700 text-white hover:bg-gray-600 font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg">
+                    Connect on LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-gray-400 py-8 text-center text-sm">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 Joe Dundore. All rights reserved.</p>
+            <p class="mt-2">Designed with <span class="text-cyan-400">&hearts;</span> using Tailwind CSS</p>
+        </div>
+    </footer>
+
+</body>
+</html>
