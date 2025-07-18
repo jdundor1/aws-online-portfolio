@@ -26,17 +26,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
 
-
             // Populate Skills section
             const skillsContainer = document.querySelector('#skills .grid');
             if (skillsContainer) {
                 skillsContainer.innerHTML = ''; // Clear existing skills
                 data.skills.forEach(skill => {
                     const skillDiv = document.createElement('div');
-                    skillDiv.className = 'bg-gray-800 p-6 rounded-lg shadow-md border-t-4 border-cyan-500 hover:shadow-xl transition duration-300';
+                    skillDiv.className = 'bg-gray-800 p-6 rounded-lg shadow-md border-t-4 border-cyan-500 hover:shadow-xl transition duration-300 flex items-start space-x-4'; // Added flexbox for icon alignment
                     skillDiv.innerHTML = `
-                        <h3 class="font-semibold text-xl mb-2 text-cyan-400">${skill.title}</h3>
-                        <p class="text-gray-300">${skill.description}</p>
+                        <i class="fas fa-cloud text-cyan-400 text-2xl mt-1"></i> <div>
+                            <h3 class="font-semibold text-xl mb-2 text-cyan-400">${skill.title}</h3>
+                            <p class="text-gray-300">${skill.description}</p>
+                        </div>
                     `;
                     skillsContainer.appendChild(skillDiv);
                 });
@@ -72,8 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     let contentHtml = '';
                     if (project.items) {
-                        const itemsHtml = project.items.map(item => `<li>${item}</li>`).join('');
-                        contentHtml = `<ul class="list-disc list-inside text-gray-200 space-y-1">${itemsHtml}</ul>`;
+                        const itemsHtml = project.items.map(item => `<li><i class="fas fa-check-circle text-cyan-400 mr-2"></i>${item}</li>`).join(''); // Added check circle icon for list items
+                        contentHtml = `<ul class="list-none text-gray-200 space-y-1">${itemsHtml}</ul>`; // Changed to list-none to better control item spacing with icon
                     } else if (project.description) {
                         contentHtml = `<p class="text-gray-300">${project.description}</p>`;
                     }
@@ -90,10 +91,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const emailLink = document.querySelector('#contact a[href^="mailto:"]');
             if (emailLink) {
                 emailLink.href = `mailto:${data.contact.email}`;
+                emailLink.innerHTML = `<i class="fas fa-envelope mr-2"></i>Email Me`; // Added envelope icon
             }
             const linkedinLink = document.querySelector('#contact a[href*="linkedin.com"]');
             if (linkedinLink) {
                 linkedinLink.href = data.contact.linkedin;
+                linkedinLink.innerHTML = `<i class="fab fa-linkedin mr-2"></i>Connect on LinkedIn`; // Added LinkedIn icon
             }
 
         })
