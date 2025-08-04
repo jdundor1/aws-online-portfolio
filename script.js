@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return response.json();
             })
             .then(data => {
-                // S3 Base URL for your assets (make sure this is correct)
+                // S3 Base URL for your assets
                 const s3BaseUrl = 'https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/';
 
                 // Populate About section
@@ -83,21 +83,20 @@ document.addEventListener('DOMContentLoaded', () => {
                             contentHtml = `<p class="text-gray-300">${project.description}</p>`;
                         }
 
-                        // Add project links if they exist, using S3 base URL
+                        // Add project links from the new 'links' array
                         let projectLinksHtml = '';
-                        if (project.presentationFile || project.githubUrl || project.liveDemoUrl) {
+                        if (project.links && project.links.length > 0) {
                             projectLinksHtml += '<div class="mt-4 space-x-4 text-sm flex flex-wrap">';
-                            if (project.presentationFile) {
-                                projectLinksHtml += `<a href="${s3BaseUrl}${project.presentationFile}" target="_blank" class="text-cyan-400 hover:underline flex items-center mb-2"><i class="fas fa-file-pdf mr-1"></i>Slides</a>`;
-                            }
-                            if (project.githubUrl) {
-                                projectLinksHtml += `<a href="${project.githubUrl}" target="_blank" class="text-cyan-400 hover:underline flex items-center mb-2"><i class="fab fa-github mr-1"></i>GitHub</a>`;
-                            }
-                            if (project.liveDemoUrl) {
-                                projectLinksHtml += `<a href="${project.liveDemoUrl}" target="_blank" class="text-cyan-400 hover:underline flex items-center mb-2"><i class="fas fa-external-link-alt mr-1"></i>Live Demo</a>`;
-                            }
+                            project.links.forEach(link => {
+                                projectLinksHtml += `<a href="${link.url}" target="_blank" class="text-cyan-400 hover:underline flex items-center mb-2"><i class="${link.icon} mr-1"></i>${link.name}</a>`;
+                            });
                             projectLinksHtml += '</div>';
                         }
+                        // Add presentation file link if it exists
+                        if (project.presentationFile) {
+                            projectLinksHtml += `<div class="mt-4 text-sm"><a href="${s3BaseUrl}${project.presentationFile}" target="_blank" class="text-cyan-400 hover:underline flex items-center"><i class="fas fa-file-pdf mr-1"></i>View Presentation</a></div>`;
+                        }
+
 
                         projectDiv.innerHTML = `
                             <h3 class="font-semibold text-xl mb-2 text-cyan-400">${project.title}</h3>
@@ -117,11 +116,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         certDiv.className = 'bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 flex items-center space-x-3';
                         let badgeLinkHtml = '';
                         if (cert.badgeFile) {
-                            // Links to the badge image itself
                             badgeLinkHtml += `<a href="${s3BaseUrl}${cert.badgeFile}" target="_blank" class="text-cyan-400 hover:underline text-sm flex items-center"><i class="fas fa-award mr-1"></i>View Badge</a>`;
                         }
                         if (cert.certificateFile) {
-                            // Add a link for the full certificate if it exists
                             badgeLinkHtml += `<a href="${s3BaseUrl}${cert.certificateFile}" target="_blank" class="text-cyan-400 hover:underline text-sm flex items-center mt-1"><i class="fas fa-file-pdf mr-1"></i>View Certificate</a>`;
                         }
                         certDiv.innerHTML = `
@@ -138,13 +135,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
                 }
 
-                // Add Resume Link to Hero Section Button
-                const heroResumeLink = document.getElementById('heroResumeLink');
-                if (heroResumeLink && data.resumeFile) {
-                    heroResumeLink.href = `${s3BaseUrl}${data.resumeFile}`;
-                    heroResumeLink.classList.remove('hidden');
-                }
-
                 // Add Education Section
                 const educationContainer = document.getElementById('education-list');
                 if (educationContainer) {
@@ -159,6 +149,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         `;
                         educationContainer.appendChild(eduItem);
                     });
+                }
+
+                // Add Resume Link to Hero Section Button
+                const heroResumeLink = document.getElementById('heroResumeLink');
+                if (heroResumeLink && data.resumeFile) {
+                    heroResumeLink.href = `${s3BaseUrl}${data.resumeFile}`;
+                    heroResumeLink.classList.remove('hidden');
                 }
 
                 // Populate Contact information (email and LinkedIn URL in links)
