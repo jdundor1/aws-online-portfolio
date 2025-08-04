@@ -1,82 +1,126 @@
 {
   "about": {
     "paragraphs": [
-      "I am a passionate and driven professional committed to improving the quality of learning and development within the education sector. My expertise lies in designing innovative programs, developing robust curriculum, and implementing effective educational techniques.",
-      "I believe in fostering a positive and innovative management environment, emphasizing open communication and the facilitation of continuous learning. My goal is to empower teams and individuals to achieve their full potential."
+      "I am a highly dedicated, organized, and learner-focused professional offering inspirational leadership. My expertise spans instructional design, project management, and cloud architecture, with a focus on leveraging technology to drive business and educational outcomes.",
+      "With a strong foundation in AWS and other cloud platforms, I believe in fostering a positive and innovative management environment. My goal is to contribute to projects that demand creative solutions and a deep understanding of cloud best practices."
     ]
   },
   "skills": [
     {
-      "title": "UX/UI Design",
-      "description": "Crafting intuitive and engaging user experiences."
+      "title": "AWS Management",
+      "description": "Proficient in managing a wide range of AWS services for deployment and operations."
     },
     {
-      "title": "Instructional Design & Development",
-      "description": "Creating effective learning programs and curriculum."
+      "title": "Instructional Design",
+      "description": "Designing and developing effective learning programs and curricula."
+    },
+    {
+      "title": "UX Design",
+      "description": "Crafting intuitive and engaging user experiences."
     },
     {
       "title": "Project Management",
       "description": "Leading projects from conception to successful completion."
     },
     {
-      "title": "Learning Theories & Techniques",
-      "description": "Applying pedagogical principles for optimal learning outcomes."
+      "title": "Code Languages",
+      "description": "Foundational understanding of programming concepts and languages from CodeCademy."
     },
     {
-      "title": "Coaching & Mentoring",
-      "description": "Guiding individuals and teams towards growth."
-    },
-    {
-      "title": "Program & Organizational Development",
-      "description": "Building and enhancing effective programs and structures."
+      "title": "Organizational Leadership",
+      "description": "Providing inspirational leadership and managing non-profit organizations like JDCRO."
     }
   ],
   "experience": [
     {
-      "title": "Executive Director, Founder & Instructional Curriculum Coordinator",
-      "company": "JoeyDCares Rock Orchestra (Non-Profit) & Awesome Kids Program (Non-Profit)",
+      "title": "JDCRO Management",
+      "company": "JoeyDCares Rock Orchestra (Non-Profit)",
       "dates": "Dates of Employment (e.g., 2010 - Present)",
       "responsibilities": [
-        "Developed and implemented innovative educational programs.",
-        "Led organizational development and fundraising efforts.",
-        "Coordinated curriculum and instructional strategies."
+        "Provided inspirational leadership as Executive Director and Founder.",
+        "Managed organizational development, fundraising efforts, and curriculum coordination."
       ]
     },
     {
-      "title": "Instrumental and General Music K-12 Educator",
-      "company": "School District Name (e.g., XYZ School District)",
-      "dates": "Dates of Employment (e.g., 2005 - 2010)",
+      "title": "Innovate Connect Internship",
+      "company": "Innovate Connect",
+      "dates": "Dates of Internship (e.g., Summer 2024)",
       "responsibilities": [
-        "Designed and delivered engaging music education curriculum.",
-        "Managed student performance assessment and development.",
-        "Fostered a positive learning environment."
+        "Description of internship duties and achievements.",
+        "Demonstrated skills in [Skills] and contributed to [Project Name]."
       ]
     }
   ],
   "projects": [
     {
-      "title": "Google Cloud Certifications",
-      "items": [
-        "AI Powered Customer Support Chatbot 2025",
-        "Getting Started with Compute Engine 2025",
-        "Getting Started with Gemini 2024",
-        "GCP Resume Challenge 2023 (unfinished)"
-      ],
-      "description": null
+      "title": "Serverless Contact Form (This Project!)",
+      "description": "A fully serverless contact form leveraging AWS Lambda, API Gateway, and DynamoDB for efficient and cost-effective message handling. Demonstrates robust backend integration and email notifications via SES.",
+      "presentationFile": "projects/contact-form-project-slides.pdf",
+      "githubUrl": "https://github.com/jdundor1/aws-online-portfolio",
+      "liveDemoUrl": "https://jdundor1.d2fqdarkje9in8.amplifyapp.com/"
     },
     {
-      "title": "AWS Task Scheduler with PartyRock 2025",
-      "items": null,
-      "description": "Demonstrates proficiency in cloud automation and serverless architecture."
+      "title": "AWS Presentation Projects",
+      "description": "A collection of AWS-focused projects documented in presentation format.",
+      "presentationFile": "projects/aws-presentation-projects.pdf",
+      "AWS Rekognition Label Detector": "https://github.com/jdundor1/aws-rekognition-label-detector",
+      "Daily Task Scheduler with PartyRock": "https://github.com/jdundor1/daily-task-scheduler-partyrock"
     },
     {
-      "title": "Cybersecurity and Computer Languages",
-      "items": null,
-      "description": "Foundational understanding in critical digital security and programming concepts."
+      "title": "Google Cloud Platform Projects",
+      "description": "Projects and badges from the Google Cloud Platform, showcasing multi-cloud experience.",
+      "presentationFile": "projects/gcp-projects.pdf",
+      "GCP Real-Time Data Pipeline": "https://github.com/jdundor1/gcp-real-time-data-pipeline",
+      "AI-Powered Customer Support Chat Bot": https://github.com/jdundor1/ai-customer-support-bot,
+      "Getting Started with GCP Compute Engine": "https://github.com/jdundor1/gcp-compute-engine",
+      "Gemini mini-Project": "https://github.com/jdundor1/gemini-mini-project",
+      "GCP Cloud Resume Challenge": "https://github.com/jdundor1/gcp-cloud-resume-challenge"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Certified Solutions Architect - Professional",
+      "issueDate": "[Month Year]",
+      "badgeFile": "certifications/aws-sa-pro-badge.png",
+      "certificateFile": "certifications/aws-sa-pro-certificate.pdf"
+    },
+    {
+      "name": "Certified in Cybersecurity (CC)",
+      "issueDate": "[Month Year]",
+      "badgeFile": "certifications/certified-in-cybersecurity-cc.png",
+      "certificateFile": "certifications/certified-in-cybersecurity-cc-certificate.pdf"
+    },
+    {
+      "name": "CodeCademy Language Certs",
+      "issueDate": "[Month Year]",
+      "badgeFile": "certifications/codecademy-badge.png"
+    },
+    {
+      "name": "Project Management Certifications",
+      "issueDate": "[Month Year]",
+      "badgeFile": "certifications/pm-cert.png"
+    },
+    {
+      "name": "UX Certifications",
+      "issueDate": "[Month Year]",
+      "badgeFile": "certifications/ux-cert.png"
+    }
+  ],
+  "education": [
+    {
+      "degree": "Academic Degree 1",
+      "school": "University Name",
+      "dates": "Dates Attended"
+    },
+    {
+      "degree": "Academic Degree 2",
+      "school": "University Name",
+      "dates": "Dates Attended"
     }
   ],
   "contact": {
     "email": "jdundor@wgu.edu",
     "linkedin": "https://www.linkedin.com/in/joedundore"
-  }
+  },
+  "resumeFile": "resume/dundore_resume_2025.pdf"
 }
