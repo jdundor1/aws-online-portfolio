@@ -56,25 +56,31 @@
       "title": "Serverless Contact Form (This Project!)",
       "description": "A fully serverless contact form leveraging AWS Lambda, API Gateway, and DynamoDB for efficient and cost-effective message handling. Demonstrates robust backend integration and email notifications via SES.",
       "presentationFile": "projects/contact-form-project-slides.pdf",
-      "githubUrl": "https://github.com/jdundor1/aws-online-portfolio",
-      "liveDemoUrl": "https://jdundor1.d2fqdarkje9in8.amplifyapp.com/"
+      "links": [
+        { "name": "GitHub Repo", "url": "https://github.com/jdundor1/aws-online-portfolio", "icon": "fab fa-github" },
+        { "name": "Live Demo", "url": "https://jdundor1.d2fqdarkje9in8.amplifyapp.com/", "icon": "fas fa-external-link-alt" }
+      ]
     },
     {
       "title": "AWS Presentation Projects",
       "description": "A collection of AWS-focused projects documented in presentation format.",
       "presentationFile": "projects/aws-presentation-projects.pdf",
-      "AWS Rekognition Label Detector": "https://github.com/jdundor1/aws-rekognition-label-detector",
-      "Daily Task Scheduler with PartyRock": "https://github.com/jdundor1/daily-task-scheduler-partyrock"
+      "links": [
+        { "name": "Rekognition Label Detector", "url": "https://github.com/jdundor1/aws-rekognition-label-detector", "icon": "fab fa-github" },
+        { "name": "Daily Task Scheduler", "url": "https://github.com/jdundor1/daily-task-scheduler-partyrock", "icon": "fab fa-github" }
+      ]
     },
     {
       "title": "Google Cloud Platform Projects",
       "description": "Projects and badges from the Google Cloud Platform, showcasing multi-cloud experience.",
       "presentationFile": "projects/gcp-projects.pdf",
-      "GCP Real-Time Data Pipeline": "https://github.com/jdundor1/gcp-real-time-data-pipeline",
-      "AI-Powered Customer Support Chat Bot": https://github.com/jdundor1/ai-customer-support-bot,
-      "Getting Started with GCP Compute Engine": "https://github.com/jdundor1/gcp-compute-engine",
-      "Gemini mini-Project": "https://github.com/jdundor1/gemini-mini-project",
-      "GCP Cloud Resume Challenge": "https://github.com/jdundor1/gcp-cloud-resume-challenge"
+      "links": [
+        { "name": "Real-Time Data Pipeline", "url": "https://github.com/jdundor1/gcp-real-time-data-pipeline", "icon": "fab fa-github" },
+        { "name": "AI-Powered Chat Bot", "url": "https://github.com/jdundor1/ai-customer-support-bot", "icon": "fab fa-github" },
+        { "name": "GCP Compute Engine", "url": "https://github.com/jdundor1/gcp-compute-engine", "icon": "fab fa-github" },
+        { "name": "Gemini mini-Project", "url": "https://github.com/jdundor1/gemini-mini-project", "icon": "fab fa-github" },
+        { "name": "GCP Cloud Resume Challenge", "url": "https://github.com/jdundor1/gcp-cloud-resume-challenge", "icon": "fab fa-github" }
+      ]
     }
   ],
   "certifications": [
