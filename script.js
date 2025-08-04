@@ -9,16 +9,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 return response.json();
             })
             .then(data => {
+                // S3 Base URL for your assets (make sure this is correct)
+                const s3BaseUrl = 'https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/';
+
                 // Populate About section
                 const aboutSection = document.getElementById('about');
                 if (aboutSection) {
                     const aboutContentDiv = aboutSection.querySelector('.container.mx-auto.px-4.max-w-4xl');
                     if (aboutContentDiv) {
-                        // Clear existing content except title
                         const existingParagraphs = aboutContentDiv.querySelectorAll('p:not(.section-title)');
                         existingParagraphs.forEach(p => p.remove());
 
-                        // Add new paragraphs from data
                         data.about.paragraphs.forEach(paragraphText => {
                             const p = document.createElement('p');
                             p.className = 'text-lg leading-relaxed mb-4';
@@ -31,12 +32,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Populate Skills section
                 const skillsContainer = document.querySelector('#skills .grid');
                 if (skillsContainer) {
-                    skillsContainer.innerHTML = ''; // Clear existing skills
+                    skillsContainer.innerHTML = '';
                     data.skills.forEach(skill => {
                         const skillDiv = document.createElement('div');
-                        skillDiv.className = 'bg-gray-800 p-6 rounded-lg shadow-md border-t-4 border-cyan-500 hover:shadow-xl transition duration-300 flex items-start space-x-4'; // Added flexbox for icon alignment
+                        skillDiv.className = 'bg-gray-800 p-6 rounded-lg shadow-md border-t-4 border-cyan-500 hover:shadow-xl transition duration-300 flex items-start space-x-4';
                         skillDiv.innerHTML = `
-                            <i class="fas fa-cloud text-cyan-400 text-2xl mt-1"></i> <div>
+                            <i class="fas fa-cloud text-cyan-400 text-2xl mt-1"></i>
+                            <div>
                                 <h3 class="font-semibold text-xl mb-2 text-cyan-400">${skill.title}</h3>
                                 <p class="text-gray-300">${skill.description}</p>
                             </div>
@@ -48,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Populate Experience section
                 const experienceContainer = document.querySelector('#experience .space-y-8');
                 if (experienceContainer) {
-                    experienceContainer.innerHTML = ''; // Clear existing experience
+                    experienceContainer.innerHTML = '';
                     data.experience.forEach(exp => {
                         const expDiv = document.createElement('div');
                         expDiv.className = 'bg-gray-950 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300';
@@ -68,24 +70,94 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Populate Projects section
                 const projectsContainer = document.querySelector('#projects .grid');
                 if (projectsContainer) {
-                    projectsContainer.innerHTML = ''; // Clear existing projects
+                    projectsContainer.innerHTML = '';
                     data.projects.forEach(project => {
                         const projectDiv = document.createElement('div');
                         projectDiv.className = 'bg-gray-800 p-6 rounded-lg shadow-md border-l-4 border-cyan-500 hover:shadow-xl transition duration-300';
 
                         let contentHtml = '';
                         if (project.items) {
-                            const itemsHtml = project.items.map(item => `<li><i class="fas fa-check-circle text-cyan-400 mr-2"></i>${item}</li>`).join(''); // Added check circle icon for list items
-                            contentHtml = `<ul class="list-none text-gray-200 space-y-1">${itemsHtml}</ul>`; // Changed to list-none to better control item spacing with icon
+                            const itemsHtml = project.items.map(item => `<li><i class="fas fa-check-circle text-cyan-400 mr-2"></i>${item}</li>`).join('');
+                            contentHtml = `<ul class="list-none text-gray-200 space-y-1">${itemsHtml}</ul>`;
                         } else if (project.description) {
                             contentHtml = `<p class="text-gray-300">${project.description}</p>`;
+                        }
+
+                        // Add project links if they exist, using S3 base URL
+                        let projectLinksHtml = '';
+                        if (project.presentationFile || project.githubUrl || project.liveDemoUrl) {
+                            projectLinksHtml += '<div class="mt-4 space-x-4 text-sm flex flex-wrap">';
+                            if (project.presentationFile) {
+                                projectLinksHtml += `<a href="${s3BaseUrl}${project.presentationFile}" target="_blank" class="text-cyan-400 hover:underline flex items-center mb-2"><i class="fas fa-file-pdf mr-1"></i>Slides</a>`;
+                            }
+                            if (project.githubUrl) {
+                                projectLinksHtml += `<a href="${project.githubUrl}" target="_blank" class="text-cyan-400 hover:underline flex items-center mb-2"><i class="fab fa-github mr-1"></i>GitHub</a>`;
+                            }
+                            if (project.liveDemoUrl) {
+                                projectLinksHtml += `<a href="${project.liveDemoUrl}" target="_blank" class="text-cyan-400 hover:underline flex items-center mb-2"><i class="fas fa-external-link-alt mr-1"></i>Live Demo</a>`;
+                            }
+                            projectLinksHtml += '</div>';
                         }
 
                         projectDiv.innerHTML = `
                             <h3 class="font-semibold text-xl mb-2 text-cyan-400">${project.title}</h3>
                             ${contentHtml}
+                            ${projectLinksHtml}
                         `;
                         projectsContainer.appendChild(projectDiv);
+                    });
+                }
+
+                // Populate Certifications section
+                const certificationsContainer = document.querySelector('#certifications .flex.flex-wrap.justify-center.items-center.gap-6');
+                if (certificationsContainer) {
+                    certificationsContainer.innerHTML = '';
+                    data.certifications.forEach(cert => {
+                        const certDiv = document.createElement('div');
+                        certDiv.className = 'bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 flex items-center space-x-3';
+                        let badgeLinkHtml = '';
+                        if (cert.badgeFile) {
+                            // Links to the badge image itself
+                            badgeLinkHtml += `<a href="${s3BaseUrl}${cert.badgeFile}" target="_blank" class="text-cyan-400 hover:underline text-sm flex items-center"><i class="fas fa-award mr-1"></i>View Badge</a>`;
+                        }
+                        if (cert.certificateFile) {
+                            // Add a link for the full certificate if it exists
+                            badgeLinkHtml += `<a href="${s3BaseUrl}${cert.certificateFile}" target="_blank" class="text-cyan-400 hover:underline text-sm flex items-center mt-1"><i class="fas fa-file-pdf mr-1"></i>View Certificate</a>`;
+                        }
+                        certDiv.innerHTML = `
+                            <img src="${s3BaseUrl}${cert.badgeFile}" alt="${cert.name} Badge" class="w-12 h-12 rounded-full">
+                            <div>
+                                <h3 class="text-xl font-semibold text-cyan-400">${cert.name}</h3>
+                                <p class="text-gray-400">Issued: ${cert.issueDate}</p>
+                                <div class="flex flex-col mt-2 space-y-1">
+                                    ${badgeLinkHtml}
+                                </div>
+                            </div>
+                        `;
+                        certificationsContainer.appendChild(certDiv);
+                    });
+                }
+
+                // Add Resume Link to Hero Section Button
+                const heroResumeLink = document.getElementById('heroResumeLink');
+                if (heroResumeLink && data.resumeFile) {
+                    heroResumeLink.href = `${s3BaseUrl}${data.resumeFile}`;
+                    heroResumeLink.classList.remove('hidden');
+                }
+
+                // Add Education Section
+                const educationContainer = document.getElementById('education-list');
+                if (educationContainer) {
+                    educationContainer.innerHTML = '';
+                    data.education.forEach(edu => {
+                        const eduItem = document.createElement('div');
+                        eduItem.className = 'bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300';
+                        eduItem.innerHTML = `
+                            <h3 class="text-xl font-semibold text-cyan-400">${edu.degree}</h3>
+                            <p class="text-lg text-gray-200">${edu.school}</p>
+                            <p class="text-md text-gray-400">${edu.dates}</p>
+                        `;
+                        educationContainer.appendChild(eduItem);
                     });
                 }
 
@@ -103,23 +175,19 @@ document.addEventListener('DOMContentLoaded', () => {
             .catch(error => console.error('Error fetching data:', error));
     };
 
-    // Call the function to populate content when the DOM is ready
     populateContent();
 
-
-    // === Contact Form Submission Logic ===
+    // === Contact Form Submission Logic (unchanged from last successful version) ===
     const contactForm = document.getElementById('contactForm');
-    const formStatus = document.getElementById('formStatus'); // Ensure this matches the ID in HTML
+    const formStatus = document.getElementById('formStatus');
 
-    // YOUR API GATEWAY INVOKE URL - THIS HAS BEEN UPDATED!
-    const API_GATEWAY_URL = 'https://w1hw5b9b4g.execute-api.us-east-1.amazonaws.com/prod/contact'; 
+    const API_GATEWAY_URL = 'https://w1hw5b9b4g.execute-api.us-east-1.amazonaws.com/prod/contact';
 
     if (contactForm) {
         contactForm.addEventListener('submit', async (event) => {
-            event.preventDefault(); // Prevent default browser form submission
-
-            formStatus.classList.remove('hidden', 'text-green-500', 'text-red-500'); // Clear previous status
-            formStatus.classList.add('text-gray-400'); // Set text color to neutral
+            event.preventDefault();
+            formStatus.classList.remove('hidden', 'text-green-500', 'text-red-500');
+            formStatus.classList.add('text-gray-400');
             formStatus.textContent = 'Sending message...';
 
             const formData = new FormData(contactForm);
@@ -137,26 +205,26 @@ document.addEventListener('DOMContentLoaded', () => {
                     body: JSON.stringify(payload),
                 });
 
-                const data = await response.json(); // Parse response from Lambda
+                const data = await response.json();
 
                 if (response.ok) {
                     formStatus.textContent = data.message || 'Message sent successfully!';
                     formStatus.classList.remove('text-gray-400');
-                    formStatus.classList.add('text-green-500'); // Green for success
-                    contactForm.reset(); // Clear form fields on success
+                    formStatus.classList.add('text-green-500');
+                    contactForm.reset();
                 } else {
                     formStatus.textContent = data.message || 'Failed to send message. Please try again.';
                     formStatus.classList.remove('text-gray-400');
-                    formStatus.classList.add('text-red-500'); // Red for error
+                    formStatus.classList.add('text-red-500');
                     console.error('API Error:', data);
                 }
             } catch (error) {
                 formStatus.textContent = 'An error occurred. Check your connection or console.';
                 formStatus.classList.remove('text-gray-400');
-                formStatus.classList.add('text-red-500'); // Red for error
+                formStatus.classList.add('text-red-500');
                 console.error('Fetch Error:', error);
             }
-            formStatus.classList.remove('hidden'); // Make status message visible
+            formStatus.classList.remove('hidden');
         });
     }
 });
