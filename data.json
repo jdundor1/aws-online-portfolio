@@ -94,40 +94,47 @@
       "certificateFile": "certifications/aws-sa-pro-certificate.pdf"
     },
     {
-      "name": "Google Cloud Certified Professional Cloud Architect",
-      "issueDate": "2023",
-      "badgeFile": "certifications/google-badge-1.png",
-      "certificateFile": "certifications/gcp-digital-cloud.pdf"
-    },
-    {
-      "name": "Google Cloud Certified Professional Cloud Security Engineer",
-      "issueDate": "2024",
-      "badgeFile": "certifications/google-badge-2.png",
-      "certificateFile": "certifications/gcp-security.pdf"
-    },
-    {
-      "name": "Google Cloud Certified Professional Data Engineer",
-      "issueDate": "2023",
-      "badgeFile": "certifications/google-badge-3.png",
-      "certificateFile": "certifications/gcp-data-engineer.pdf"
-    },
-    {
-      "name": "Google Cloud Certified Cloud Digital Leader",
-      "issueDate": "2023",
-      "badgeFile": "certifications/google-badge-4.png",
-      "certificateFile": "certifications/gcp-cloud-digital-leader.pdf"
+      "name": "Google Cloud Platform Certifications",
+      "issueDate": "2023-2024",
+      "badgeFile": "certifications/Google Badge 1.png",
+      "details": [
+        {
+          "name": "Google Cloud Certified Professional Cloud Architect",
+          "issueDate": "2023",
+          "badgeFile": "certifications/Google Badge 1.png",
+          "certificateFile": "certifications/GCP Digital Cloud.pdf"
+        },
+        {
+          "name": "Google Cloud Certified Professional Cloud Security Engineer",
+          "issueDate": "2024",
+          "badgeFile": "certifications/Google Badge 2.png",
+          "certificateFile": "certifications/GCP Security.pdf"
+        },
+        {
+          "name": "Google Cloud Certified Professional Data Engineer",
+          "issueDate": "2023",
+          "badgeFile": "certifications/Google Badge 3.png",
+          "certificateFile": "certifications/GCP Data Engineer.pdf"
+        },
+        {
+          "name": "Google Cloud Certified Cloud Digital Leader",
+          "issueDate": "2023",
+          "badgeFile": "certifications/Google Badge 4.png",
+          "certificateFile": "certifications/GCP Cloud Digital Leader.pdf"
+        }
+      ]
     },
     {
       "name": "PMP and other Project Management Certifications",
-      "issueDate": "August 2022 (Recertified August 2025)",
+      "issueDate": "August 2022, Recertified August 2025",
       "badgeFile": "certifications/pm-cert.png",
       "certificateFile": null
     },
     {
       "name": "Google Project Management",
       "issueDate": "2023",
-      "badgeFile": "certifications/google-badge-5.png",
-      "certificateFile": "certifications/google-project-management.pdf"
+      "badgeFile": "certifications/Google Badge 5.png",
+      "certificateFile": "certifications/Google Project Management.pdf"
     },
     {
       "name": "Certified in Cybersecurity (CC)",
@@ -150,12 +157,12 @@
   ],
   "education": [
     {
-      "degree": "Master of Education | Instructional Design and Technology",
+      "degree": "Masters of Education | Instructional Design and Technology",
       "school": "Western Governors University",
       "dates": "July 2020 - January 2021"
     },
     {
-      "degree": "Master of Arts in Teaching | Music",
+      "degree": "Masters in the Art of Teaching | Music",
       "school": "University of the Arts – Philadelphia",
       "dates": "January 2004 - May 2005"
     },
