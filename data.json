@@ -67,8 +67,9 @@
     {
       "title": "AWS Presentation Projects",
       "description": "A collection of AWS-focused projects documented in presentation format.",
-      "presentationFile": "projects/aws-online-portfolio-project.pdf",
       "links": [
+        { "name": "Rekognition Label Detector", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/image-labels-generator-amazon-rekognition.pdf" },
+        { "name": "Daily Task Scheduler", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/daily-task-scheduler-aws-partyrock.pdf" }
         { "name": "Rekognition Label Detector", "url": "https://github.com/jdundor1/aws-rekognition-label-detector", "icon": "fab fa-github" },
         { "name": "Daily Task Scheduler", "url": "https://github.com/jdundor1/daily-task-scheduler-partyrock", "icon": "fab fa-github" }
       ]
@@ -76,8 +77,12 @@
     {
       "title": "Google Cloud Platform Projects",
       "description": "Projects and badges from the Google Cloud Platform, showcasing multi-cloud experience.",
-      "presentationFile": "projects/gcp-projects.pdf",
       "links": [
+        { "name": "Real-Time Data Pipeline", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/real-time-data-pipeline-bigquery-cloud-functions.pdf" },
+        { "name": "AI-Powered Chat Bot", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/ai-powered-customer-support-bot.pdf" },
+        { "name": "GCP Compute Engine", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/getting-started-with-gcp_compute-engine.pdf" },
+        { "name": "Gemini mini-Project", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/gemini-mini-project.pdf" },
+        { "name": "GCP Cloud Resume Challenge", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/gcp-cloud-resume-challenge-2023.pdf" },
         { "name": "Real-Time Data Pipeline", "url": "https://github.com/jdundor1/gcp-real-time-data-pipeline", "icon": "fab fa-github" },
         { "name": "AI-Powered Chat Bot", "url": "https://github.com/jdundor1/ai-customer-support-bot", "icon": "fab fa-github" },
         { "name": "GCP Compute Engine", "url": "https://github.com/jdundor1/gcp-compute-engine", "icon": "fab fa-github" },
@@ -128,9 +133,7 @@
       "name": "PMP and other Project Management Certifications",
       "issueDate": "August 2022, Recertified August 2025",
       "badgeFile": "certifications/pmp-certification.pdf",
-      "certificateFile": "certifications/pmp-certification.pdf"
-    },
-    {
+      "certificateFile": "certifications/pmp-certification.pdf",
       "name": "Google Project Management",
       "issueDate": "2023",
       "badgeFile": "certifications/google-badge-5.png",
