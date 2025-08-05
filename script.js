@@ -75,32 +75,25 @@ document.addEventListener('DOMContentLoaded', () => {
                         const projectDiv = document.createElement('div');
                         projectDiv.className = 'bg-gray-800 p-6 rounded-lg shadow-md border-l-4 border-cyan-500 hover:shadow-xl transition duration-300';
 
-                        let contentHtml = '';
-                        if (project.items) {
-                            const itemsHtml = project.items.map(item => `<li><i class="fas fa-check-circle text-cyan-400 mr-2"></i>${item}</li>`).join('');
-                            contentHtml = `<ul class="list-none text-gray-200 space-y-1">${itemsHtml}</ul>`;
-                        } else if (project.description) {
-                            contentHtml = `<p class="text-gray-300">${project.description}</p>`;
-                        }
-
+                        let contentHtml = `<p class="text-gray-300">${project.description}</p>`;
+                        
                         let projectLinksHtml = '';
-                        // Add presentation file link if it exists
-                        if (project.presentationFile) {
-                            projectLinksHtml += `<a href="${s3BaseUrl}${project.presentationFile}" target="_blank" class="text-cyan-400 hover:underline flex items-center mb-2"><i class="fas fa-file-pdf mr-1"></i>View Presentation</a>`;
-                        }
-                        // Add project links from the new 'links' array
                         if (project.links && project.links.length > 0) {
+                            projectLinksHtml += '<div class="mt-4 space-y-2 text-sm flex flex-col">';
                             project.links.forEach(link => {
-                                projectLinksHtml += `<a href="${link.url}" target="_blank" class="text-cyan-400 hover:underline flex items-center mb-2"><i class="${link.icon} mr-1"></i>${link.name}</a>`;
+                                let linkUrl = link.url;
+                                if (link.url.includes('.pdf') || link.url.includes('.png') || link.url.includes('.jpg')) {
+                                  linkUrl = `${s3BaseUrl}${link.url}`;
+                                }
+                                projectLinksHtml += `<a href="${linkUrl}" target="_blank" class="text-cyan-400 hover:underline flex items-center mb-2"><i class="${link.icon} mr-1"></i>${link.name}</a>`;
                             });
+                            projectLinksHtml += '</div>';
                         }
                         
                         projectDiv.innerHTML = `
                             <h3 class="font-semibold text-xl mb-2 text-cyan-400">${project.title}</h3>
                             ${contentHtml}
-                            <div class="mt-4 space-y-2 text-sm flex flex-col">
-                                ${projectLinksHtml}
-                            </div>
+                            ${projectLinksHtml}
                         `;
                         projectsContainer.appendChild(projectDiv);
                     });
@@ -114,18 +107,12 @@ document.addEventListener('DOMContentLoaded', () => {
                         const certDiv = document.createElement('div');
                         certDiv.className = 'bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 flex items-center space-x-3';
                         let badgeLinkHtml = '';
-                        if (cert.badgeFile) {
-                            badgeLinkHtml += `<a href="${s3BaseUrl}${cert.badgeFile}" target="_blank" class="text-cyan-400 hover:underline text-sm flex items-center mb-1"><i class="fas fa-award mr-1"></i>View Badge</a>`;
-                        }
-                        if (cert.certificateFile) {
-                            badgeLinkHtml += `<a href="${s3BaseUrl}${cert.certificateFile}" target="_blank" class="text-cyan-400 hover:underline text-sm flex items-center"><i class="fas fa-file-pdf mr-1"></i>View Certificate</a>`;
-                        }
                         
                         // Check for consolidated details (e.g., Google Cloud)
                         if (cert.details && cert.details.length > 0) {
                             const detailsHtml = cert.details.map(detail => `
                                 <div class="flex items-center space-x-2">
-                                    <a href="${s3BaseUrl}${detail.badgeFile}" target="_blank">
+                                    <a href="${s3BaseUrl}${detail.certificateFile}" target="_blank">
                                         <img src="${s3BaseUrl}${detail.badgeFile}" alt="${detail.name} Badge" class="w-8 h-8 rounded-full">
                                     </a>
                                     <div>
@@ -135,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                     <a href="${s3BaseUrl}${detail.certificateFile}" target="_blank" class="text-cyan-400 hover:underline text-xs flex items-center ml-auto"><i class="fas fa-file-pdf"></i></a>
                                 </div>
                             `).join('');
-
+    
                             certDiv.innerHTML = `
                                 <img src="${s3BaseUrl}${cert.badgeFile}" alt="${cert.name} Badge" class="w-12 h-12 rounded-full">
                                 <div>
@@ -154,7 +141,8 @@ document.addEventListener('DOMContentLoaded', () => {
                                     <h3 class="text-xl font-semibold text-cyan-400">${cert.name}</h3>
                                     <p class="text-gray-400">Issued: ${cert.issueDate}</p>
                                     <div class="flex flex-col mt-2 space-y-1">
-                                        ${badgeLinkHtml}
+                                        <a href="${s3BaseUrl}${cert.badgeFile}" target="_blank" class="text-cyan-400 hover:underline text-sm flex items-center mb-1"><i class="fas fa-award mr-1"></i>View Badge</a>
+                                        ${cert.certificateFile ? `<a href="${s3BaseUrl}${cert.certificateFile}" target="_blank" class="text-cyan-400 hover:underline text-sm flex items-center"><i class="fas fa-file-pdf mr-1"></i>View Certificate</a>` : ''}
                                     </div>
                                 </div>
                             `;
@@ -163,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
                 }
 
-                // Add Education Section
+                // Populate Education Section
                 const educationContainer = document.getElementById('education-list');
                 if (educationContainer) {
                     educationContainer.innerHTML = '';
@@ -202,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     populateContent();
 
-    // === Contact Form Submission Logic ===
+    // === Contact Form Submission Logic (unchanged from last successful version) ===
     const contactForm = document.getElementById('contactForm');
     const formStatus = document.getElementById('formStatus');
 
