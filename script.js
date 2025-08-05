@@ -108,18 +108,18 @@ document.addEventListener('DOMContentLoaded', () => {
                         certDiv.className = 'bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 flex items-center space-x-3';
                         let badgeLinkHtml = '';
                         
-                        // Check for consolidated details (e.g., Google Cloud)
+                        // Check for consolidated details (e.g., Google Cloud and Project Management)
                         if (cert.details && cert.details.length > 0) {
                             const detailsHtml = cert.details.map(detail => `
                                 <div class="flex items-center space-x-2">
-                                    <a href="${s3BaseUrl}${detail.certificateFile}" target="_blank">
+                                    <a href="${s3BaseUrl}${detail.badgeFile}" target="_blank">
                                         <img src="${s3BaseUrl}${detail.badgeFile}" alt="${detail.name} Badge" class="w-8 h-8 rounded-full">
                                     </a>
                                     <div>
                                         <p class="text-sm font-semibold text-gray-200">${detail.name}</p>
                                         <p class="text-xs text-gray-400">Issued: ${detail.issueDate}</p>
                                     </div>
-                                    <a href="${s3BaseUrl}${detail.certificateFile}" target="_blank" class="text-cyan-400 hover:underline text-xs flex items-center ml-auto"><i class="fas fa-file-pdf"></i></a>
+                                    ${detail.certificateFile ? `<a href="${s3BaseUrl}${detail.certificateFile}" target="_blank" class="text-cyan-400 hover:underline text-xs flex items-center ml-auto"><i class="fas fa-file-pdf"></i></a>` : ''}
                                 </div>
                             `).join('');
     
@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     populateContent();
 
-    // === Contact Form Submission Logic (unchanged from last successful version) ===
+    // === Contact Form Submission Logic ===
     const contactForm = document.getElementById('contactForm');
     const formStatus = document.getElementById('formStatus');
 
