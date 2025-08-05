@@ -83,25 +83,24 @@ document.addEventListener('DOMContentLoaded', () => {
                             contentHtml = `<p class="text-gray-300">${project.description}</p>`;
                         }
 
-                        // Add project links from the new 'links' array
                         let projectLinksHtml = '';
+                        // Add presentation file link if it exists
+                        if (project.presentationFile) {
+                            projectLinksHtml += `<a href="${s3BaseUrl}${project.presentationFile}" target="_blank" class="text-cyan-400 hover:underline flex items-center mb-2"><i class="fas fa-file-pdf mr-1"></i>View Presentation</a>`;
+                        }
+                        // Add project links from the new 'links' array
                         if (project.links && project.links.length > 0) {
-                            projectLinksHtml += '<div class="mt-4 space-x-4 text-sm flex flex-wrap">';
                             project.links.forEach(link => {
                                 projectLinksHtml += `<a href="${link.url}" target="_blank" class="text-cyan-400 hover:underline flex items-center mb-2"><i class="${link.icon} mr-1"></i>${link.name}</a>`;
                             });
-                            projectLinksHtml += '</div>';
                         }
-                        // Add presentation file link if it exists
-                        if (project.presentationFile) {
-                            projectLinksHtml += `<div class="mt-4 text-sm"><a href="${s3BaseUrl}${project.presentationFile}" target="_blank" class="text-cyan-400 hover:underline flex items-center"><i class="fas fa-file-pdf mr-1"></i>View Presentation</a></div>`;
-                        }
-
 
                         projectDiv.innerHTML = `
                             <h3 class="font-semibold text-xl mb-2 text-cyan-400">${project.title}</h3>
                             ${contentHtml}
-                            ${projectLinksHtml}
+                            <div class="mt-4 space-y-2 text-sm flex flex-col">
+                                ${projectLinksHtml}
+                            </div>
                         `;
                         projectsContainer.appendChild(projectDiv);
                     });
@@ -116,17 +115,17 @@ document.addEventListener('DOMContentLoaded', () => {
                         certDiv.className = 'bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 flex items-center space-x-3';
                         let badgeLinkHtml = '';
                         if (cert.badgeFile) {
-                            badgeLinkHtml += `<a href="${s3BaseUrl}${cert.badgeFile}" target="_blank" class="text-cyan-400 hover:underline text-sm flex items-center"><i class="fas fa-award mr-1"></i>View Badge</a>`;
+                            badgeLinkHtml += `<a href="${s3BaseUrl}${cert.badgeFile}" target="_blank" class="text-cyan-400 hover:underline text-sm flex items-center mb-1"><i class="fas fa-award mr-1"></i>View Badge</a>`;
                         }
                         if (cert.certificateFile) {
-                            badgeLinkHtml += `<a href="${s3BaseUrl}${cert.certificateFile}" target="_blank" class="text-cyan-400 hover:underline text-sm flex items-center mt-1"><i class="fas fa-file-pdf mr-1"></i>View Certificate</a>`;
+                            badgeLinkHtml += `<a href="${s3BaseUrl}${cert.certificateFile}" target="_blank" class="text-cyan-400 hover:underline text-sm flex items-center"><i class="fas fa-file-pdf mr-1"></i>View Certificate</a>`;
                         }
                         certDiv.innerHTML = `
                             <img src="${s3BaseUrl}${cert.badgeFile}" alt="${cert.name} Badge" class="w-12 h-12 rounded-full">
                             <div>
                                 <h3 class="text-xl font-semibold text-cyan-400">${cert.name}</h3>
                                 <p class="text-gray-400">Issued: ${cert.issueDate}</p>
-                                <div class="flex flex-col mt-2 space-y-1">
+                                <div class="flex flex-col mt-2">
                                     ${badgeLinkHtml}
                                 </div>
                             </div>
@@ -158,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     heroResumeLink.classList.remove('hidden');
                 }
 
-                // Populate Contact information (email and LinkedIn URL in links)
+                // Populate Contact information
                 const emailLink = document.querySelector('#contact a[href^="mailto:"]');
                 if (emailLink) {
                     emailLink.href = `mailto:${data.contact.email}`;
