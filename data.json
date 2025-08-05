@@ -67,7 +67,7 @@
     {
       "title": "AWS Presentation Projects",
       "description": "A collection of AWS-focused projects documented in presentation format.",
-      "presentationFile": "projects/aws-presentation-projects.pdf",
+      "presentationFile": "projects/aws-online-portfolio-project.pdf",
       "links": [
         { "name": "Rekognition Label Detector", "url": "https://github.com/jdundor1/aws-rekognition-label-detector", "icon": "fab fa-github" },
         { "name": "Daily Task Scheduler", "url": "https://github.com/jdundor1/daily-task-scheduler-partyrock", "icon": "fab fa-github" }
@@ -90,57 +90,57 @@
     {
       "name": "AWS Certified Solutions Architect - Professional",
       "issueDate": "March 2025",
-      "badgeFile": "certifications/aws-certified-solutions-architect-professional-badge.png",
-      "certificateFile": "certifications/aws-certified-solutions-architect-professional-certificate.pdf"
+      "badgeFile": "certifications/aws-certified-solutions-architect-professional.png",
+      "certificateFile": "certifications/aws-certified-solutions-architect-pro.pdf"
     },
     {
       "name": "Google Cloud Platform Certifications",
       "issueDate": "2023-2024",
-      "badgeFile": "certifications/Google-Badge-1.png",
+      "badgeFile": "certifications/google-badge-1.png",
       "details": [
         {
           "name": "Google Cloud Certified Professional Cloud Architect",
           "issueDate": "2023",
-          "badgeFile": "certifications/Google-Badge-1.png",
-          "certificateFile": "certifications/GCP Digital Cloud.pdf"
+          "badgeFile": "certifications/google-badge-1.png",
+          "certificateFile": "certifications/gcp-cloud-architect.pdf"
         },
         {
           "name": "Google Cloud Certified Professional Cloud Security Engineer",
           "issueDate": "2024",
-          "badgeFile": "certifications/Google-Badge-2.png",
-          "certificateFile": "certifications/GCP Security.pdf"
+          "badgeFile": "certifications/google-badge-2.png",
+          "certificateFile": "certifications/gcp_security_engineer.pdf"
         },
         {
           "name": "Google Cloud Certified Professional Data Engineer",
           "issueDate": "2023",
-          "badgeFile": "certifications/Google-Badge-3.png",
-          "certificateFile": "certifications/GCP Data Engineer.pdf"
+          "badgeFile": "certifications/google-badge-3.png",
+          "certificateFile": "certifications/gcp-data-engineer.pdf"
         },
         {
           "name": "Google Cloud Certified Cloud Digital Leader",
           "issueDate": "2023",
-          "badgeFile": "certifications/Google-Badge-4.png",
-          "certificateFile": "certifications/gcp-cloud-digital-leader.pdf"
+          "badgeFile": "certifications/google-badge-4.png",
+          "certificateFile": "certifications/gcp-digital-cloud-leader.pdf"
         }
       ]
     },
     {
       "name": "PMP and other Project Management Certifications",
       "issueDate": "August 2022, Recertified August 2025",
-      "badgeFile": "certifications/pm-cert.png",
-      "certificateFile": null
+      "badgeFile": "certifications/pmp-certification.pdf",
+      "certificateFile": "certifications/pmp-certification.pdf"
     },
     {
       "name": "Google Project Management",
       "issueDate": "2023",
-      "badgeFile": "certifications/Google Badge 5.png",
-      "certificateFile": "certifications/Google Project Management.pdf"
+      "badgeFile": "certifications/google-badge-5.png",
+      "certificateFile": "certifications/google-project-management.pdf"
     },
     {
       "name": "Certified in Cybersecurity (CC)",
       "issueDate": "October 2023",
       "badgeFile": "certifications/certified-in-cybersecurity-cc.png",
-      "certificateFile": "certifications/certified-in-cybersecurity-cc-certificate.pdf"
+      "certificateFile": "certifications/certified-in-cybersecurity-cc.png"
     },
     {
       "name": "CodeCademy Language Certs",
