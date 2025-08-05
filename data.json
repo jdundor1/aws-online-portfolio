@@ -94,34 +94,41 @@
       "certificateFile": "certifications/aws-sa-pro-certificate.pdf"
     },
     {
-      "name": "Google Cloud Certified Professional Cloud Architect",
-      "issueDate": "2023",
+      "name": "Google Cloud Platform Certifications",
+      "issueDate": "2023-2024",
       "badgeFile": "certifications/google-badge-1.png",
-      "certificateFile": "certifications/gcp-digital-cloud.pdf"
-    },
-    {
-      "name": "Google Cloud Certified Professional Cloud Security Engineer",
-      "issueDate": "2024",
-      "badgeFile": "certifications/google-badge-2.png",
-      "certificateFile": "certifications/gcp-security.pdf"
-    },
-    {
-      "name": "Google Cloud Certified Professional Data Engineer",
-      "issueDate": "2023",
-      "badgeFile": "certifications/google-badge-3.png",
-      "certificateFile": "certifications/gcp-data-engineer.pdf"
-    },
-    {
-      "name": "Google Cloud Certified Cloud Digital Leader",
-      "issueDate": "2023",
-      "badgeFile": "certifications/google-badge-4.png",
-      "certificateFile": "certifications/gcp-cloud-digital-leader.pdf"
+      "details": [
+        {
+          "name": "Google Cloud Certified Professional Cloud Architect",
+          "issueDate": "2023",
+          "badgeFile": "certifications/google-badge-1.png",
+          "certificateFile": "certifications/gcp-digital-cloud.pdf"
+        },
+        {
+          "name": "Google Cloud Certified Professional Cloud Security Engineer",
+          "issueDate": "2024",
+          "badgeFile": "certifications/google-badge-2.png",
+          "certificateFile": "certifications/gcp-security.pdf"
+        },
+        {
+          "name": "Google Cloud Certified Professional Data Engineer",
+          "issueDate": "2023",
+          "badgeFile": "certifications/google-badge-3.png",
+          "certificateFile": "certifications/gcp-data-engineer.pdf"
+        },
+        {
+          "name": "Google Cloud Certified Cloud Digital Leader",
+          "issueDate": "2023",
+          "badgeFile": "certifications/google-badge-4.png",
+          "certificateFile": "certifications/gcp-cloud-digital-leader.pdf"
+        }
+      ]
     },
     {
       "name": "PMP and other Project Management Certifications",
-      "issueDate": "August 2022 (Recertified August 2025)",
+      "issueDate": "August 2022, Recertified August 2025",
       "badgeFile": "certifications/pm-cert.png",
-      "certificateFile": null
+      "certificateFile": ""
     },
     {
       "name": "Google Project Management",
@@ -139,23 +146,23 @@
       "name": "CodeCademy Language Certs",
       "issueDate": "2021-2023",
       "badgeFile": "certifications/codecademy-badge.png",
-      "certificateFile": null
+      "certificateFile": ""
     },
     {
       "name": "UX Certifications",
       "issueDate": "January to August 2022",
       "badgeFile": "certifications/ux-cert.png",
-      "certificateFile": null
+      "certificateFile": ""
     }
   ],
   "education": [
     {
-      "degree": "Master of Education | Instructional Design and Technology",
+      "degree": "Masters of Education | Instructional Design and Technology",
       "school": "Western Governors University",
       "dates": "July 2020 - January 2021"
     },
     {
-      "degree": "Master of Arts in Teaching | Music",
+      "degree": "Masters in the Art of Teaching | Music",
       "school": "University of the Arts – Philadelphia",
       "dates": "January 2004 - May 2005"
     },
@@ -169,5 +176,5 @@
     "email": "jdundor@wgu.edu",
     "linkedin": "https://www.linkedin.com/in/joedundore"
   },
-  "resumeFile": "resume/dundore_resume_2025.pdf"
+  "resumeFile": "resume/dundore-resume-2025.pdf"
 }
