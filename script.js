@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(data => {
                 // S3 Base URL for your assets
                 const s3BaseUrl = 'https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/';
-    
+
                 // Populate About section
                 const aboutSection = document.getElementById('about');
                 if (aboutSection) {
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (aboutContentDiv) {
                         const existingParagraphs = aboutContentDiv.querySelectorAll('p:not(.section-title)');
                         existingParagraphs.forEach(p => p.remove());
-    
+
                         data.about.paragraphs.forEach(paragraphText => {
                             const p = document.createElement('p');
                             p.className = 'text-lg leading-relaxed mb-4';
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         });
                     }
                 }
-    
+
                 // Populate Skills section
                 const skillsContainer = document.querySelector('#skills .grid');
                 if (skillsContainer) {
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         skillsContainer.appendChild(skillDiv);
                     });
                 }
-    
+
                 // Populate Experience section
                 const experienceContainer = document.querySelector('#experience .space-y-8');
                 if (experienceContainer) {
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         experienceContainer.appendChild(expDiv);
                     });
                 }
-    
+
                 // Populate Projects section
                 const projectsContainer = document.querySelector('#projects .grid');
                 if (projectsContainer) {
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     data.projects.forEach(project => {
                         const projectDiv = document.createElement('div');
                         projectDiv.className = 'bg-gray-800 p-6 rounded-lg shadow-md border-l-4 border-cyan-500 hover:shadow-xl transition duration-300';
-    
+
                         let contentHtml = '';
                         if (project.items) {
                             const itemsHtml = project.items.map(item => `<li><i class="fas fa-check-circle text-cyan-400 mr-2"></i>${item}</li>`).join('');
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         } else if (project.description) {
                             contentHtml = `<p class="text-gray-300">${project.description}</p>`;
                         }
-    
+
                         let projectLinksHtml = '';
                         // Add presentation file link if it exists
                         if (project.presentationFile) {
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         projectsContainer.appendChild(projectDiv);
                     });
                 }
-    
+
                 // Populate Certifications section
                 const certificationsContainer = document.querySelector('#certifications .flex.flex-wrap.justify-center.items-center.gap-6');
                 if (certificationsContainer) {
@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                     <a href="${s3BaseUrl}${detail.certificateFile}" target="_blank" class="text-cyan-400 hover:underline text-xs flex items-center ml-auto"><i class="fas fa-file-pdf"></i></a>
                                 </div>
                             `).join('');
-    
+
                             certDiv.innerHTML = `
                                 <img src="${s3BaseUrl}${cert.badgeFile}" alt="${cert.name} Badge" class="w-12 h-12 rounded-full">
                                 <div>
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         certificationsContainer.appendChild(certDiv);
                     });
                 }
-    
+
                 // Add Education Section
                 const educationContainer = document.getElementById('education-list');
                 if (educationContainer) {
@@ -178,14 +178,14 @@ document.addEventListener('DOMContentLoaded', () => {
                         educationContainer.appendChild(eduItem);
                     });
                 }
-    
+
                 // Add Resume Link to Hero Section Button
                 const heroResumeLink = document.getElementById('heroResumeLink');
                 if (heroResumeLink && data.resumeFile) {
                     heroResumeLink.href = `${s3BaseUrl}${data.resumeFile}`;
                     heroResumeLink.classList.remove('hidden');
                 }
-    
+
                 // Populate Contact information
                 const emailLink = document.querySelector('#contact a[href^="mailto:"]');
                 if (emailLink) {
@@ -199,28 +199,28 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .catch(error => console.error('Error fetching data:', error));
     };
-    
+
     populateContent();
-    
-    // === Contact Form Submission Logic (unchanged from last successful version) ===
+
+    // === Contact Form Submission Logic ===
     const contactForm = document.getElementById('contactForm');
     const formStatus = document.getElementById('formStatus');
-    
+
     const API_GATEWAY_URL = 'https://w1hw5b9b4g.execute-api.us-east-1.amazonaws.com/prod/contact';
-    
+
     if (contactForm) {
         contactForm.addEventListener('submit', async (event) => {
             event.preventDefault();
             formStatus.classList.remove('hidden', 'text-green-500', 'text-red-500');
             formStatus.classList.add('text-gray-400');
             formStatus.textContent = 'Sending message...';
-    
+
             const formData = new FormData(contactForm);
             const payload = {};
             for (const [key, value] of formData.entries()) {
                 payload[key] = value;
             }
-    
+
             try {
                 const response = await fetch(API_GATEWAY_URL, {
                     method: 'POST',
@@ -229,9 +229,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     },
                     body: JSON.stringify(payload),
                 });
-    
+
                 const data = await response.json();
-    
+
                 if (response.ok) {
                     formStatus.textContent = data.message || 'Message sent successfully!';
                     formStatus.classList.remove('text-gray-400');
