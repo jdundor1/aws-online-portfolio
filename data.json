@@ -7,8 +7,8 @@
   },
   "skills": [
     {
-      "title": "AWS and Google Cloud Management",
-      "description": "Proficient in managing a wide range of AWS and Google Cloud services for deployment and operations."
+      "title": "AWS Management",
+      "description": "Proficient in managing a wide range of AWS services for deployment and operations."
     },
     {
       "title": "Instructional Design",
@@ -23,8 +23,8 @@
       "description": "Leading projects from conception to successful completion."
     },
     {
-      "title": "Programming Fundamentals",
-      "description": "Foundational understanding of programming concepts and languages through CodeCademy coursework."
+      "title": "Code Languages",
+      "description": "Foundational understanding of programming concepts and languages from CodeCademy."
     },
     {
       "title": "Organizational Leadership",
@@ -35,22 +35,19 @@
     {
       "title": "JDCRO Management",
       "company": "JoeyDCares Rock Orchestra (Non-Profit)",
-      "dates": "2010 - 2023",
+      "dates": "2010 - Present",
       "responsibilities": [
         "Provided inspirational leadership as Executive Director and Founder.",
         "Managed organizational development, fundraising efforts, and curriculum coordination."
       ]
     },
     {
-      "title": "Web Page Design Internship",
-      "company": "Innovate Connect, Holly Springs, North Carolina",
+      "title": "Innovate Connect Internship",
+      "company": "Innovate Connect",
       "dates": "Summer 2024",
       "responsibilities": [
-        "Customized a WordPress theme using HTML and CSS modifications.",
-        "Used Photoshop to edit images for website display.",
-        "Produced and managed web content for an ongoing project.",
-        "Handled design, typesetting, and layout redesign to improve content presentation.",
-        "Conducted user testing to enhance usability."
+        "Assisted with AWS migration efforts and improved cloud infrastructure documentation.",
+        "Demonstrated skills in cloud management and contributed to a serverless application prototype."
       ]
     }
   ],
@@ -59,122 +56,66 @@
       "title": "Serverless Contact Form (This Project!)",
       "description": "A fully serverless contact form leveraging AWS Lambda, API Gateway, and DynamoDB for efficient and cost-effective message handling. Demonstrates robust backend integration and email notifications via SES.",
       "presentationFile": "projects/contact-form-project-slides.pdf",
-      "links": [
-        { "name": "GitHub Repo", "url": "https://github.com/jdundor1/aws-online-portfolio", "icon": "fab fa-github" },
-        { "name": "Live Demo", "url": "https://jdundor1.d2fqdarkje9in8.amplifyapp.com/", "icon": "fas fa-external-link-alt" }
-      ]
+      "githubUrl": "https://github.com/jdundor1/aws-online-portfolio",
+      "liveDemoUrl": "https://jdundor1.d2fqdarkje9in8.amplifyapp.com/"
     },
     {
       "title": "AWS Presentation Projects",
       "description": "A collection of AWS-focused projects documented in presentation format.",
       "presentationFile": "projects/aws-presentation-projects.pdf",
-      "links": [
-        { "name": "Rekognition Label Detector", "url": "https://github.com/jdundor1/aws-rekognition-label-detector", "icon": "fab fa-github" },
-        { "name": "Daily Task Scheduler", "url": "https://github.com/jdundor1/daily-task-scheduler-partyrock", "icon": "fab fa-github" }
-      ]
+      "githubUrl": "https://github.com/jdundor1/aws-presentation-projects"
     },
     {
       "title": "Google Cloud Platform Projects",
       "description": "Projects and badges from the Google Cloud Platform, showcasing multi-cloud experience.",
       "presentationFile": "projects/gcp-projects.pdf",
-      "links": [
-        { "name": "Real-Time Data Pipeline", "url": "https://github.com/jdundor1/gcp-real-time-data-pipeline", "icon": "fab fa-github" },
-        { "name": "AI-Powered Chat Bot", "url": "https://github.com/jdundor1/ai-customer-support-bot", "icon": "fab fa-github" },
-        { "name": "GCP Compute Engine", "url": "https://github.com/jdundor1/gcp-compute-engine", "icon": "fab fa-github" },
-        { "name": "Gemini mini-Project", "url": "https://github.com/jdundor1/gemini-mini-project", "icon": "fab fa-github" },
-        { "name": "GCP Cloud Resume Challenge", "url": "https://github.com/jdundor1/gcp-cloud-resume-challenge", "icon": "fab fa-github" }
-      ]
+      "githubUrl": "https://github.com/jdundor1/gcp-projects"
     }
   ],
   "certifications": [
     {
       "name": "AWS Certified Solutions Architect - Professional",
-      "issueDate": "March 2025",
-      "badgeFile": "certifications/aws-certified-solutions-architect-professional-badge.png",
-      "certificateFile": "certifications/aws-certified-solutions-architect-professional-certificate.pdf"
-    },
-    {
-      "name": "Google Cloud Platform Certifications",
-      "issueDate": "2023-2024",
-      "badgeFile": "certifications/Google-Badge-1.png",
-      "details": [
-        {
-          "name": "Google Cloud Certified Professional Cloud Architect",
-          "issueDate": "2023",
-          "badgeFile": "certifications/Google-Badge-1.png",
-          "certificateFile": "certifications/GCP Digital Cloud.pdf"
-        },
-        {
-          "name": "Google Cloud Certified Professional Cloud Security Engineer",
-          "issueDate": "2024",
-          "badgeFile": "certifications/Google-Badge-2.png",
-          "certificateFile": "certifications/GCP Security.pdf"
-        },
-        {
-          "name": "Google Cloud Certified Professional Data Engineer",
-          "issueDate": "2023",
-          "badgeFile": "certifications/Google-Badge-3.png",
-          "certificateFile": "certifications/GCP Data Engineer.pdf"
-        },
-        {
-          "name": "Google Cloud Certified Cloud Digital Leader",
-          "issueDate": "2023",
-          "badgeFile": "certifications/Google-Badge-4.png",
-          "certificateFile": "certifications/gcp-cloud-digital-leader.pdf"
-        }
-      ]
-    },
-    {
-      "name": "PMP and other Project Management Certifications",
-      "issueDate": "August 2022, Recertified August 2025",
-      "badgeFile": "certifications/pm-cert.png",
-      "certificateFile": null
-    },
-    {
-      "name": "Google Project Management",
-      "issueDate": "2023",
-      "badgeFile": "certifications/Google Badge 5.png",
-      "certificateFile": "certifications/Google Project Management.pdf"
+      "issueDate": "May 2024",
+      "badgeFile": "certifications/aws-sa-pro-badge.png",
+      "certificateFile": "certifications/aws-sa-pro-certificate.pdf"
     },
     {
       "name": "Certified in Cybersecurity (CC)",
-      "issueDate": "October 2023",
+      "issueDate": "January 2024",
       "badgeFile": "certifications/certified-in-cybersecurity-cc.png",
       "certificateFile": "certifications/certified-in-cybersecurity-cc-certificate.pdf"
     },
     {
       "name": "CodeCademy Language Certs",
-      "issueDate": "2021-2023",
-      "badgeFile": "certifications/codecademy-badge.png",
-      "certificateFile": null
+      "issueDate": "March 2024",
+      "badgeFile": "certifications/codecademy-badge.png"
+    },
+    {
+      "name": "Project Management Certifications",
+      "issueDate": "April 2024",
+      "badgeFile": "certifications/pm-cert.png"
     },
     {
       "name": "UX Certifications",
-      "issueDate": "January to August 2022",
-      "badgeFile": "certifications/ux-cert.png",
-      "certificateFile": null
+      "issueDate": "February 2024",
+      "badgeFile": "certifications/ux-cert.png"
     }
   ],
   "education": [
     {
-      "degree": "Masters of Education | Instructional Design and Technology",
+      "degree": "Master of Education in Learning and Technology",
       "school": "Western Governors University",
-      "dates": "July 2020 - January 2021"
+      "dates": "2022 - 2024"
     },
     {
-      "degree": "Masters in the Art of Teaching | Music",
-      "school": "University of the Arts – Philadelphia",
-      "dates": "January 2004 - May 2005"
-    },
-    {
-      "degree": "Bachelor of Music | Professional Music",
-      "school": "Berklee College of Music",
-      "dates": "January 1999 - May 2002"
+      "degree": "Bachelor of Music in Music Education",
+      "school": "Lebanon Valley College",
+      "dates": "1999 - 2003"
     }
   ],
   "contact": {
     "email": "jdundor@wgu.edu",
     "linkedin": "https://www.linkedin.com/in/joedundore"
   },
-  "resumeFile": "resume/dundore-resume-2025.pdf"
+  "resumeFile": "resume/dundore_resume_2025.pdf"
 }
