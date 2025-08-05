@@ -150,4 +150,31 @@
     },
     {
       "name": "UX Certifications",
-      "issueDate": "January to August 202
+      "issueDate": "January to August 2022",
+      "badgeFile": "certifications/ux-cert.png",
+      "certificateFile": ""
+    }
+  ],
+  "education": [
+    {
+      "degree": "Masters of Education | Instructional Design and Technology",
+      "school": "Western Governors University",
+      "dates": "July 2020-January 2021"
+    },
+    {
+      "degree": "Masters in the Art of Teaching | Music",
+      "school": "University of the Arts – Philadelphia",
+      "dates": "January 2004-May 2005"
+    },
+    {
+      "degree": "Bachelor of Music | Professional Music",
+      "school": "Berklee College of Music",
+      "dates": "January 1999-May 2002"
+    }
+  ],
+  "contact": {
+    "email": "jdundor@wgu.edu",
+    "linkedin": "https://www.linkedin.com/in/joedundore"
+  },
+  "resumeFile": "resume/dundore_resume_2025.pdf"
+}
