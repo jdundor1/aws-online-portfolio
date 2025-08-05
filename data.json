@@ -58,7 +58,7 @@
     {
       "title": "Serverless Contact Form (This Project!)",
       "description": "A fully serverless contact form leveraging AWS Lambda, API Gateway, and DynamoDB for efficient and cost-effective message handling. Demonstrates robust backend integration and email notifications via SES.",
-      "presentationFile": "projects/contact-form-project-slides.pdf",
+      "presentationFile": "projects/aws-online-portfolio-slides.pdf",
       "links": [
         { "name": "GitHub Repo", "url": "https://github.com/jdundor1/aws-online-portfolio", "icon": "fab fa-github" },
         { "name": "Live Demo", "url": "https://jdundor1.d2fqdarkje9in8.amplifyapp.com/", "icon": "fas fa-external-link-alt" }
@@ -90,36 +90,36 @@
     {
       "name": "AWS Certified Solutions Architect - Professional",
       "issueDate": "March 2025",
-      "badgeFile": "certifications/aws-sa-pro-badge.png",
-      "certificateFile": "certifications/aws-sa-pro-certificate.pdf"
+      "badgeFile": "certifications/aws-certified-solutions-architect-professional-badge.png",
+      "certificateFile": "certifications/aws-certified-solutions-architect-professional-certificate.pdf"
     },
     {
       "name": "Google Cloud Platform Certifications",
       "issueDate": "2023-2024",
-      "badgeFile": "certifications/google-badge-1.png",
+      "badgeFile": "certifications/Google-Badge-1.png",
       "details": [
         {
           "name": "Google Cloud Certified Professional Cloud Architect",
           "issueDate": "2023",
-          "badgeFile": "certifications/google-badge-1.png",
-          "certificateFile": "certifications/gcp-digital-cloud.pdf"
+          "badgeFile": "certifications/Google-Badge-1.png",
+          "certificateFile": "certifications/gcp-cloud-digital-leader.pdf"
         },
         {
           "name": "Google Cloud Certified Professional Cloud Security Engineer",
           "issueDate": "2024",
-          "badgeFile": "certifications/google-badge-2.png",
+          "badgeFile": "certifications/Google-Badge-2.png",
           "certificateFile": "certifications/gcp-security.pdf"
         },
         {
           "name": "Google Cloud Certified Professional Data Engineer",
           "issueDate": "2023",
-          "badgeFile": "certifications/google-badge-3.png",
+          "badgeFile": "certifications/Google-Badge-3.png",
           "certificateFile": "certifications/gcp-data-engineer.pdf"
         },
         {
           "name": "Google Cloud Certified Cloud Digital Leader",
           "issueDate": "2023",
-          "badgeFile": "certifications/google-badge-4.png",
+          "badgeFile": "certifications/Google-Badge-4.png",
           "certificateFile": "certifications/gcp-cloud-digital-leader.pdf"
         }
       ]
@@ -133,7 +133,7 @@
     {
       "name": "Google Project Management",
       "issueDate": "2023",
-      "badgeFile": "certifications/google-badge-5.png",
+      "badgeFile": "certifications/Google-Badge-5.png",
       "certificateFile": "certifications/google-project-management.pdf"
     },
     {
