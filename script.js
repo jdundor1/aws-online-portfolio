@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(data => {
                 // S3 Base URL for your assets
                 const s3BaseUrl = 'https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/';
-
+    
                 // Populate About section
                 const aboutSection = document.getElementById('about');
                 if (aboutSection) {
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (aboutContentDiv) {
                         const existingParagraphs = aboutContentDiv.querySelectorAll('p:not(.section-title)');
                         existingParagraphs.forEach(p => p.remove());
-
+    
                         data.about.paragraphs.forEach(paragraphText => {
                             const p = document.createElement('p');
                             p.className = 'text-lg leading-relaxed mb-4';
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         });
                     }
                 }
-
+    
                 // Populate Skills section
                 const skillsContainer = document.querySelector('#skills .grid');
                 if (skillsContainer) {
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         skillsContainer.appendChild(skillDiv);
                     });
                 }
-
+    
                 // Populate Experience section
                 const experienceContainer = document.querySelector('#experience .space-y-8');
                 if (experienceContainer) {
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         experienceContainer.appendChild(expDiv);
                     });
                 }
-
+    
                 // Populate Projects section
                 const projectsContainer = document.querySelector('#projects .grid');
                 if (projectsContainer) {
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     data.projects.forEach(project => {
                         const projectDiv = document.createElement('div');
                         projectDiv.className = 'bg-gray-800 p-6 rounded-lg shadow-md border-l-4 border-cyan-500 hover:shadow-xl transition duration-300';
-
+    
                         let contentHtml = '';
                         if (project.items) {
                             const itemsHtml = project.items.map(item => `<li><i class="fas fa-check-circle text-cyan-400 mr-2"></i>${item}</li>`).join('');
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         } else if (project.description) {
                             contentHtml = `<p class="text-gray-300">${project.description}</p>`;
                         }
-
+    
                         let projectLinksHtml = '';
                         // Add presentation file link if it exists
                         if (project.presentationFile) {
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 projectLinksHtml += `<a href="${link.url}" target="_blank" class="text-cyan-400 hover:underline flex items-center mb-2"><i class="${link.icon} mr-1"></i>${link.name}</a>`;
                             });
                         }
-
+                        
                         projectDiv.innerHTML = `
                             <h3 class="font-semibold text-xl mb-2 text-cyan-400">${project.title}</h3>
                             ${contentHtml}
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         projectsContainer.appendChild(projectDiv);
                     });
                 }
-
+    
                 // Populate Certifications section
                 const certificationsContainer = document.querySelector('#certifications .flex.flex-wrap.justify-center.items-center.gap-6');
                 if (certificationsContainer) {
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         if (cert.certificateFile) {
                             badgeLinkHtml += `<a href="${s3BaseUrl}${cert.certificateFile}" target="_blank" class="text-cyan-400 hover:underline text-sm flex items-center"><i class="fas fa-file-pdf mr-1"></i>View Certificate</a>`;
                         }
-
+                        
                         // Check for consolidated details (e.g., Google Cloud)
                         if (cert.details && cert.details.length > 0) {
                             const detailsHtml = cert.details.map(detail => `
@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                     <a href="${s3BaseUrl}${detail.certificateFile}" target="_blank" class="text-cyan-400 hover:underline text-xs flex items-center ml-auto"><i class="fas fa-file-pdf"></i></a>
                                 </div>
                             `).join('');
-
+    
                             certDiv.innerHTML = `
                                 <img src="${s3BaseUrl}${cert.badgeFile}" alt="${cert.name} Badge" class="w-12 h-12 rounded-full">
                                 <div>
@@ -145,3 +145,111 @@ document.addEventListener('DOMContentLoaded', () => {
                                         ${detailsHtml}
                                     </div>
                                 </div>
+                            `;
+                        } else {
+                            // Standard single certification entry
+                            certDiv.innerHTML = `
+                                <img src="${s3BaseUrl}${cert.badgeFile}" alt="${cert.name} Badge" class="w-12 h-12 rounded-full">
+                                <div>
+                                    <h3 class="text-xl font-semibold text-cyan-400">${cert.name}</h3>
+                                    <p class="text-gray-400">Issued: ${cert.issueDate}</p>
+                                    <div class="flex flex-col mt-2 space-y-1">
+                                        ${badgeLinkHtml}
+                                    </div>
+                                </div>
+                            `;
+                        }
+                        certificationsContainer.appendChild(certDiv);
+                    });
+                }
+    
+                // Add Education Section
+                const educationContainer = document.getElementById('education-list');
+                if (educationContainer) {
+                    educationContainer.innerHTML = '';
+                    data.education.forEach(edu => {
+                        const eduItem = document.createElement('div');
+                        eduItem.className = 'bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300';
+                        eduItem.innerHTML = `
+                            <h3 class="text-xl font-semibold text-cyan-400">${edu.degree}</h3>
+                            <p class="text-lg text-gray-200">${edu.school}</p>
+                            <p class="text-md text-gray-400">${edu.dates}</p>
+                        `;
+                        educationContainer.appendChild(eduItem);
+                    });
+                }
+    
+                // Add Resume Link to Hero Section Button
+                const heroResumeLink = document.getElementById('heroResumeLink');
+                if (heroResumeLink && data.resumeFile) {
+                    heroResumeLink.href = `${s3BaseUrl}${data.resumeFile}`;
+                    heroResumeLink.classList.remove('hidden');
+                }
+    
+                // Populate Contact information
+                const emailLink = document.querySelector('#contact a[href^="mailto:"]');
+                if (emailLink) {
+                    emailLink.href = `mailto:${data.contact.email}`;
+                }
+                const linkedinLink = document.querySelector('#contact a[href*="linkedin.com"]');
+                if (linkedinLink) {
+                    linkedinLink.href = data.contact.linkedin;
+                    linkedinLink.innerHTML = `<i class="fab fa-linkedin mr-2"></i>Connect on LinkedIn`; 
+                }
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    };
+    
+    populateContent();
+    
+    // === Contact Form Submission Logic (unchanged from last successful version) ===
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+    
+    const API_GATEWAY_URL = 'https://w1hw5b9b4g.execute-api.us-east-1.amazonaws.com/prod/contact';
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            formStatus.classList.remove('hidden', 'text-green-500', 'text-red-500');
+            formStatus.classList.add('text-gray-400');
+            formStatus.textContent = 'Sending message...';
+    
+            const formData = new FormData(contactForm);
+            const payload = {};
+            for (const [key, value] of formData.entries()) {
+                payload[key] = value;
+            }
+    
+            try {
+                const response = await fetch(API_GATEWAY_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(payload),
+                });
+    
+                const data = await response.json();
+    
+                if (response.ok) {
+                    formStatus.textContent = data.message || 'Message sent successfully!';
+                    formStatus.classList.remove('text-gray-400');
+                    formStatus.classList.add('text-green-500');
+                    contactForm.reset();
+                } else {
+                    formStatus.textContent = data.message || 'Failed to send message. Please try again.';
+                    formStatus.classList.remove('text-gray-400');
+                    formStatus.classList.add('text-red-500');
+                    console.error('API Error:', data);
+                }
+            } catch (error) {
+                formStatus.textContent = 'An error occurred. Check your connection or console.';
+                formStatus.classList.remove('text-gray-400');
+                formStatus.classList.add('text-red-500');
+                console.error('Fetch Error:', error);
+            }
+            formStatus.classList.remove('hidden');
+        });
+    }
+});
