@@ -44,6 +44,11 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #9ca3af;
         }
+        /* New custom styles for certifications to fix sizing */
+        .certification-card {
+            min-height: 12rem; /* Ensures a consistent height */
+            height: 12rem; /* Fixed height for uniform size */
+        }
     </style>
 </head>
 <body class="text-gray-200">
@@ -104,79 +109,3 @@
             <h2 class="text-3xl section-title mb-8">Professional Experience</h2>
             <div class="space-y-8">
                 </div>
-        </div>
-    </section>
-
-    <section id="projects" class="py-16 md:py-20 bg-gray-950 text-gray-200">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <h2 class="text-3xl section-title mb-8">My Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                </div>
-        </div>
-    </section>
-
-    <section id="certifications" class="py-16 md:py-20 bg-gray-900 text-gray-200">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <h2 class="text-3xl section-title mb-8">Certifications</h2>
-            <div class="flex flex-wrap justify-center items-center gap-6">
-                </div>
-            <p class="text-center text-gray-400 mt-8 text-lg">
-                My certifications validate my expertise in designing distributed systems and developing secure, scalable applications on AWS.
-            </p>
-        </div>
-    </section>
-
-    <section id="education" class="py-16 md:py-20 bg-gray-950 text-gray-200">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <h2 class="text-3xl section-title mb-8">Education</h2>
-            <div id="education-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                </div>
-        </div>
-    </section>
-
-    <section id="contact" class="bg-gray-900 text-white py-16 md:py-20 text-center">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Connect?</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-                I'm actively seeking new career opportunities where I can apply my skills and leadership.
-            </p>
-            <form id="contactForm" class="max-w-xl mx-auto bg-gray-800 p-8 rounded-lg shadow-xl space-y-6 mb-8">
-                <div class="text-xl font-bold mb-4 text-cyan-400">Send me a message!</div>
-                <div>
-                    <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Name</label>
-                    <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-700 border-gray-600 text-white placeholder-gray-400" placeholder="Your Name" required>
-                </div>
-                <div>
-                    <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email</label>
-                    <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-700 border-gray-600 text-white placeholder-gray-400" placeholder="your@example.com" required>
-                </div>
-                <div>
-                    <label for="message" class="block text-gray-300 text-sm font-bold mb-2">Message</label>
-                    <textarea id="message" name="message" rows="5" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-700 border-gray-600 text-white placeholder-gray-400" placeholder="Your message..." required></textarea>
-                </div>
-                <button type="submit" class="w-full bg-cyan-500 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg">
-                    <i class="fas fa-paper-plane mr-2"></i>Send Message
-                </button>
-                <div id="formStatus" class="mt-4 text-center text-lg hidden"></div>
-            </form>
-
-            <div class="mt-8 text-center">
-                <p class="text-xl mb-4">Or connect with me directly:</p>
-                <a href="https://www.linkedin.com/in/joedundore" target="_blank" rel="noopener noreferrer" class="inline-block bg-gray-700 text-white hover:bg-gray-600 font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg">
-                    <i class="fab fa-linkedin mr-2"></i>Connect on LinkedIn
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-black text-gray-400 py-8 text-center text-sm">
-        <div class="container mx-auto px-4">
-            <p>&copy; 2025 Joe Dundore. All rights reserved.</p>
-            <p class="mt-2">Designed with <span class="text-cyan-400">&hearts;</span> using Tailwind CSS</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-
-</body>
-</html>
