@@ -85,7 +85,8 @@ document.addEventListener('DOMContentLoaded', () => {
                                 if (link.url.includes('.pdf') || link.url.includes('.png') || link.url.includes('.jpg')) {
                                   linkUrl = `${s3BaseUrl}${link.url}`;
                                 }
-                                projectLinksHtml += `<a href="${linkUrl}" target="_blank" class="text-cyan-400 hover:underline flex items-center mb-2"><i class="${link.icon} mr-1"></i>${link.name}</a>`;
+                                const indentClass = link.icon === 'fab fa-github' ? 'ml-6' : '';
+                                projectLinksHtml += `<a href="${linkUrl}" target="_blank" class="text-cyan-400 hover:underline flex items-center mb-2 ${indentClass}"><i class="${link.icon} mr-1"></i>${link.name}</a>`;
                             });
                             projectLinksHtml += '</div>';
                         }
@@ -106,7 +107,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     data.certifications.forEach(cert => {
                         const certDiv = document.createElement('div');
                         certDiv.className = 'bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 flex items-center space-x-3';
+                        
                         let badgeLinkHtml = '';
+                        if (cert.badgeFile) {
+                             badgeLinkHtml = `<a href="${s3BaseUrl}${cert.badgeFile}" target="_blank" class="text-cyan-400 hover:underline text-sm flex items-center mb-1"><i class="fas fa-award mr-1"></i>View Badge</a>`;
+                        }
+                        if (cert.certificateFile) {
+                             badgeLinkHtml += `<a href="${s3BaseUrl}${cert.certificateFile}" target="_blank" class="text-cyan-400 hover:underline text-sm flex items-center"><i class="fas fa-file-pdf mr-1"></i>View Certificate</a>`;
+                        }
                         
                         // Check for consolidated details (e.g., Google Cloud and Project Management)
                         if (cert.details && cert.details.length > 0) {
