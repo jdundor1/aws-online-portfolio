@@ -44,6 +44,11 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #9ca3af;
         }
+        /* New custom styles for certifications to fix sizing */
+        .certification-card {
+            min-height: 12rem; /* Ensures a consistent height */
+            height: 12rem; /* Fixed height for uniform size */
+        }
     </style>
 </head>
 <body class="text-gray-200">
@@ -153,7 +158,7 @@
                         <label for="message" class="block text-gray-300 text-sm font-bold mb-2">Message</label>
                         <textarea id="message" name="message" rows="5" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-700 border-gray-600 text-white placeholder-gray-400" placeholder="Your message..." required></textarea>
                     </div>
-                    <button type="submit" class="w-full bg-cyan-500 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg">
+                    <button type="submit" class="w-full bg-cyan-500 text-white hover:bg-cyan-600 font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg">
                         <i class="fas fa-paper-plane mr-2"></i>Send Message
                     </button>
                     <div id="formStatus" class="mt-4 text-center text-lg hidden"></div>
@@ -179,4 +184,3 @@
 
     </body>
     </html>
-    ```
