@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         expDiv.className = 'bg-gray-950 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300';
                         const responsibilitiesHtml = exp.responsibilities.map(resp => `<li>${resp}</li>`).join('');
                         expDiv.innerHTML = `
-                            <h3 class="text-xl font-semibold text-cyan-400">${exp.title}</h3>
+                            <h3 class="font-semibold text-xl text-cyan-400">${exp.title}</h3>
                             <p class="text-lg text-gray-200">${exp.company}</p>
                             <p class="text-md text-gray-400 mb-4">${exp.dates}</p>
                             <ul class="list-disc list-inside text-gray-200 space-y-2">
@@ -85,7 +85,9 @@ document.addEventListener('DOMContentLoaded', () => {
                                 if (link.url.includes('.pdf') || link.url.includes('.png') || link.url.includes('.jpg')) {
                                   linkUrl = `${s3BaseUrl}${link.url}`;
                                 }
-                                projectLinksHtml += `<a href="${linkUrl}" target="_blank" class="text-cyan-400 hover:underline flex items-center mb-2"><i class="${link.icon} mr-1"></i>${link.name}</a>`;
+                                // Indent the link if it's a repo link
+                                const indentClass = link.icon === 'fab fa-github' ? 'ml-6' : '';
+                                projectLinksHtml += `<a href="${linkUrl}" target="_blank" class="text-cyan-400 hover:underline flex items-center mb-2 ${indentClass}"><i class="${link.icon} mr-1"></i>${link.name}</a>`;
                             });
                             projectLinksHtml += '</div>';
                         }
@@ -106,7 +108,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     data.certifications.forEach(cert => {
                         const certDiv = document.createElement('div');
                         certDiv.className = 'bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 flex items-center space-x-3';
+                        
                         let badgeLinkHtml = '';
+                        if (cert.badgeFile) {
+                            badgeLinkHtml += `<a href="${s3BaseUrl}${cert.badgeFile}" target="_blank" class="text-cyan-400 hover:underline text-sm flex items-center mb-1"><i class="fas fa-award mr-1"></i>View Badge</a>`;
+                        }
+                        if (cert.certificateFile) {
+                            badgeLinkHtml += `<a href="${s3BaseUrl}${cert.certificateFile}" target="_blank" class="text-cyan-400 hover:underline text-sm flex items-center"><i class="fas fa-file-pdf mr-1"></i>View Certificate</a>`;
+                        }
                         
                         // Check for consolidated details (e.g., Google Cloud and Project Management)
                         if (cert.details && cert.details.length > 0) {
@@ -194,7 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('contactForm');
     const formStatus = document.getElementById('formStatus');
 
-    const API_GATEway_URL = 'https://w1hw5b9b4g.execute-api.us-east-1.amazonaws.com/prod/contact';
+    const API_GATEWAY_URL = 'https://w1hw5b9b4g.execute-api.us-east-1.amazonaws.com/prod/contact';
 
     if (contactForm) {
         contactForm.addEventListener('submit', async (event) => {
