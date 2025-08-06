@@ -108,14 +108,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         const certDiv = document.createElement('div');
                         certDiv.className = 'bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 flex items-center space-x-3';
                         
-                        let badgeLinkHtml = '';
-                        if (cert.badgeFile) {
-                             badgeLinkHtml = `<a href="${s3BaseUrl}${cert.badgeFile}" target="_blank" class="text-cyan-400 hover:underline text-sm flex items-center mb-1"><i class="fas fa-award mr-1"></i>View Badge</a>`;
-                        }
-                        if (cert.certificateFile) {
-                             badgeLinkHtml += `<a href="${s3BaseUrl}${cert.certificateFile}" target="_blank" class="text-cyan-400 hover:underline text-sm flex items-center"><i class="fas fa-file-pdf mr-1"></i>View Certificate</a>`;
-                        }
-                        
                         // Check for consolidated details (e.g., Google Cloud and Project Management)
                         if (cert.details && cert.details.length > 0) {
                             const detailsHtml = cert.details.map(detail => `
