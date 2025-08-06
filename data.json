@@ -1,244 +1,186 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Function to populate content from data.json
-    const populateContent = () => {
-        fetch('data.json')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.json();
-            })
-            .then(data => {
-                // S3 Base URL for your assets
-                const s3BaseUrl = 'https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/';
-
-                // Populate About section
-                const aboutSection = document.getElementById('about');
-                if (aboutSection) {
-                    const aboutContentDiv = aboutSection.querySelector('.container.mx-auto.px-4.max-w-4xl');
-                    if (aboutContentDiv) {
-                        const existingParagraphs = aboutContentDiv.querySelectorAll('p:not(.section-title)');
-                        existingParagraphs.forEach(p => p.remove());
-
-                        data.about.paragraphs.forEach(paragraphText => {
-                            const p = document.createElement('p');
-                            p.className = 'text-lg leading-relaxed mb-4';
-                            p.textContent = paragraphText;
-                            aboutContentDiv.appendChild(p);
-                        });
-                    }
-                }
-
-                // Populate Skills section
-                const skillsContainer = document.querySelector('#skills .grid');
-                if (skillsContainer) {
-                    skillsContainer.innerHTML = '';
-                    data.skills.forEach(skill => {
-                        const skillDiv = document.createElement('div');
-                        skillDiv.className = 'bg-gray-800 p-6 rounded-lg shadow-md border-t-4 border-cyan-500 hover:shadow-xl transition duration-300 flex items-start space-x-4';
-                        skillDiv.innerHTML = `
-                            <i class="fas fa-cloud text-cyan-400 text-2xl mt-1"></i>
-                            <div>
-                                <h3 class="font-semibold text-xl mb-2 text-cyan-400">${skill.title}</h3>
-                                <p class="text-gray-300">${skill.description}</p>
-                            </div>
-                        `;
-                        skillsContainer.appendChild(skillDiv);
-                    });
-                }
-
-                // Populate Experience section
-                const experienceContainer = document.querySelector('#experience .space-y-8');
-                if (experienceContainer) {
-                    experienceContainer.innerHTML = '';
-                    data.experience.forEach(exp => {
-                        const expDiv = document.createElement('div');
-                        expDiv.className = 'bg-gray-950 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300';
-                        const responsibilitiesHtml = exp.responsibilities.map(resp => `<li>${resp}</li>`).join('');
-                        expDiv.innerHTML = `
-                            <h3 class="text-xl font-semibold text-cyan-400">${exp.title}</h3>
-                            <p class="text-lg text-gray-200">${exp.company}</p>
-                            <p class="text-md text-gray-400 mb-4">${exp.dates}</p>
-                            <ul class="list-disc list-inside text-gray-200 space-y-2">
-                                ${responsibilitiesHtml}
-                            </ul>
-                        `;
-                        experienceContainer.appendChild(expDiv);
-                    });
-                }
-
-                // Populate Projects section
-                const projectsContainer = document.querySelector('#projects .grid');
-                if (projectsContainer) {
-                    projectsContainer.innerHTML = '';
-                    data.projects.forEach(project => {
-                        const projectDiv = document.createElement('div');
-                        projectDiv.className = 'bg-gray-800 p-6 rounded-lg shadow-md border-l-4 border-cyan-500 hover:shadow-xl transition duration-300';
-
-                        let contentHtml = `<p class="text-gray-300">${project.description}</p>`;
-                        
-                        let projectLinksHtml = '';
-                        if (project.links && project.links.length > 0) {
-                            projectLinksHtml += '<div class="mt-4 space-y-2 text-sm flex flex-col">';
-                            project.links.forEach(link => {
-                                let linkUrl = link.url;
-                                if (link.url.includes('.pdf') || link.url.includes('.png') || link.url.includes('.jpg')) {
-                                  linkUrl = `${s3BaseUrl}${link.url}`;
-                                }
-                                const indentClass = link.icon === 'fab fa-github' ? 'ml-6' : '';
-                                projectLinksHtml += `<a href="${linkUrl}" target="_blank" class="text-cyan-400 hover:underline flex items-center mb-2 ${indentClass}"><i class="${link.icon} mr-1"></i>${link.name}</a>`;
-                            });
-                            projectLinksHtml += '</div>';
-                        }
-                        
-                        projectDiv.innerHTML = `
-                            <h3 class="font-semibold text-xl mb-2 text-cyan-400">${project.title}</h3>
-                            ${contentHtml}
-                            ${projectLinksHtml}
-                        `;
-                        projectsContainer.appendChild(projectDiv);
-                    });
-                }
-
-                // Populate Certifications section
-                const certificationsContainer = document.querySelector('#certifications .flex.flex-wrap.justify-center.items-center.gap-6');
-                if (certificationsContainer) {
-                    certificationsContainer.innerHTML = '';
-                    data.certifications.forEach(cert => {
-                        const certDiv = document.createElement('div');
-                        certDiv.className = 'bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 flex items-center space-x-3';
-                        let badgeLinkHtml = '';
-                        
-                        // Check for consolidated details (e.g., Google Cloud and Project Management)
-                        if (cert.details && cert.details.length > 0) {
-                            const detailsHtml = cert.details.map(detail => `
-                                <div class="flex items-center space-x-2">
-                                    <a href="${s3BaseUrl}${detail.badgeFile}" target="_blank">
-                                        <img src="${s3BaseUrl}${detail.badgeFile}" alt="${detail.name} Badge" class="w-8 h-8 rounded-full">
-                                    </a>
-                                    <div>
-                                        <p class="text-sm font-semibold text-gray-200">${detail.name}</p>
-                                        <p class="text-xs text-gray-400">Issued: ${detail.issueDate}</p>
-                                    </div>
-                                    ${detail.certificateFile ? `<a href="${s3BaseUrl}${detail.certificateFile}" target="_blank" class="text-cyan-400 hover:underline text-xs flex items-center ml-auto"><i class="fas fa-file-pdf"></i></a>` : ''}
-                                </div>
-                            `).join('');
-    
-                            certDiv.innerHTML = `
-                                <img src="${s3BaseUrl}${cert.badgeFile}" alt="${cert.name} Badge" class="w-12 h-12 rounded-full">
-                                <div>
-                                    <h3 class="text-xl font-semibold text-cyan-400">${cert.name}</h3>
-                                    <p class="text-gray-400">Issued: ${cert.issueDate}</p>
-                                    <div class="flex flex-col mt-2 space-y-2">
-                                        ${detailsHtml}
-                                    </div>
-                                </div>
-                            `;
-                        } else {
-                            // Standard single certification entry
-                            certDiv.innerHTML = `
-                                <img src="${s3BaseUrl}${cert.badgeFile}" alt="${cert.name} Badge" class="w-12 h-12 rounded-full">
-                                <div>
-                                    <h3 class="text-xl font-semibold text-cyan-400">${cert.name}</h3>
-                                    <p class="text-gray-400">Issued: ${cert.issueDate}</p>
-                                    <div class="flex flex-col mt-2 space-y-1">
-                                        <a href="${s3BaseUrl}${cert.badgeFile}" target="_blank" class="text-cyan-400 hover:underline text-sm flex items-center mb-1"><i class="fas fa-award mr-1"></i>View Badge</a>
-                                        ${cert.certificateFile ? `<a href="${s3BaseUrl}${cert.certificateFile}" target="_blank" class="text-cyan-400 hover:underline text-sm flex items-center"><i class="fas fa-file-pdf mr-1"></i>View Certificate</a>` : ''}
-                                    </div>
-                                </div>
-                            `;
-                        }
-                        certificationsContainer.appendChild(certDiv);
-                    });
-                }
-
-                // Populate Education Section
-                const educationContainer = document.getElementById('education-list');
-                if (educationContainer) {
-                    educationContainer.innerHTML = '';
-                    data.education.forEach(edu => {
-                        const eduItem = document.createElement('div');
-                        eduItem.className = 'bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300';
-                        eduItem.innerHTML = `
-                            <h3 class="text-xl font-semibold text-cyan-400">${edu.degree}</h3>
-                            <p class="text-lg text-gray-200">${edu.school}</p>
-                            <p class="text-md text-gray-400">${edu.dates}</p>
-                        `;
-                        educationContainer.appendChild(eduItem);
-                    });
-                }
-
-                // Add Resume Link to Hero Section Button
-                const heroResumeLink = document.getElementById('heroResumeLink');
-                if (heroResumeLink && data.resumeFile) {
-                    heroResumeLink.href = `${s3BaseUrl}${data.resumeFile}`;
-                    heroResumeLink.classList.remove('hidden');
-                }
-
-                // Populate Contact information
-                const emailLink = document.querySelector('#contact a[href^="mailto:"]');
-                if (emailLink) {
-                    emailLink.href = `mailto:${data.contact.email}`;
-                }
-                const linkedinLink = document.querySelector('#contact a[href*="linkedin.com"]');
-                if (linkedinLink) {
-                    linkedinLink.href = data.contact.linkedin;
-                    linkedinLink.innerHTML = `<i class="fab fa-linkedin mr-2"></i>Connect on LinkedIn`; 
-                }
-            })
-            .catch(error => console.error('Error fetching data:', error));
-    };
-
-    populateContent();
-
-    // === Contact Form Submission Logic ===
-    const contactForm = document.getElementById('contactForm');
-    const formStatus = document.getElementById('formStatus');
-
-    const API_GATEWAY_URL = 'https://w1hw5b9b4g.execute-api.us-east-1.amazonaws.com/prod/contact';
-
-    if (contactForm) {
-        contactForm.addEventListener('submit', async (event) => {
-            event.preventDefault();
-            formStatus.classList.remove('hidden', 'text-green-500', 'text-red-500');
-            formStatus.classList.add('text-gray-400');
-            formStatus.textContent = 'Sending message...';
-
-            const formData = new FormData(contactForm);
-            const payload = {};
-            for (const [key, value] of formData.entries()) {
-                payload[key] = value;
-            }
-
-            try {
-                const response = await fetch(API_GATEWAY_URL, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(payload),
-                });
-
-                const data = await response.json();
-
-                if (response.ok) {
-                    formStatus.textContent = data.message || 'Message sent successfully!';
-                    formStatus.classList.remove('text-gray-400');
-                    formStatus.classList.add('text-green-500');
-                    contactForm.reset();
-                } else {
-                    formStatus.textContent = data.message || 'Failed to send message. Please try again.';
-                    formStatus.classList.remove('text-gray-400');
-                    formStatus.classList.add('text-red-500');
-                    console.error('API Error:', data);
-                }
-            } catch (error) {
-                formStatus.textContent = 'An error occurred. Check your connection or console.';
-                formStatus.classList.remove('text-gray-400');
-                formStatus.classList.add('text-red-500');
-                console.error('Fetch Error:', error);
-            }
-            formStatus.classList.remove('hidden');
-        });
+{
+  "about": {
+    "paragraphs": [
+      "I am a highly dedicated, organized, and learner-focused professional offering inspirational leadership. My expertise spans instructional design, project management, and cloud architecture, with a focus on leveraging technology to drive business and educational outcomes.",
+      "With a strong foundation in AWS and other cloud platforms, I believe in fostering a positive and innovative management environment. My goal is to contribute to projects that demand creative solutions and a deep understanding of cloud best practices."
+    ]
+  },
+  "skills": [
+    {
+      "title": "AWS and Google Cloud Management",
+      "description": "Proficient in managing a wide range of AWS and Google Cloud services for deployment and operations."
+    },
+    {
+      "title": "Instructional Design",
+      "description": "Designing and developing effective learning programs and curricula."
+    },
+    {
+      "title": "UX Design",
+      "description": "Crafting intuitive and engaging user experiences."
+    },
+    {
+      "title": "Project Management",
+      "description": "Leading projects from conception to successful completion."
+    },
+    {
+      "title": "Programming Fundamentals",
+      "description": "Foundational understanding of programming concepts and languages through CodeCademy coursework."
+    },
+    {
+      "title": "Organizational Leadership",
+      "description": "Providing inspirational leadership and managing non-profit organizations like JDCRO."
     }
-});
+  ],
+  "experience": [
+    {
+      "title": "JDCRO Management",
+      "company": "JoeyDCares Rock Orchestra (Non-Profit)",
+      "dates": "2010 - 2023",
+      "responsibilities": [
+        "Provided inspirational leadership as Executive Director and Founder.",
+        "Managed organizational development, fundraising efforts, and curriculum coordination."
+      ]
+    },
+    {
+      "title": "Web Page Design Internship",
+      "company": "Innovate Connect, Holly Springs, North Carolina",
+      "dates": "Summer 2024",
+      "responsibilities": [
+        "Customized a WordPress theme using HTML and CSS modifications.",
+        "Used Photoshop to edit images for website display.",
+        "Produced and managed web content for an ongoing project.",
+        "Handled design, typesetting, and layout redesign to improve content presentation.",
+        "Conducted user testing to enhance usability."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "AWS Presentation Projects",
+      "description": "A collection of AWS-focused projects documented in presentation format, including this portfolio's backend and other projects showcasing cloud services.",
+      "links": [
+        { "name": "Serverless Contact Form (Live Demo)", "url": "https://jdundor1.d2fqdarkje9in8.amplifyapp.com/", "icon": "fas fa-external-link-alt" },
+        { "name": "Serverless Contact Form (Repo)", "url": "https://github.com/jdundor1/aws-online-portfolio", "icon": "fab fa-github" },
+        { "name": "Serverless Contact Form (Slides)", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/aws-online-portfolio-slides.pdf", "icon": "fas fa-file-pdf" },
+        { "name": "Rekognition Label Detector (Repo)", "url": "https://github.com/jdundor1/aws-rekognition-label-detector", "icon": "fab fa-github" },
+        { "name": "Rekognition Label Detector (Slides)", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/image-labels-generator-amazon-rekognition.pdf", "icon": "fas fa-file-pdf" },
+        { "name": "Daily Task Scheduler (Repo)", "url": "https://github.com/jdundor1/daily-task-scheduler-partyrock", "icon": "fab fa-github" },
+        { "name": "Daily Task Scheduler (Slides)", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/daily-task-scheduler-aws-partyrock.pdf", "icon": "fas fa-file-pdf" }
+      ]
+    },
+    {
+      "title": "Google Cloud Platform Projects",
+      "description": "Projects and badges from the Google Cloud Platform, showcasing multi-cloud experience.",
+      "links": [
+        { "name": "Real-Time Data Pipeline (Repo)", "url": "https://github.com/jdundor1/gcp-real-time-data-pipeline", "icon": "fab fa-github" },
+        { "name": "Real-Time Data Pipeline (Slides)", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/real-time-data-pipeline-bigquery-cloud-functions.pdf", "icon": "fas fa-file-pdf" },
+        { "name": "AI-Powered Chat Bot (Repo)", "url": "https://github.com/jdundor1/ai-customer-support-bot", "icon": "fab fa-github" },
+        { "name": "AI-Powered Chat Bot (Slides)", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/ai-powered-customer-support-bot.pdf", "icon": "fas fa-file-pdf" },
+        { "name": "GCP Compute Engine (Repo)", "url": "https://github.com/jdundor1/gcp-compute-engine", "icon": "fab fa-github" },
+        { "name": "GCP Compute Engine (Slides)", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/getting-started-with-gcp_compute-engine.pdf", "icon": "fas fa-file-pdf" },
+        { "name": "Gemini mini-Project (Repo)", "url": "https://github.com/jdundor1/gemini-mini-project", "icon": "fab fa-github" },
+        { "name": "Gemini mini-Project (Slides)", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/gemini-mini-project.pdf", "icon": "fas fa-file-pdf" },
+        { "name": "GCP Cloud Resume Challenge (Repo)", "url": "https://github.com/jdundor1/gcp-cloud-resume-challenge", "icon": "fab fa-github" },
+        { "name": "GCP Cloud Resume Challenge (Slides)", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/gcp-cloud-resume-challenge-2023.pdf", "icon": "fas fa-file-pdf" }
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Certified Solutions Architect - Professional",
+      "issueDate": "March 2025",
+      "badgeFile": "certifications/aws-certified-solutions-architect-professional-badge.png",
+      "certificateFile": "certifications/aws-certified-solutions-architect-pro.pdf"
+    },
+    {
+      "name": "Google Cloud Platform Certifications",
+      "issueDate": "2023-2024",
+      "badgeFile": "certifications/google-badge-1.png",
+      "details": [
+        {
+          "name": "Google Cloud Certified Professional Cloud Architect",
+          "issueDate": "2023",
+          "badgeFile": "certifications/google-badge-1.png",
+          "certificateFile": "certifications/gcp-cloud-architect.pdf"
+        },
+        {
+          "name": "Google Cloud Certified Professional Cloud Security Engineer",
+          "issueDate": "2024",
+          "badgeFile": "certifications/google-badge-2.png",
+          "certificateFile": "certifications/gcp_security_engineer.pdf"
+        },
+        {
+          "name": "Google Cloud Certified Professional Data Engineer",
+          "issueDate": "2023",
+          "badgeFile": "certifications/google-badge-3.png",
+          "certificateFile": "certifications/gcp-data-engineer.pdf"
+        },
+        {
+          "name": "Google Cloud Certified Cloud Digital Leader",
+          "issueDate": "2023",
+          "badgeFile": "certifications/google-badge-4.png",
+          "certificateFile": "certifications/gcp-cloud-digital-leader.pdf"
+        }
+      ]
+    },
+    {
+      "name": "Project Management Certifications",
+      "issueDate": "2022-2025",
+      "badgeFile": "certifications/pm-cert.png",
+      "details": [
+        {
+          "name": "PMP Certification",
+          "issueDate": "August 2022 (Recertified August 2025)",
+          "badgeFile": "certifications/pm-cert.png",
+          "certificateFile": "certifications/pmp-certification.pdf"
+        },
+        {
+          "name": "Google Project Management",
+          "issueDate": "2023",
+          "badgeFile": "certifications/google-badge-5.png",
+          "certificateFile": "certifications/google-project-management.pdf"
+        }
+      ]
+    },
+    {
+      "name": "Certified in Cybersecurity (CC)",
+      "issueDate": "October 2023",
+      "badgeFile": "certifications/certified-in-cybersecurity-cc.png",
+      "certificateFile": "certifications/certified-in-cybersecurity-cc-certificate.pdf"
+    },
+    {
+      "name": "CodeCademy Language Certs",
+      "issueDate": "2021-2023",
+      "badgeFile": "certifications/codecademy-badge.png",
+      "certificateFile": null
+    },
+    {
+      "name": "UX Certifications",
+      "issueDate": "January to August 2022",
+      "badgeFile": "certifications/ux-cert.png",
+      "certificateFile": null
+    }
+  ],
+  "education": [
+    {
+      "degree": "Masters of Education | Instructional Design and Technology",
+      "school": "Western Governors University",
+      "dates": "July 2020 - January 2021"
+    },
+    {
+      "degree": "Masters in the Art of Teaching | Music",
+      "school": "University of the Arts – Philadelphia",
+      "dates": "January 2004 - May 2005"
+    },
+    {
+      "degree": "Bachelor of Music | Professional Music",
+      "school": "Berklee College of Music",
+      "dates": "January 1999 - May 2002"
+    }
+  ],
+  "contact": {
+    "email": "jdundor@wgu.edu",
+    "linkedin": "https://www.linkedin.com/in/joedundore"
+  },
+  "resumeFile": "resume/dundore-resume-2025.pdf"
+  }
