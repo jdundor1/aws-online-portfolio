@@ -11,28 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(data => {
                 // S3 Base URL for your assets
                 const s3BaseUrl = 'https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/';
-
-                // Populate About section
-                const aboutSection = document.getElementById('about');
-                if (aboutSection) {
-                    const aboutContentDiv = aboutSection.querySelector('.container.mx-auto.px-4.max-w-4xl');
-                    if (aboutContentDiv) {
-                        const existingParagraphs = aboutContentDiv.querySelectorAll('p:not(.section-title)');
-                        existingParagraphs.forEach(p => p.remove());
-
-                        data.about.paragraphs.forEach(paragraphText => {
-                            const p = document.createElement('p');
-                            p.className = 'text-lg leading-relaxed mb-4';
-                            p.textContent = paragraphText;
-                            aboutContentDiv.appendChild(p);
-                        });
-                    }
-                }
                 
                 // Check if we are on the blog page or the homepage
                 const isBlogPage = window.location.pathname.includes('blog.html');
 
                 if (isBlogPage) {
+                    // Populate blog page content
                     const blogPostsContainer = document.getElementById('blog-post-list');
                     if (blogPostsContainer) {
                         blogPostsContainer.innerHTML = '';
@@ -67,6 +51,22 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 } else {
                     // This is the homepage logic
+                    const aboutSection = document.getElementById('about');
+                    if (aboutSection) {
+                        const aboutContentDiv = aboutSection.querySelector('.container.mx-auto.px-4.max-w-4xl');
+                        if (aboutContentDiv) {
+                            const existingParagraphs = aboutContentDiv.querySelectorAll('p:not(.section-title)');
+                            existingParagraphs.forEach(p => p.remove());
+
+                            data.about.paragraphs.forEach(paragraphText => {
+                                const p = document.createElement('p');
+                                p.className = 'text-lg leading-relaxed mb-4';
+                                p.textContent = paragraphText;
+                                aboutContentDiv.appendChild(p);
+                            });
+                        }
+                    }
+
                     const skillsContainer = document.querySelector('#skills .grid');
                     if (skillsContainer) {
                         skillsContainer.innerHTML = '';
@@ -141,8 +141,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         data.certifications.forEach(cert => {
                             const certDiv = document.createElement('div');
                             certDiv.className = 'bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 flex items-center space-x-3';
-                            let badgeLinkHtml = '';
                             
+                            let badgeLinkHtml = '';
                             if (cert.badgeFile) {
                                  badgeLinkHtml = `<a href="${s3BaseUrl}${cert.badgeFile}" target="_blank" class="text-cyan-400 hover:underline text-sm flex items-center mb-1"><i class="fas fa-award mr-1"></i>View Badge</a>`;
                             }
