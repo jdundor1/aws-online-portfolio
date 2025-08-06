@@ -51,22 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 } else {
                     // This is the homepage logic
-                    const aboutSection = document.getElementById('about');
-                    if (aboutSection) {
-                        const aboutContentDiv = aboutSection.querySelector('.container.mx-auto.px-4.max-w-4xl');
-                        if (aboutContentDiv) {
-                            const existingParagraphs = aboutContentDiv.querySelectorAll('p:not(.section-title)');
-                            existingParagraphs.forEach(p => p.remove());
-
-                            data.about.paragraphs.forEach(paragraphText => {
-                                const p = document.createElement('p');
-                                p.className = 'text-lg leading-relaxed mb-4';
-                                p.textContent = paragraphText;
-                                aboutContentDiv.appendChild(p);
-                            });
-                        }
-                    }
-
                     const skillsContainer = document.querySelector('#skills .grid');
                     if (skillsContainer) {
                         skillsContainer.innerHTML = '';
@@ -141,14 +125,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         data.certifications.forEach(cert => {
                             const certDiv = document.createElement('div');
                             certDiv.className = 'bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 flex items-center space-x-3';
-                            
-                            let badgeLinkHtml = '';
-                            if (cert.badgeFile) {
-                                 badgeLinkHtml = `<a href="${s3BaseUrl}${cert.badgeFile}" target="_blank" class="text-cyan-400 hover:underline text-sm flex items-center mb-1"><i class="fas fa-award mr-1"></i>View Badge</a>`;
-                            }
-                            if (cert.certificateFile) {
-                                 badgeLinkHtml += `<a href="${s3BaseUrl}${cert.certificateFile}" target="_blank" class="text-cyan-400 hover:underline text-sm flex items-center"><i class="fas fa-file-pdf mr-1"></i>View Certificate</a>`;
-                            }
                             
                             if (cert.details && cert.details.length > 0) {
                                 const detailsHtml = cert.details.map(detail => `
