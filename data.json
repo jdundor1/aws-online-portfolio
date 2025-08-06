@@ -42,6 +42,17 @@
       ]
     },
     {
+      "title": "Awesome Kids Program Management",
+      "company": "Awesome Kids Program",
+      "dates": "2013 - 2020",
+      "responsibilities": [
+        "Started with two students, grew to 50+.",
+        "Conducted hiring process with all employees.",
+        "Created classes and wrote curriculum for art, music, cooking, languages, math, engineering, photography.",
+        "Logistics for employee and bus schedules."
+      ]
+    },
+    {
       "title": "Web Page Design Internship",
       "company": "Innovate Connect, Holly Springs, North Carolina",
       "dates": "Summer 2024",
@@ -124,8 +135,8 @@
       ]
     },
     {
-      "name": "Project Management Certifications",
-      "issueDate": "2022-2025",
+      "name": "PMP and other Project Management Certifications",
+      "issueDate": "August 2022, Recertified August 2025",
       "badgeFile": "certifications/pm-cert.png",
       "details": [
         {
@@ -183,4 +194,4 @@
     "linkedin": "https://www.linkedin.com/in/joedundore"
   },
   "resumeFile": "resume/dundore-resume-2025.pdf"
-  }
+}
