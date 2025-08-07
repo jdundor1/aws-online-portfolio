@@ -191,6 +191,22 @@
     "email": "jdundor@wgu.edu",
     "linkedin": "https://www.linkedin.com/in/joedundore"
   },
+  "blog": [
+    {
+      "title": "Building a Serverless Contact Form on AWS: A Step-by-Step Guide",
+      "date": "August 6, 2025",
+      "content": "In this post, I walk through the architecture and implementation of my portfolio's contact form, a project that demonstrates core serverless skills using AWS Amplify, API Gateway, Lambda, and DynamoDB. I discuss the key decisions made and the benefits of using a pay-per-use model for a high-availability, low-cost solution.",
+      "links": [
+        { "name": "View Project Architecture", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/aws-online-portfolio-slides.pdf", "icon": "fas fa-file-pdf" },
+        { "name": "View GitHub Repository", "url": "https://github.com/jdundor1/aws-online-portfolio", "icon": "fab fa-github" }
+      ]
+    },
+    {
+      "title": "Why I Chose a Multi-Cloud Approach: AWS and Google Cloud",
+      "date": "July 28, 2025",
+      "content": "This post explores the strategic advantages of having a multi-cloud skill set. I discuss my experience and certifications with both AWS and Google Cloud Platform, and why having expertise in both ecosystems can make a professional more versatile and valuable to an organization.",
+      "links": []
+    }
+  ],
   "resumeFile": "resume/dundore-resume-2025.pdf"
-  },
 }
