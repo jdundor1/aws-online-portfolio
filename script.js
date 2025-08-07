@@ -51,6 +51,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 } else {
                     // This is the homepage logic
+
+                    // *** ADDED: Populate About Me Section ***
+                    const aboutContainer = document.getElementById('about-content');
+                    if (aboutContainer && data.about) {
+                        aboutContainer.innerHTML = data.about.paragraphs.map(p => `<p>${p}</p>`).join('');
+                    }
+
                     const skillsContainer = document.querySelector('#skills .grid');
                     if (skillsContainer) {
                         skillsContainer.innerHTML = '';
