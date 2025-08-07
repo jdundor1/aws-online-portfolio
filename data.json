@@ -98,36 +98,30 @@
     {
       "name": "AWS Certified Solutions Architect - Professional",
       "issueDate": "March 2025",
-      "badgeFile": "certifications/aws-certified-solutions-architect-professional.png",
       "certificateFile": "certifications/aws-certified-solutions-architect-pro.pdf"
     },
     {
       "name": "Google Cloud Platform Certifications",
       "issueDate": "2023-2024",
-      "badgeFile": "certifications/google-badge-1.png",
       "details": [
         {
           "name": "Google Cloud Certified Professional Cloud Architect",
           "issueDate": "2023",
-          "badgeFile": "certifications/google-badge-1.png",
           "certificateFile": "certifications/gcp-cloud-architect.pdf"
         },
         {
           "name": "Google Cloud Certified Professional Cloud Security Engineer",
           "issueDate": "2024",
-          "badgeFile": "certifications/google-badge-2.png",
           "certificateFile": "certifications/gcp_security_engineer.pdf"
         },
         {
           "name": "Google Cloud Certified Professional Data Engineer",
           "issueDate": "2023",
-          "badgeFile": "certifications/google-badge-3.png",
           "certificateFile": "certifications/gcp-data-engineer.pdf"
         },
         {
           "name": "Google Cloud Certified Cloud Digital Leader",
           "issueDate": "2023",
-          "badgeFile": "certifications/google-badge-4.png",
           "certificateFile": "certifications/gcp-digital-cloud-leader.pdf"
         }
       ]
@@ -135,30 +129,25 @@
     {
       "name": "Project Management Certifications",
       "issueDate": "2022-2025",
-      "badgeFile": "certifications/pm-cert.png",
       "details": [
         {
           "name": "PMP Certification",
           "issueDate": "August 2022 (Recertified August 2025)",
-          "badgeFile": "certifications/pm-cert.png",
           "certificateFile": "certifications/pmp-certification.pdf"
         },
         {
           "name": "Pro Scrum Master I",
           "issueDate": "November 2022",
-          "badgeFile": null,
           "certificateFile": "certifications/pro-scrum-master-i.pdf"
         },
         {
           "name": "Pro Scrum Product Owner I",
           "issueDate": "November 2022",
-          "badgeFile": null,
           "certificateFile": "certifications/pro-scrum-product-owner-i.pdf"
         },
         {
           "name": "Google Project Management",
           "issueDate": "2023",
-          "badgeFile": "certifications/google-badge-5.png",
           "certificateFile": "certifications/google-project-management.pdf"
         }
       ]
@@ -166,53 +155,57 @@
     {
       "name": "Certified in Cybersecurity (CC)",
       "issueDate": "October 2023",
-      "badgeFile": "certifications/certified-in-cybersecurity-cc.png",
       "certificateFile": "certifications/ISC2-CC-Cert.jpeg"
     },
     {
-      "name": "CodeCademy Language Certs",
-      "issueDate": "2021-2023",
-      "certificateFile": null
-
-      "name": "Analyze Data with SQL",
-      "certificateFile": "certifications/analyze_data_with_SQL.pdf",
-      "icon": "fas fa-file-pdf"
-
-      "name": "Data Analysis with Pandas",
-      "certificateFile": "certifications/data-analysis-pandas.pdf",
-      "icon": "fas fa-file-pdf"
-
-      "name": "Learn HTML",
-      "certificateFile": "certifications/html-course.pdf",
-      "icon": "fas fa-file-pdf"
-
-      "name": "Intro to C#",
-      "certificateFile": "certifications/intro-c-sharp.pdf",
-      "icon": "fas fa-file-pdf"
-
-      "name": "Learn Kotlin",
-      "certificateFile": "certifications/kotlin-cert.pdf",
-      "icon": "fas fa-file-pdf"
-
-      "name": "Learn the Command Line",
-      "certificateFile": "certifications/learn-command-line.pdf",
-      "icon": "fas fa-file-pdf"
-
-      "name": "Learn JavaScript",
-      "certificateFile": "certifications/learn-javascript.pdf",
-      "icon": "fas fa-file-pdf"
-
-      "name": "Learn SQL",
-      "certificateFile": "certifications/learn-sql.pdf",
-      "icon": "fas fa-file-pdf"
-
-      "name": "Learn Python Three",
-      "certificateFile": "certifications/learn-python-three.pdf",
-      "icon": "fas fa-file-pdf"
-    },
-    {
-      "name": "UX Certifications (contact joe)",
-      "issueDate": "January to August 2022"
+      "name": "Codecademy Language Certifications",
+      "details": [
+        {
+          "name": "Analyze Data with SQL",
+          "certificateFile": "certifications/analyze_data_with_SQL.pdf",
+          "icon": "fas fa-file-pdf"
+        },
+        {
+          "name": "Data Analysis with Pandas",
+          "certificateFile": "certifications/data-analysis-pandas.pdf",
+          "icon": "fas fa-file-pdf"
+        },
+        {
+          "name": "Learn HTML",
+          "certificateFile": "certifications/html-course.pdf",
+          "icon": "fas fa-file-pdf"
+        },
+        {
+          "name": "Intro to C#",
+          "certificateFile": "certifications/intro-c-sharp.pdf",
+          "icon": "fas fa-file-pdf"
+        },
+        {
+          "name": "Learn Kotlin",
+          "certificateFile": "certifications/kotlin-cert.pdf",
+          "icon": "fas fa-file-pdf"
+        },
+        {
+          "name": "Learn the Command Line",
+          "certificateFile": "certifications/learn-command-line.pdf",
+          "icon": "fas fa-file-pdf"
+        },
+        {
+          "name": "Learn JavaScript",
+          "certificateFile": "certifications/learn-javascript.pdf",
+          "icon": "fas fa-file-pdf"
+        },
+        {
+          "name": "Learn SQL",
+          "certificateFile": "certifications/learn-sql.pdf",
+          "icon": "fas fa-file-pdf"
+        },
+        {
+          "name": "Learn Python Three",
+          "certificateFile": "certifications/learn-python-three.pdf",
+          "icon": "fas fa-file-pdf"
+        }
+      ]
     }
   ],
   "education": [
