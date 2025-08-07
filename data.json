@@ -172,77 +172,47 @@
     {
       "name": "CodeCademy Language Certs",
       "issueDate": "2021-2023",
-      "badgeFile": null,
       "certificateFile": null
-    },
-    {
+
       "name": "Analyze Data with SQL",
-      "issueDate": null,
-      "badgeFile": null,
       "certificateFile": "certifications/analyze_data_with_SQL.pdf",
       "icon": "fas fa-file-pdf"
-    },
-    {
+
       "name": "Data Analysis with Pandas",
-      "issueDate": null,
-      "badgeFile": null,
       "certificateFile": "certifications/data-analysis-pandas.pdf",
       "icon": "fas fa-file-pdf"
-    },
-    {
+
       "name": "Learn HTML",
-      "issueDate": null,
-      "badgeFile": null,
       "certificateFile": "certifications/html-course.pdf",
       "icon": "fas fa-file-pdf"
-    },
-    {
+
       "name": "Intro to C#",
-      "issueDate": null,
-      "badgeFile": null,
       "certificateFile": "certifications/intro-c-sharp.pdf",
       "icon": "fas fa-file-pdf"
-    },
-    {
+
       "name": "Learn Kotlin",
-      "issueDate": null,
-      "badgeFile": null,
       "certificateFile": "certifications/kotlin-cert.pdf",
       "icon": "fas fa-file-pdf"
-    },
-    {
+
       "name": "Learn the Command Line",
-      "issueDate": null,
-      "badgeFile": null,
       "certificateFile": "certifications/learn-command-line.pdf",
       "icon": "fas fa-file-pdf"
-    },
-    {
+
       "name": "Learn JavaScript",
-      "issueDate": null,
-      "badgeFile": null,
       "certificateFile": "certifications/learn-javascript.pdf",
       "icon": "fas fa-file-pdf"
-    },
-    {
+
       "name": "Learn SQL",
-      "issueDate": null,
-      "badgeFile": null,
       "certificateFile": "certifications/learn-sql.pdf",
       "icon": "fas fa-file-pdf"
-    },
-    {
+
       "name": "Learn Python Three",
-      "issueDate": null,
-      "badgeFile": null,
       "certificateFile": "certifications/learn-python-three.pdf",
       "icon": "fas fa-file-pdf"
     },
     {
-      "name": "UX Certifications",
-      "issueDate": "January to August 2022",
-      "badgeFile": null,
-      "certificateFile": null
+      "name": "UX Certifications (contact joe)",
+      "issueDate": "January to August 2022"
     }
   ],
   "education": [
