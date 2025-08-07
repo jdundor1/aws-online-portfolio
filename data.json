@@ -70,8 +70,6 @@
       "title": "AWS Presentation Projects",
       "description": "A collection of AWS-focused projects documented in presentation format, including this portfolio's backend and other projects showcasing cloud services.",
       "links": [
-        { "name": "Serverless Contact Form (Live Demo)", "url": "https://jdundor1.d2fqdarkje9in8.amplifyapp.com/", "icon": "fas fa-external-link-alt" },
-        { "name": "Serverless Contact Form (Repo)", "url": "https://github.com/jdundor1/aws-online-portfolio", "icon": "fab fa-github" },
         { "name": "Serverless Contact Form (Slides)", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/aws-online-portfolio-slides.pdf", "icon": "fas fa-file-pdf" },
         { "name": "Rekognition Label Detector (Repo)", "url": "https://github.com/jdundor1/aws-rekognition-label-detector", "icon": "fab fa-github" },
         { "name": "Rekognition Label Detector (Slides)", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/image-labels-generator-amazon-rekognition.pdf", "icon": "fas fa-file-pdf" },
@@ -157,7 +155,7 @@
       "name": "Certified in Cybersecurity (CC)",
       "issueDate": "October 2023",
       "badgeFile": "certifications/certified-in-cybersecurity-cc.png",
-      "certificateFile": "certifications/certified-in-cybersecurity-cc-certificate.pdf"
+      "certificateFile": "certifications/ISC2-CC-Cert.jpeg"
     },
     {
       "name": "CodeCademy Language Certs",
@@ -195,21 +193,4 @@
   },
   "resumeFile": "resume/dundore-resume-2025.pdf"
   },
-  "blog": [
-    {
-      "title": "Building a Serverless Contact Form on AWS: A Step-by-Step Guide",
-      "date": "August 6, 2025",
-      "content": "In this post, I walk through the architecture and implementation of my portfolio's contact form, a project that demonstrates core serverless skills using AWS Amplify, API Gateway, Lambda, and DynamoDB. I discuss the key decisions made and the benefits of using a pay-per-use model for a high-availability, low-cost solution.",
-      "links": [
-        { "name": "View Project Architecture", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/aws-online-portfolio-slides.pdf", "icon": "fas fa-file-pdf" },
-        { "name": "View GitHub Repository", "url": "https://github.com/jdundor1/aws-online-portfolio", "icon": "fab fa-github" }
-      ]
-    },
-    {
-      "title": "Why I Chose a Multi-Cloud Approach: AWS and Google Cloud",
-      "date": "July 28, 2025",
-      "content": "This post explores the strategic advantages of having a multi-cloud skill set. I discuss my experience and certifications with both AWS and Google Cloud Platform, and why having expertise in both ecosystems can make a professional more versatile and valuable to an organization.",
-      "links": []
-    }
-  ]
 }
