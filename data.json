@@ -177,7 +177,7 @@
         { "name": "Learn Kotlin", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/certifications/kotlin-cert.pdf", "icon": "fas fa-file-pdf" },
         { "name": "Learn the Command Line", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/certifications/learn-command-line.pdf", "icon": "fas fa-file-pdf" },
         { "name": "Learn JavaScript", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/certifications/learn-javascript.pdf", "icon": "fas fa-file-pdf" },
-        { "name": "Learn Python”, "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/certifications/learn-python-3.pdf", "icon": "fas fa-file-pdf" },
+        { "name": "Learn Python 3”, "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/certifications/learn-python-three.pdf", "icon": "fas fa-file-pdf" },
         { "name": "Learn SQL", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/certifications/learn-sql.pdf", "icon": "fas fa-file-pdf" }
     },
     {
