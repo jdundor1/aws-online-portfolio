@@ -146,11 +146,13 @@
         {
           "name": "Pro Scrum Master I",
           "issueDate": "November 2022",
+          "badgeFile": null,
           "certificateFile": "certifications/pro-scrum-master-i.pdf"
         },
         {
           "name": "Pro Scrum Product Owner I",
           "issueDate": "November 2022",
+          "badgeFile": null,
           "certificateFile": "certifications/pro-scrum-product-owner-i.pdf"
         },
         {
@@ -170,15 +172,62 @@
     {
       "name": "CodeCademy Language Certs",
       "issueDate": "2021-2023",
-        "name": "Analyze Data with SQL", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/certifications/analyze_data_with_SQL.pdf", "icon": "fas fa-file-pdf",
-        "name": "Data Analysis with Pandas", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/certifications/data-analysis-pandas.pdf", "icon": "fas fa-file-pdf",
-        "name": "Learn HTML", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/certifications/html-course.pdf", "icon": "fas fa-file-pdf",
-        "name": "Intro to C#", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/certifications/intro-c-sharp.pdf", "icon": "fas fa-file-pdf",
-        "name": "Learn Kotlin", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/certifications/kotlin-cert.pdf", "icon": "fas fa-file-pdf",
-        "name": "Learn the Command Line", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/certifications/learn-command-line.pdf", "icon": "fas fa-file-pdf",
-        "name": "Learn JavaScript", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/certifications/learn-javascript.pdf", "icon": "fas fa-file-pdf",
-        "name": "Learn SQL", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/certifications/learn-sql.pdf", "icon": "fas fa-file-pdf",
-        "name": "Learn Python Three", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/certifications/learn-python-three.pdf", "icon": "fas fa-file-pdf"
+      "badgeFile": null
+      "certificateFile": null
+    },
+    {
+      "name": "Analyze Data with SQL",
+      "issueDate": null 
+      "badgeFile": null
+      "certificateFile": "certifications/analyze_data_with_SQL.pdf", "icon": "fas fa-file-pdf"
+    },
+    {
+      "name": "Data Analysis with Pandas",
+      "issueDate": null 
+      "badgeFile": null
+      "certificateFile": "certifications/data-analysis-pandas.pdf", "icon": "fas fa-file-pdf"
+    },
+    {  
+      "name": "Learn HTML",
+      "issueDate": null 
+      "badgeFile": null
+      "certificateFile": "certifications/html-course.pdf", "icon": "fas fa-file-pdf"
+    },
+    {  
+      "name": "Intro to C#",
+      "issueDate": null 
+      "badgeFile": null
+      "certificateFile": "certifications/intro-c-sharp.pdf", "icon": "fas fa-file-pdf"
+    },
+    {  
+      "name": "Learn Kotlin",
+      "issueDate": null 
+      "badgeFile": null
+      "certificateFile": "certifications/kotlin-cert.pdf", "icon": "fas fa-file-pdf"
+    },
+    {    
+      "name": "Learn the Command Line",
+      "issueDate": null
+      "badgeFile": null
+      "certificateFile": "certifications/learn-command-line.pdf", "icon": "fas fa-file-pdf"
+    },
+    {    
+      "name": "Learn JavaScript",
+      "issueDate": null
+      "badgeFile": null 
+      "certificateFile": "certifications/learn-javascript.pdf", "icon": "fas fa-file-pdf"
+    },
+    {    
+      "name": "Learn SQL",
+      "issueDate": null
+      "badgeFile": null 
+      "certificateFile": "certifications/learn-sql.pdf", "icon": "fas fa-file-pdf"
+    },
+    {    
+      "name": "Learn Python Three",
+      "issueDate": null
+      "badgeFile": null 
+      "certificateFile": "learn-python-three.pdf", "icon": "fas fa-file-pdf"
     },
     {
       "name": "UX Certifications",
