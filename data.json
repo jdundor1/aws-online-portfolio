@@ -98,7 +98,7 @@
     {
       "name": "AWS Certified Solutions Architect - Professional",
       "issueDate": "March 2025",
-      "badgeFile": "certifications/aws-certified-solutions-architect-professional-badge.png",
+      "badgeFile": "certifications/aws-certified-solutions-architect-professional.png",
       "certificateFile": "certifications/aws-certified-solutions-architect-pro.pdf"
     },
     {
@@ -128,7 +128,7 @@
           "name": "Google Cloud Certified Cloud Digital Leader",
           "issueDate": "2023",
           "badgeFile": "certifications/google-badge-4.png",
-          "certificateFile": "certifications/gcp-cloud-digital-leader.pdf"
+          "certificateFile": "certifications/gcp-digital-cloud-leader.pdf"
         }
       ]
     },
@@ -142,6 +142,16 @@
           "issueDate": "August 2022 (Recertified August 2025)",
           "badgeFile": "certifications/pm-cert.png",
           "certificateFile": "certifications/pmp-certification.pdf"
+        },
+          {
+          "name": "Pro Scrum Master I",
+          "issueDate": "November 2022",
+          "certificateFile": "certifications/pro-scrum-master-I.pdf"
+        },
+          {
+          "name": "Pro Scrum Product Owner I",
+          "issueDate": "November 2022",
+          "certificateFile": "certifications/pro-scrum-product-owner-I.pdf"
         },
         {
           "name": "Google Project Management",
@@ -160,13 +170,20 @@
     {
       "name": "CodeCademy Language Certs",
       "issueDate": "2021-2023",
-      "badgeFile": "certifications/codecademy-badge.png",
-      "certificateFile": null
+        { "name": "Analyze Data with SQL", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/certifications/analyze_data_with_SQL.pdf", "icon": "fas fa-file-pdf" },
+        { "name": "Data Analysis with Pandas "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/certifications/data-analysis-pandas.pdf", "icon": "fas fa-file-pdf" },
+        { "name": "Learn HTML", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/certifications/html-course.pdf", "icon": "fas fa-file-pdf" },
+        { "name": "Intro to C#", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/certifications/intro-c-sharp.pdf", "icon": "fas fa-file-pdf" },
+        { "name": "Learn Kotlin", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/certifications/kotlin-cert.pdf", "icon": "fas fa-file-pdf" },
+        { "name": "Learn the Command Line", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/certifications/learn-command-line.pdf", "icon": "fas fa-file-pdf" },
+        { "name": "Learn JavaScript", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/certifications/learn-javascript.pdf", "icon": "fas fa-file-pdf" },
+        { "name": "Learn Python”, "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/certifications/learn-python-3.pdf", "icon": "fas fa-file-pdf" },
+        { "name": "Learn SQL", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/certifications/learn-sql.pdf", "icon": "fas fa-file-pdf" }
     },
     {
       "name": "UX Certifications",
       "issueDate": "January to August 2022",
-      "badgeFile": "certifications/ux-cert.png",
+      "badgeFile": null
       "certificateFile": null
     }
   ],
