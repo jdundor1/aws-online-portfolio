@@ -171,7 +171,7 @@
       "name": "CodeCademy Language Certs",
       "issueDate": "2021-2023",
         { "name": "Analyze Data with SQL", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/certifications/analyze_data_with_SQL.pdf", "icon": "fas fa-file-pdf" },
-        { "name": "Data Analysis with Pandas "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/certifications/data-analysis-pandas.pdf", "icon": "fas fa-file-pdf" },
+        { "name": "Data Analysis with Pandas", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/certifications/data-analysis-pandas.pdf", "icon": "fas fa-file-pdf" },
         { "name": "Learn HTML", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/certifications/html-course.pdf", "icon": "fas fa-file-pdf" },
         { "name": "Intro to C#", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/certifications/intro-c-sharp.pdf", "icon": "fas fa-file-pdf" },
         { "name": "Learn Kotlin", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/certifications/kotlin-cert.pdf", "icon": "fas fa-file-pdf" },
