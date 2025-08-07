@@ -11,23 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(data => {
                 // S3 Base URL for your assets
                 const s3BaseUrl = 'https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/';
-
-                // Populate About section
-                const aboutSection = document.getElementById('about');
-                if (aboutSection) {
-                    const aboutContentDiv = aboutSection.querySelector('.container.mx-auto.px-4.max-w-4xl');
-                    if (aboutContentDiv) {
-                        const existingParagraphs = aboutContentDiv.querySelectorAll('p:not(.section-title)');
-                        existingParagraphs.forEach(p => p.remove());
-
-                        data.about.paragraphs.forEach(paragraphText => {
-                            const p = document.createElement('p');
-                            p.className = 'text-lg leading-relaxed mb-4';
-                            p.textContent = paragraphText;
-                            aboutContentDiv.appendChild(p);
-                        });
-                    }
-                }
                 
                 // Check if we are on the blog page or the homepage
                 const isBlogPage = window.location.pathname.includes('blog.html');
@@ -68,6 +51,22 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 } else {
                     // This is the homepage logic
+                    const aboutSection = document.getElementById('about');
+                    if (aboutSection) {
+                        const aboutContentDiv = aboutSection.querySelector('.container.mx-auto.px-4.max-w-4xl');
+                        if (aboutContentDiv) {
+                            const existingParagraphs = aboutContentDiv.querySelectorAll('p:not(.section-title)');
+                            existingParagraphs.forEach(p => p.remove());
+
+                            data.about.paragraphs.forEach(paragraphText => {
+                                const p = document.createElement('p');
+                                p.className = 'text-lg leading-relaxed mb-4';
+                                p.textContent = paragraphText;
+                                aboutContentDiv.appendChild(p);
+                            });
+                        }
+                    }
+
                     const skillsContainer = document.querySelector('#skills .grid');
                     if (skillsContainer) {
                         skillsContainer.innerHTML = '';
@@ -96,6 +95,9 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <h3 class="font-semibold text-xl text-cyan-400">${exp.title}</h3>
                                 <p class="text-lg text-gray-200">${exp.company}</p>
                                 <p class="text-md text-gray-400 mb-4">${exp.dates}</p>
+                                <ul class="list-disc list-inside text-gray-200 space-y-2">
+                                    ${responsibilitiesHtml}
+                                </ul>
                             `;
                             experienceContainer.appendChild(expDiv);
                         });
@@ -227,17 +229,18 @@ document.addEventListener('DOMContentLoaded', () => {
                                     body: JSON.stringify(payload),
                                 });
 
-                                const responseData = await response.json();
+                                const data = await response.json();
+
                                 if (response.ok) {
-                                    formStatus.textContent = responseData.message || 'Message sent successfully!';
+                                    formStatus.textContent = data.message || 'Message sent successfully!';
                                     formStatus.classList.remove('text-gray-400');
                                     formStatus.classList.add('text-green-500');
                                     contactForm.reset();
                                 } else {
-                                    formStatus.textContent = responseData.message || 'Failed to send message. Please try again.';
+                                    formStatus.textContent = data.message || 'Failed to send message. Please try again.';
                                     formStatus.classList.remove('text-gray-400');
                                     formStatus.classList.add('text-red-500');
-                                    console.error('API Error:', responseData);
+                                    console.error('API Error:', data);
                                 }
                             } catch (error) {
                                 formStatus.textContent = 'An error occurred. Check your connection or console.';
