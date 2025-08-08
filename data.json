@@ -160,51 +160,15 @@
     {
       "name": "Codecademy Language Certifications",
       "details": [
-        {
-          "name": "Analyze Data with SQL",
-          "certificateFile": "certifications/analyze_data_with_SQL.pdf",
-          "icon": "fas fa-file-pdf"
-        },
-        {
-          "name": "Data Analysis with Pandas",
-          "certificateFile": "certifications/data-analysis-pandas.pdf",
-          "icon": "fas fa-file-pdf"
-        },
-        {
-          "name": "Learn HTML",
-          "certificateFile": "certifications/html-course.pdf",
-          "icon": "fas fa-file-pdf"
-        },
-        {
-          "name": "Intro to C#",
-          "certificateFile": "certifications/intro-c-sharp.pdf",
-          "icon": "fas fa-file-pdf"
-        },
-        {
-          "name": "Learn Kotlin",
-          "certificateFile": "certifications/kotlin-cert.pdf",
-          "icon": "fas fa-file-pdf"
-        },
-        {
-          "name": "Learn the Command Line",
-          "certificateFile": "certifications/learn-command-line.pdf",
-          "icon": "fas fa-file-pdf"
-        },
-        {
-          "name": "Learn JavaScript",
-          "certificateFile": "certifications/learn-javascript.pdf",
-          "icon": "fas fa-file-pdf"
-        },
-        {
-          "name": "Learn SQL",
-          "certificateFile": "certifications/learn-sql.pdf",
-          "icon": "fas fa-file-pdf"
-        },
-        {
-          "name": "Learn Python Three",
-          "certificateFile": "certifications/learn-python-three.pdf",
-          "icon": "fas fa-file-pdf"
-        }
+        { "name": "Analyze Data with SQL", "certificateFile": "certifications/analyze_data_with_SQL.pdf", "icon": "fas fa-file-pdf" },
+        { "name": "Data Analysis with Pandas", "certificateFile": "certifications/data-analysis-pandas.pdf", "icon": "fas fa-file-pdf" },
+        { "name": "Learn HTML", "certificateFile": "certifications/html-course.pdf", "icon": "fas fa-file-pdf" },
+        { "name": "Intro to C#", "certificateFile": "certifications/intro-c-sharp.pdf", "icon": "fas fa-file-pdf" },
+        { "name": "Learn Kotlin", "certificateFile": "certifications/kotlin-cert.pdf", "icon": "fas fa-file-pdf" },
+        { "name": "Learn the Command Line", "certificateFile": "certifications/learn-command-line.pdf", "icon": "fas fa-file-pdf" },
+        { "name": "Learn JavaScript", "certificateFile": "certifications/learn-javascript.pdf", "icon": "fas fa-file-pdf" },
+        { "name": "Learn SQL", "certificateFile": "certifications/learn-sql.pdf", "icon": "fas fa-file-pdf" },
+        { "name": "Learn Python Three", "certificateFile": "certifications/learn-python-three.pdf", "icon": "fas fa-file-pdf" }
       ]
     }
   ],
