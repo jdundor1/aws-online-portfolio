@@ -1,253 +1,48 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const populateContent = () => {
-    fetch('data.json')
-      .then(response => {
-        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-        return response.json();
-      })
-      .then(data => {
-        const s3BaseUrl = 'https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/';
+fetch('data.json')
+  .then(response => response.json())
+  .then(data => {
+    // About
+    document.getElementById('about-content').innerHTML =
+      data.about.paragraphs.map(p => `<p class="mb-4">${p}</p>`).join('');
 
-        // About
-        const aboutSection = document.getElementById('about');
-        if (aboutSection) {
-          const aboutContentDiv = aboutSection.querySelector('.container.mx-auto.px-4.max-w-4xl');
-          if (aboutContentDiv) {
-            const existingParagraphs = aboutContentDiv.querySelectorAll('p:not(.section-title)');
-            existingParagraphs.forEach(p => p.remove());
-            data.about.paragraphs.forEach(paragraphText => {
-              const p = document.createElement('p');
-              p.className = 'text-lg leading-relaxed mb-4';
-              p.textContent = paragraphText;
-              aboutContentDiv.appendChild(p);
-            });
-          }
-        }
+    // Skills
+    document.getElementById('skills-list').innerHTML =
+      data.skills.map(skill =>
+        `<div class="bg-gray-800 p-4 rounded-lg shadow">${skill.title ? `<h3 class="text-xl font-semibold mb-2">${skill.title}</h3>` : ''}<p>${skill.description}</p></div>`
+      ).join('');
 
-        // Skills
-        const skillsContainer = document.querySelector('#skills .grid');
-        if (skillsContainer) {
-          skillsContainer.innerHTML = '';
-          data.skills.forEach(skill => {
-            const skillDiv = document.createElement('div');
-            skillDiv.className = 'bg-gray-800 p-6 rounded-lg shadow-md border-t-4 border-cyan-500 hover:shadow-xl transition duration-300 flex items-start space-x-4';
-            skillDiv.innerHTML = `
-              <i class="fas fa-cloud text-cyan-400 text-2xl mt-1"></i>
-              <div>
-                <h3 class="font-semibold text-xl mb-2 text-cyan-400">${skill.title}</h3>
-                <p class="text-gray-300">${skill.description}</p>
-              </div>
-            `;
-            skillsContainer.appendChild(skillDiv);
-          });
-        }
+    // Experience
+    document.getElementById('experience-list').innerHTML =
+      data.experience.map(exp =>
+        `<div><h3 class="text-xl font-bold">${exp.title}</h3><p class="italic">${exp.company} | ${exp.dates}</p><ul class="list-disc pl-5 mt-2">${exp.responsibilities.map(r => `<li>${r}</li>`).join('')}</ul></div>`
+      ).join('');
 
-        // Experience
-        const experienceContainer = document.querySelector('#experience .space-y-8');
-        if (experienceContainer) {
-          experienceContainer.innerHTML = '';
-          data.experience.forEach(exp => {
-            const expDiv = document.createElement('div');
-            expDiv.className = 'bg-gray-950 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300';
-            const responsibilitiesHtml = exp.responsibilities.map(resp => `<li>${resp}</li>`).join('');
-            expDiv.innerHTML = `
-              <h3 class="font-semibold text-xl text-cyan-400">${exp.title}</h3>
-              <p class="text-lg text-gray-200">${exp.company}</p>
-              <p class="text-md text-gray-400 mb-4">${exp.dates}</p>
-              <ul class="list-disc list-inside text-gray-200 space-y-2">
-                ${responsibilitiesHtml}
-              </ul>
-            `;
-            experienceContainer.appendChild(expDiv);
-          });
-        }
+    // Projects
+    document.getElementById('projects-list').innerHTML =
+      data.projects.map(proj =>
+        `<div class="bg-gray-800 p-4 rounded-lg shadow"><h3 class="text-xl font-bold mb-2">${proj.title}</h3><p>${proj.description}</p><div class="mt-2 space-y-1">${proj.links.map(link => `<a href="${link.url}" target="_blank" class="block text-cyan-400 hover:underline"><i class="${link.icon}"></i> ${link.name}</a>`).join('')}</div></div>`
+      ).join('');
 
-        // Projects
-        const projectsContainer = document.querySelector('#projects .grid');
-        if (projectsContainer) {
-          projectsContainer.innerHTML = '';
-          data.projects.forEach(project => {
-            const projectDiv = document.createElement('div');
-            projectDiv.className = 'bg-gray-800 p-6 rounded-lg shadow-md border-l-4 border-cyan-500 hover:shadow-xl transition duration-300';
-            let contentHtml = `<p class="text-gray-300">${project.description}</p>`;
-
-            let projectLinksHtml = '';
-            if (project.links && project.links.length > 0) {
-              projectLinksHtml += '<div class="mt-4 space-y-2 text-sm flex flex-col">';
-              project.links.forEach(link => {
-                let linkUrl = link.url;
-                if (link.url && !link.url.startsWith('http')) linkUrl = `${s3BaseUrl}${link.url}`;
-                const indentClass = link.icon === 'fab fa-github' ? 'ml-6' : '';
-                projectLinksHtml += `<a href="${linkUrl}" target="_blank" class="text-cyan-400 hover:underline flex items-center mb-2 ${indentClass}"><i class="${link.icon} mr-1"></i>${link.name}</a>`;
-              });
-              projectLinksHtml += '</div>';
-            }
-
-            projectDiv.innerHTML = `
-              <h3 class="font-semibold text-xl mb-2 text-cyan-400">${project.title}</h3>
-              ${contentHtml}
-              ${projectLinksHtml}
-            `;
-            projectsContainer.appendChild(projectDiv);
-          });
-        }
-
-        // Certifications
-        const certificationsContainer =
-          document.querySelector('#certifications .certifications-container') ||
-          document.querySelector('#certifications .flex.flex-wrap.gap-6'); // fallback
-        if (certificationsContainer) {
-          certificationsContainer.innerHTML = '';
-
-          // Names to force full-width (stack vertically)
-          const fullWidthNames = new Set([
-            'Project Management Certifications',
-            'Certified in Cybersecurity (CC)'
-          ]);
-
-          data.certifications.forEach(cert => {
-            const certDiv = document.createElement('div');
-            certDiv.className = 'cert-card bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 flex items-start space-x-3';
-            if (fullWidthNames.has(cert.name)) certDiv.classList.add('full');
-
-            if (cert.details && cert.details.length > 0) {
-              // Grouped cert (e.g., Google Cloud, Project Mgmt, Codecademy)
-              const detailsHtml = cert.details.map(detail => {
-                const imgHtml = detail.badgeFile
-                  ? `<a href="${s3BaseUrl}${detail.certificateFile || '#'}" target="_blank"><img src="${s3BaseUrl}${detail.badgeFile}" alt="${detail.name} Badge" class="w-8 h-8 rounded-full"></a>`
-                  : '';
-                const issueHtml = detail.issueDate ? `<p class="text-xs text-gray-400">Issued: ${detail.issueDate}</p>` : '';
-                const certLink = detail.certificateFile
-                  ? `<a href="${s3BaseUrl}${detail.certificateFile}" target="_blank" class="text-cyan-400 hover:underline text-xs flex items-center ml-auto"><i class="fas fa-file-pdf"></i></a>`
-                  : '';
-                return `
-                  <div class="flex items-center space-x-2">
-                    ${imgHtml}
-                    <div>
-                      <p class="text-sm font-semibold text-gray-200">${detail.name}</p>
-                      ${issueHtml}
-                    </div>
-                    ${certLink}
-                  </div>
-                `;
-              }).join('');
-
-              const topImg = cert.badgeFile ? `<img src="${s3BaseUrl}${cert.badgeFile}" alt="${cert.name} Badge" class="w-12 h-12 rounded-full">` : '';
-              const issueTop = cert.issueDate ? `<p class="text-gray-400">Issued: ${cert.issueDate}</p>` : '';
-
-              certDiv.innerHTML = `
-                ${topImg}
-                <div>
-                  <h3 class="text-xl font-semibold text-cyan-400">${cert.name}</h3>
-                  ${issueTop}
-                  <div class="flex flex-col mt-2 space-y-2">
-                    ${detailsHtml}
-                  </div>
-                </div>
-              `;
-            } else {
-              // Single cert
-              const topImg = cert.badgeFile ? `<img src="${s3BaseUrl}${cert.badgeFile}" alt="${cert.name} Badge" class="w-12 h-12 rounded-full">` : '';
-              const issueTop = cert.issueDate ? `<p class="text-gray-400">Issued: ${cert.issueDate}</p>` : '';
-              const certLink = cert.certificateFile
-                ? `<a href="${s3BaseUrl}${cert.certificateFile}" target="_blank" class="text-cyan-400 hover:underline text-sm flex items-center"><i class="fas fa-file-pdf mr-1"></i>View Certificate</a>`
-                : '';
-              certDiv.innerHTML = `
-                ${topImg}
-                <div>
-                  <h3 class="text-xl font-semibold text-cyan-400">${cert.name}</h3>
-                  ${issueTop}
-                  <div class="flex flex-col mt-2 space-y-1">
-                    ${certLink}
-                  </div>
-                </div>
-              `;
-            }
-
-            certificationsContainer.appendChild(certDiv);
-          });
-        }
-
-        // Education
-        const educationContainer = document.getElementById('education-list');
-        if (educationContainer) {
-          educationContainer.innerHTML = '';
-          data.education.forEach(edu => {
-            const eduItem = document.createElement('div');
-            eduItem.className = 'bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300';
-            eduItem.innerHTML = `
-              <h3 class="text-xl font-semibold text-cyan-400">${edu.degree}</h3>
-              <p class="text-lg text-gray-200">${edu.school}</p>
-              <p class="text-md text-gray-400">${edu.dates}</p>
-            `;
-            educationContainer.appendChild(eduItem);
-          });
-        }
-
-        // Resume link (hero)
-        const heroResumeLink = document.getElementById('heroResumeLink');
-        if (heroResumeLink && data.resumeFile) {
-          heroResumeLink.href = `${s3BaseUrl}${data.resumeFile}`;
-          heroResumeLink.classList.remove('hidden');
-        }
-
-        // Contact links
-        const emailLink = document.querySelector('#contact a[href^="mailto:"]');
-        if (emailLink) emailLink.href = `mailto:${data.contact.email}`;
-        const linkedinLink = document.querySelector('#contact a[href*="linkedin.com"]');
-        if (linkedinLink) {
-          linkedinLink.href = data.contact.linkedin;
-          linkedinLink.innerHTML = `<i class="fab fa-linkedin mr-2"></i>Connect on LinkedIn`;
-        }
-      })
-      .catch(error => console.error('Error fetching data:', error));
-  };
-
-  populateContent();
-
-  // Contact Form Submission
-  const contactForm = document.getElementById('contactForm');
-  const formStatus = document.getElementById('formStatus');
-  const API_GATEWAY_URL = 'https://w1hw5b9b4g.execute-api.us-east-1.amazonaws.com/prod/contact';
-
-  if (contactForm) {
-    contactForm.addEventListener('submit', async (event) => {
-      event.preventDefault();
-      formStatus.classList.remove('hidden', 'text-green-500', 'text-red-500');
-      formStatus.classList.add('text-gray-400');
-      formStatus.textContent = 'Sending message...';
-
-      const formData = new FormData(contactForm);
-      const payload = {};
-      for (const [key, value] of formData.entries()) payload[key] = value;
-
-      try {
-        const response = await fetch(API_GATEWAY_URL, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload),
-        });
-
-        const data = await response.json();
-
-        if (response.ok) {
-          formStatus.textContent = data.message || 'Message sent successfully!';
-          formStatus.classList.remove('text-gray-400');
-          formStatus.classList.add('text-green-500');
-          contactForm.reset();
+    // Certifications
+    document.getElementById('certifications-list').innerHTML =
+      data.certifications.map(cert => {
+        const customClass = cert.customClass ? ` ${cert.customClass}` : '';
+        if (cert.details) {
+          return `<div class="bg-gray-800 p-4 rounded-lg shadow${customClass}"><h3 class="text-xl font-bold mb-2">${cert.name}</h3><ul class="list-disc pl-5">${cert.details.map(d => `<li>${d.name} (${d.issueDate || ''})</li>`).join('')}</ul></div>`;
         } else {
-          formStatus.textContent = data.message || 'Failed to send message. Please try again.';
-          formStatus.classList.remove('text-gray-400');
-          formStatus.classList.add('text-red-500');
-          console.error('API Error:', data);
+          return `<div class="bg-gray-800 p-4 rounded-lg shadow${customClass}"><h3 class="text-xl font-bold mb-2">${cert.name}</h3><p>${cert.issueDate || ''}</p></div>`;
         }
-      } catch (error) {
-        formStatus.textContent = 'An error occurred. Check your connection or console.';
-        formStatus.classList.remove('text-gray-400');
-        formStatus.classList.add('text-red-500');
-        console.error('Fetch Error:', error);
-      }
-      formStatus.classList.remove('hidden');
-    });
-  }
-});
+      }).join('');
+
+    // Education
+    document.getElementById('education-list').innerHTML =
+      data.education.map(ed =>
+        `<div class="bg-gray-800 p-4 rounded-lg shadow"><h3 class="text-xl font-bold mb-2">${ed.degree}</h3><p class="italic">${ed.school}</p><p>${ed.dates}</p></div>`
+      ).join('');
+
+    // Blog
+    document.getElementById('blog-list').innerHTML =
+      data.blog.map(post =>
+        `<div class="bg-gray-800 p-4 rounded-lg shadow"><h3 class="text-xl font-bold mb-2">${post.title}</h3><p class="text-sm text-gray-400">${post.date}</p><p class="mt-2">${post.summary}</p><a href="${post.link}" target="_blank" class="text-cyan-400 hover:underline mt-2 inline-block">Read more →</a></div>`
+      ).join('');
+  });
