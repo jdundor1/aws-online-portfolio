@@ -6,30 +6,12 @@
     ]
   },
   "skills": [
-    {
-      "title": "AWS and Google Cloud Management",
-      "description": "Proficient in managing a wide range of AWS and Google Cloud services for deployment and operations."
-    },
-    {
-      "title": "Instructional Design",
-      "description": "Designing and developing effective learning programs and curricula."
-    },
-    {
-      "title": "UX Design",
-      "description": "Crafting intuitive and engaging user experiences."
-    },
-    {
-      "title": "Project Management",
-      "description": "Leading projects from conception to successful completion."
-    },
-    {
-      "title": "Programming Fundamentals",
-      "description": "Foundational understanding of programming concepts and languages through CodeCademy coursework."
-    },
-    {
-      "title": "Organizational Leadership",
-      "description": "Providing inspirational leadership and managing non-profit organizations like JDCRO."
-    }
+    { "title": "AWS and Google Cloud Management", "description": "Proficient in managing a wide range of AWS and Google Cloud services for deployment and operations." },
+    { "title": "Instructional Design", "description": "Designing and developing effective learning programs and curricula." },
+    { "title": "UX Design", "description": "Crafting intuitive and engaging user experiences." },
+    { "title": "Project Management", "description": "Leading projects from conception to successful completion." },
+    { "title": "Programming Fundamentals", "description": "Foundational understanding of programming concepts and languages through CodeCademy coursework." },
+    { "title": "Organizational Leadership", "description": "Providing inspirational leadership and managing non-profit organizations like JDCRO." }
   ],
   "experience": [
     {
@@ -104,26 +86,10 @@
       "name": "Google Cloud Platform Certifications",
       "issueDate": "2023-2024",
       "details": [
-        {
-          "name": "Google Cloud Certified Professional Cloud Architect",
-          "issueDate": "2023",
-          "certificateFile": "certifications/gcp-cloud-architect.pdf"
-        },
-        {
-          "name": "Google Cloud Certified Professional Cloud Security Engineer",
-          "issueDate": "2024",
-          "certificateFile": "certifications/gcp_security_engineer.pdf"
-        },
-        {
-          "name": "Google Cloud Certified Professional Data Engineer",
-          "issueDate": "2023",
-          "certificateFile": "certifications/gcp-data-engineer.pdf"
-        },
-        {
-          "name": "Google Cloud Certified Cloud Digital Leader",
-          "issueDate": "2023",
-          "certificateFile": "certifications/gcp-digital-cloud-leader.pdf"
-        }
+        { "name": "Google Cloud Certified Professional Cloud Architect", "issueDate": "2023", "certificateFile": "certifications/gcp-cloud-architect.pdf" },
+        { "name": "Google Cloud Certified Professional Cloud Security Engineer", "issueDate": "2024", "certificateFile": "certifications/gcp_security_engineer.pdf" },
+        { "name": "Google Cloud Certified Professional Data Engineer", "issueDate": "2023", "certificateFile": "certifications/gcp-data-engineer.pdf" },
+        { "name": "Google Cloud Certified Cloud Digital Leader", "issueDate": "2023", "certificateFile": "certifications/gcp-digital-cloud-leader.pdf" }
       ]
     },
     {
@@ -131,26 +97,10 @@
       "issueDate": "2022-2025",
       "customClass": "stack-cert",
       "details": [
-        {
-          "name": "PMP Certification",
-          "issueDate": "August 2022 (Recertified August 2025)",
-          "certificateFile": "certifications/pmp-certification.pdf"
-        },
-        {
-          "name": "Pro Scrum Master I",
-          "issueDate": "November 2022",
-          "certificateFile": "certifications/pro-scrum-master-i.pdf"
-        },
-        {
-          "name": "Pro Scrum Product Owner I",
-          "issueDate": "November 2022",
-          "certificateFile": "certifications/pro-scrum-product-owner-i.pdf"
-        },
-        {
-          "name": "Google Project Management",
-          "issueDate": "2023",
-          "certificateFile": "certifications/google-project-management.pdf"
-        }
+        { "name": "PMP Certification", "issueDate": "August 2022 (Recertified August 2025)", "certificateFile": "certifications/pmp-certification.pdf" },
+        { "name": "Pro Scrum Master I", "issueDate": "November 2022", "certificateFile": "certifications/pro-scrum-master-i.pdf" },
+        { "name": "Pro Scrum Product Owner I", "issueDate": "November 2022", "certificateFile": "certifications/pro-scrum-product-owner-i.pdf" },
+        { "name": "Google Project Management", "issueDate": "2023", "certificateFile": "certifications/google-project-management.pdf" }
       ]
     },
     {
@@ -175,21 +125,9 @@
     }
   ],
   "education": [
-    {
-      "degree": "Masters of Education | Instructional Design and Technology",
-      "school": "Western Governors University",
-      "dates": "July 2020 - January 2021"
-    },
-    {
-      "degree": "Masters in the Art of Teaching | Music",
-      "school": "University of the Arts – Philadelphia",
-      "dates": "January 2004 - May 2005"
-    },
-    {
-      "degree": "Bachelor of Music | Professional Music",
-      "school": "Berklee College of Music",
-      "dates": "January 1999 - May 2002"
-    }
+    { "degree": "Masters of Education | Instructional Design and Technology", "school": "Western Governors University", "dates": "July 2020 - January 2021" },
+    { "degree": "Masters in the Art of Teaching | Music", "school": "University of the Arts – Philadelphia", "dates": "January 2004 - May 2005" },
+    { "degree": "Bachelor of Music | Professional Music", "school": "Berklee College of Music", "dates": "January 1999 - May 2002" }
   ],
   "contact": {
     "email": "jdundor@wgu.edu",
@@ -216,4 +154,3 @@
   ],
   "resumeFile": "resume/dundore-resume-2025.pdf"
 }
-

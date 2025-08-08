@@ -37,7 +37,7 @@ data.skills.forEach(skill => {
 const skillDiv = document.createElement('div');
 skillDiv.className = 'bg-gray-800 p-6 rounded-lg shadow-md border-t-4 border-cyan-500 hover:shadow-xl transition duration-300 flex items-start space-x-4';
 skillDiv.innerHTML = `
-<i class="fas fa-cloud text-cyan-400 text-2xl mt-1"></i>
+<i class="fas fa-cloud text-cyan-400 text-2xl mt-1" aria-hidden="true"></i>
 <div>
 <h3 class="font-semibold text-xl mb-2 text-cyan-400">${skill.title}</h3>
 <p class="text-gray-300">${skill.description}</p>
@@ -87,7 +87,7 @@ if (link.url && !link.url.startsWith('http')) {
 linkUrl = `${s3BaseUrl}${link.url}`;
 }
 const indentClass = link.icon === 'fab fa-github' ? 'ml-6' : '';
-projectLinksHtml += `<a href="${linkUrl}" target="_blank" class="text-cyan-400 hover:underline flex items-center mb-2 ${indentClass}"><i class="${link.icon} mr-1"></i>${link.name}</a>`;
+projectLinksHtml += `<a href="${linkUrl}" target="_blank" class="text-cyan-400 hover:underline flex items-center mb-2 ${indentClass}"><i class="${link.icon}" aria-hidden="true"></i><span class="ml-1">${link.name}</span></a>`;
 });
 projectLinksHtml += '</div>';
 }
@@ -116,21 +116,21 @@ if (cert.customClass) certDiv.classList.add(cert.customClass);
 
 let badgeLinkHtml = '';
 if (cert.badgeFile) {
-badgeLinkHtml = `<a href="${s3BaseUrl}${cert.badgeFile}" target="_blank" class="text-cyan-400 hover:underline text-sm flex items-center mb-1"><i class="fas fa-award mr-1"></i>View Badge</a>`;
+badgeLinkHtml = `<a href="${s3BaseUrl}${cert.badgeFile}" target="_blank" class="text-cyan-400 hover:underline text-sm flex items-center mb-1"><i class="fas fa-award mr-1" aria-hidden="true"></i>View Badge</a>`;
 }
 if (cert.certificateFile) {
-badgeLinkHtml += `<a href="${s3BaseUrl}${cert.certificateFile}" target="_blank" class="text-cyan-400 hover:underline text-sm flex items-center"><i class="fas fa-file-pdf mr-1"></i>View Certificate</a>`;
+badgeLinkHtml += `<a href="${s3BaseUrl}${cert.certificateFile}" target="_blank" class="text-cyan-400 hover:underline text-sm flex items-center"><i class="fas fa-file-pdf mr-1" aria-hidden="true"></i>View Certificate</a>`;
 }
 
 // Check for consolidated details (e.g., Google Cloud, Project Management, Codecademy)
 if (cert.details && cert.details.length > 0) {
 const detailsHtml = cert.details.map(detail => {
 const imgHtml = detail.badgeFile
-? `<a href="${s3BaseUrl}${detail.certificateFile || '#'}" target="_blank"><img src="${s3BaseUrl}${detail.badgeFile}" alt="${detail.name} Badge" class="w-8 h-8 rounded-full"></a>`
+? `<a href="${s3BaseUrl}${detail.certificateFile || '#'}" target="_blank"><img src="${s3BaseUrl}${detail.badgeFile}" alt="${detail.name} badge" loading="lazy" class="w-8 h-8 rounded-full"></a>`
 : '';
 const issueHtml = detail.issueDate ? `<p class="text-xs text-gray-400">Issued: ${detail.issueDate}</p>` : '';
 const certLink = detail.certificateFile
-? `<a href="${s3BaseUrl}${detail.certificateFile}" target="_blank" class="text-cyan-400 hover:underline text-xs flex items-center ml-auto"><i class="fas fa-file-pdf"></i></a>`
+? `<a href="${s3BaseUrl}${detail.certificateFile}" target="_blank" class="text-cyan-400 hover:underline text-xs flex items-center ml-auto"><i class="fas fa-file-pdf" aria-hidden="true"></i></a>`
 : '';
 return `
 <div class="flex items-center space-x-2">
@@ -144,7 +144,7 @@ ${certLink}
 `;
 }).join('');
 
-const topImg = cert.badgeFile ? `<img src="${s3BaseUrl}${cert.badgeFile}" alt="${cert.name} Badge" class="w-12 h-12 rounded-full">` : '';
+const topImg = cert.badgeFile ? `<img src="${s3BaseUrl}${cert.badgeFile}" alt="${cert.name} badge" loading="lazy" class="w-12 h-12 rounded-full">` : '';
 const issueTop = cert.issueDate ? `<p class="text-gray-400">Issued: ${cert.issueDate}</p>` : '';
 
 certDiv.innerHTML = `
@@ -159,10 +159,10 @@ ${detailsHtml}
 `;
 } else {
 // Standard single certification entry
-const topImg = cert.badgeFile ? `<img src="${s3BaseUrl}${cert.badgeFile}" alt="${cert.name} Badge" class="w-12 h-12 rounded-full">` : '';
+const topImg = cert.badgeFile ? `<img src="${s3BaseUrl}${cert.badgeFile}" alt="${cert.name} badge" loading="lazy" class="w-12 h-12 rounded-full">` : '';
 const issueTop = cert.issueDate ? `<p class="text-gray-400">Issued: ${cert.issueDate}</p>` : '';
 const certLink = cert.certificateFile
-? `<a href="${s3BaseUrl}${cert.certificateFile}" target="_blank" class="text-cyan-400 hover:underline text-sm flex items-center"><i class="fas fa-file-pdf mr-1"></i>View Certificate</a>`
+? `<a href="${s3BaseUrl}${cert.certificateFile}" target="_blank" class="text-cyan-400 hover:underline text-sm flex items-center"><i class="fas fa-file-pdf mr-1" aria-hidden="true"></i>View Certificate</a>`
 : '';
 
 certDiv.innerHTML = `
@@ -196,39 +196,127 @@ educationContainer.appendChild(eduItem);
 });
 }
 
-// ===== New: Populate Blog Section =====
-const blogContainer = document.getElementById('blog-list');
-if (blogContainer && data.blog && data.blog.length > 0) {
-blogContainer.innerHTML = '';
-data.blog.forEach(post => {
-const imgSrc = post.image
-? (post.image.startsWith('http') ? post.image : `${s3BaseUrl}${post.image}`)
-: null;
+// ===== Dynamic-or-Static Blog Module =====
 
-let linksHtml = '';
-if (post.links && post.links.length > 0) {
-linksHtml = '<div class="mt-3 space-y-1">';
-post.links.forEach(link => {
-const url = link.url && !link.url.startsWith('http') ? `${s3BaseUrl}${link.url}` : link.url;
-linksHtml += `<a href="${url}" target="_blank" class="text-cyan-400 hover:underline flex items-center text-sm"><i class="${link.icon} mr-2"></i>${link.name}</a>`;
-});
-linksHtml += '</div>';
-}
+// 1) If/when you stand up the API Gateway, paste its base URL here:
+const BLOG_API_BASE = ""; 
+// Example: "https://abc123.execute-api.us-east-1.amazonaws.com"
 
-const card = document.createElement('div');
-card.className = 'bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition duration-300 overflow-hidden';
-card.innerHTML = `
-${imgSrc ? `<img src="${imgSrc}" alt="${post.title}" class="w-full h-40 object-cover">` : ''}
-<div class="p-4">
-  <h3 class="text-xl font-bold text-cyan-400">${post.title}</h3>
-  <p class="text-sm text-gray-400">${post.date}</p>
-  <p class="mt-2 text-gray-200">${post.content}</p>
-  ${linksHtml}
-</div>
-`;
-blogContainer.appendChild(card);
-});
-}
+// 2) Helper to build full image URL from your S3 assets bucket
+const buildImg = (path) => {
+  if (!path) return "";
+  return path.startsWith("http") ? path : `${s3BaseUrl}${path}`;
+};
+
+// 3) Render a list of blog cards
+const renderBlogFeed = (posts) => {
+  const blogContainer = document.getElementById("blog-list");
+  if (!blogContainer) return;
+  blogContainer.innerHTML = posts.map(post => {
+    const img = buildImg(post.image);
+    return `
+      <article class="bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition duration-300 overflow-hidden">
+        ${img ? `<img src="${img}" alt="${post.title || "Blog post"}" loading="lazy" class="w-full h-40 object-cover">` : ""}
+        <div class="p-4">
+          <h3 class="text-xl font-bold text-cyan-400">${post.title || ""}</h3>
+          <p class="text-sm text-gray-400">${post.date || ""}</p>
+          <p class="mt-2 text-gray-200">${post.summary || post.content || ""}</p>
+          <button data-slug="${post.slug || ""}" class="mt-3 inline-block text-cyan-400 hover:underline read-post">Read more →</button>
+        </div>
+      </article>
+    `;
+  }).join("");
+
+  // Hook up "Read more" buttons to load the full post
+  blogContainer.querySelectorAll(".read-post").forEach(btn => {
+    btn.addEventListener("click", async () => {
+      const slug = btn.getAttribute("data-slug");
+      if (!slug || !BLOG_API_BASE) return; // only works when API is configured
+      try {
+        const res = await fetch(`${BLOG_API_BASE}/blog/${slug}`);
+        if (!res.ok) throw new Error("Post fetch failed");
+        const post = await res.json(); // { meta, markdown }
+        const html = window.marked ? marked.parse(post.markdown || "") : (post.markdown || "");
+
+        const card = btn.closest("article");
+        card.innerHTML = `
+          ${post.meta?.image ? `<img src="${buildImg(post.meta.image)}" alt="${post.meta?.title || "Blog post"}" loading="lazy" class="w-full h-56 object-cover">` : ""}
+          <div class="p-4">
+            <h2 class="text-2xl font-extrabold text-cyan-400">${post.meta?.title || slug}</h2>
+            <p class="text-sm text-gray-400">${post.meta?.date || ""}</p>
+            <div class="prose prose-invert max-w-none mt-4">${html}</div>
+            <button class="mt-6 text-cyan-400 hover:underline back-to-list">← Back to posts</button>
+          </div>
+        `;
+        card.querySelector(".back-to-list").addEventListener("click", () => {
+          window.location.hash = "#blog";
+          window.location.reload();
+        });
+      } catch (e) {
+        console.error(e);
+        alert("Sorry, that post could not be loaded.");
+      }
+    });
+  });
+};
+
+// 4) Try API first → fall back to data.json
+const renderBlogDynamicOrStatic = async (dataObj) => {
+  const blogContainer = document.getElementById("blog-list");
+  if (!blogContainer) return;
+
+  // If API not configured, render from data.json immediately
+  if (!BLOG_API_BASE) {
+    const staticFeed = (dataObj.blog || []).map((b, i) => ({
+      slug: `post-${i}`,
+      title: b.title,
+      date: b.date,
+      image: b.image,
+      summary: b.content,
+      links: b.links || []
+    }));
+    renderBlogFeed(staticFeed);
+    return;
+  }
+
+  // API path is set → try to fetch it
+  try {
+    const res = await fetch(`${BLOG_API_BASE}/blog`, { method: "GET" });
+    if (!res.ok) throw new Error(`Feed fetch failed: ${res.status}`);
+    const feed = await res.json(); // { items: [...] }
+    const items = Array.isArray(feed.items) ? feed.items : [];
+    if (items.length === 0) {
+      const staticFeed = (dataObj.blog || []).map((b, i) => ({
+        slug: `post-${i}`,
+        title: b.title,
+        date: b.date,
+        image: b.image,
+        summary: b.content,
+        links: b.links || []
+      }));
+      renderBlogFeed(staticFeed);
+      return;
+    }
+    renderBlogFeed(items);
+  } catch (e) {
+    console.warn("Blog API not reachable, falling back to data.json.", e);
+    const staticFeed = (dataObj.blog || []).map((b, i) => ({
+      slug: `post-${i}`,
+      title: b.title,
+      date: b.date,
+      image: b.image,
+      summary: b.content,
+      links: b.links || []
+    }));
+    renderBlogFeed(staticFeed);
+  }
+};
+
+// Call the dynamic-or-static blog renderer
+renderBlogDynamicOrStatic(data);
+
+// ===== End Dynamic-or-Static Blog Module =====
+
 
 // Add Resume Link to Hero Section Button
 const heroResumeLink = document.getElementById('heroResumeLink');
@@ -237,7 +325,7 @@ heroResumeLink.href = `${s3BaseUrl}${data.resumeFile}`;
 heroResumeLink.classList.remove('hidden');
 }
 
-// Populate Contact information (if you ever add a mailto link element)
+// Populate Contact information
 const emailLink = document.querySelector('#contact a[href^="mailto:"]');
 if (emailLink && data.contact && data.contact.email) {
 emailLink.href = `mailto:${data.contact.email}`;
@@ -245,7 +333,7 @@ emailLink.href = `mailto:${data.contact.email}`;
 const linkedinLink = document.querySelector('#contact a[href*="linkedin.com"]');
 if (linkedinLink && data.contact && data.contact.linkedin) {
 linkedinLink.href = data.contact.linkedin;
-linkedinLink.innerHTML = `<i class="fab fa-linkedin mr-2"></i>Connect on LinkedIn`;
+linkedinLink.innerHTML = `<i class="fab fa-linkedin mr-2" aria-hidden="true"></i>Connect on LinkedIn`;
 }
 })
 .catch(error => console.error('Error fetching data:', error));
