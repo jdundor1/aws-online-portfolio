@@ -46,6 +46,11 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #9ca3af;
         }
+        /* Force certification cards to stack vertically */
+        .certifications-container > * {
+            flex: 0 0 100%;
+            width: 100%;
+        }
     </style>
 </head>
 <body class="text-gray-200">
@@ -123,7 +128,7 @@
         <section id="certifications" class="py-16 md:py-20 bg-gray-900 text-gray-200">
             <div class="container mx-auto px-4 max-w-4xl">
                 <h2 class="text-3xl section-title mb-8">Certifications</h2>
-                <div class="flex flex-wrap justify-center items-center gap-6">
+                <div class="flex flex-wrap gap-6 certifications-container">
                     <!-- Certifications will be injected here by script.js -->
                 </div>
                 <p class="text-center text-gray-400 mt-8 text-lg">
