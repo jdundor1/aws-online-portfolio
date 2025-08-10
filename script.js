@@ -392,3 +392,51 @@ formStatus.classList.remove('hidden');
 });
 }
 });
+/* ===============================
+   Dynamic Blog: render Markdown from CloudFront (Signed URL)
+   =============================== */
+(() => {
+  // 1) Paste your latest signed URL between the quotes:
+  const SIGNED_URL =
+    'https://d28s8r06h995ni.cloudfront.net/posts/first-post.md?Expires=1754845057&Key-Pair-Id=KNLAQV5CVN98G&Signature=rXR9BpEOwAXCiCwBQ-R27lmKFxmCMYNcWrid7qLCLk1lI9-SBNr25sOk1ZEYakTCe9X-M5ItXnrkBybEVdrNPEvlSu30a1TjOPNZIPgVyxOKxF~0yTppekXedcRIq32Sp2AojYK55FXVKrccK3nE1wtH0Gpvp75em1TyhxpVYk0RCes5Rk5u7o3rIhVd6Yll2yMLdp0xoPUTdj2VagImBm0EP-bG-okV8egQCThrS2-81-E11FgIQS76DogVlyQb4X9bf6ZJN6bIFtOQ6S8oTjLFr2UtGMjzJtz8gK14l-Ydke6ePsKMj103tDiKSyxltt2O37MHAVcDZ1K634wd8Q__';
+
+  const elContent = document.getElementById('blog-content');
+  const elStatus  = document.getElementById('blog-status');
+
+  if (!elContent) return; // Page doesn't have the blog card; do nothing.
+
+  const showStatus = (msg, isError = false) => {
+    if (!elStatus) return;
+    elStatus.textContent = msg;
+    elStatus.classList.remove('hidden');
+    elStatus.classList.toggle('text-red-400', isError);
+    elStatus.classList.toggle('text-gray-400', !isError);
+  };
+
+  async function loadBlog() {
+    try {
+      showStatus('Loading post…');
+      // no-store so you always see the latest file
+      const res = await fetch(SIGNED_URL, { cache: 'no-store' });
+
+      if (!res.ok) {
+        throw new Error(`HTTP ${res.status} ${res.statusText}`);
+      }
+
+      const md = await res.text();
+      // marked is loaded from the CDN in index.html
+      elContent.innerHTML = marked.parse(md);
+      showStatus('Loaded.', false);
+      // Hide the status gently after a moment
+      setTimeout(() => elStatus && elStatus.classList.add('hidden'), 1200);
+    } catch (err) {
+      console.error('Blog load error:', err);
+      showStatus(
+        'Could not load the blog post. The signed link may have expired — generate a new signed URL and update SIGNED_URL in script.js.',
+        true
+      );
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', loadBlog);
+})();
