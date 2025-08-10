@@ -137,15 +137,23 @@
             </div>
         </section>
 
-        <!-- Blog Section (before Contact) -->
-        <section id="blog" class="py-16 md:py-20 bg-gray-900 text-gray-200">
-            <div class="container mx-auto px-4 max-w-4xl">
-                <h2 class="text-3xl section-title mb-8">Blog</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="blog-list">
-                    <!-- Blog posts injected by script.js -->
-                </div>
-            </div>
-        </section>
+    <!-- Blog Section (before Contact) -->
+<section id="blog" class="py-16 md:py-20 bg-gray-900 text-gray-200">
+  <div class="container mx-auto px-4 max-w-4xl">
+    <h2 class="text-3xl section-title mb-8">Blog</h2>
+
+    <div id="blog-card" class="bg-gray-800 p-6 rounded-lg shadow-md">
+      <h3 class="text-2xl font-semibold text-cyan-400 mb-4">Latest Post</h3>
+
+      <!-- Markdown will be injected here -->
+      <article id="blog-content" class="prose prose-invert max-w-none"></article>
+
+      <!-- Status / errors -->
+      <div id="blog-status" class="text-gray-400 text-sm mt-4 hidden"></div>
+    </div>
+  </div>
+</section>
+
 
         <section id="contact" class="bg-gray-900 text-white py-16 md:py-20 text-center">
             <div class="container mx-auto px-4">
