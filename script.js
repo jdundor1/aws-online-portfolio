@@ -393,17 +393,21 @@ formStatus.classList.remove('hidden');
 }
 });
 /* ===============================
-   Dynamic Blog: render Markdown from CloudFront (Signed URL)
+   Dynamic Blog: load from S3 public posts (fallback to signed URL)
    =============================== */
 (() => {
-  // 1) Paste your latest signed URL between the quotes:
-  const SIGNED_URL =
-    'https://d28s8r06h995ni.cloudfront.net/posts/first-post.md?Expires=1754845057&Key-Pair-Id=KNLAQV5CVN98G&Signature=rXR9BpEOwAXCiCwBQ-R27lmKFxmCMYNcWrid7qLCLk1lI9-SBNr25sOk1ZEYakTCe9X-M5ItXnrkBybEVdrNPEvlSu30a1TjOPNZIPgVyxOKxF~0yTppekXedcRIq32Sp2AojYK55FXVKrccK3nE1wtH0Gpvp75em1TyhxpVYk0RCes5Rk5u7o3rIhVd6Yll2yMLdp0xoPUTdj2VagImBm0EP-bG-okV8egQCThrS2-81-E11FgIQS76DogVlyQb4X9bf6ZJN6bIFtOQ6S8oTjLFr2UtGMjzJtz8gK14l-Ydke6ePsKMj103tDiKSyxltt2O37MHAVcDZ1K634wd8Q__';
+  // Public S3 location (no signed URL needed)
+  const PUBLIC_POST_KEY = 'first-post.md'; // change if you want a different post
+  const PUBLIC_POST_URL =
+    `https://jd-portfolio-content-blog-us-east-1.s3.amazonaws.com/posts/${encodeURIComponent(PUBLIC_POST_KEY)}`;
+
+  // Optional: paste a valid signed URL if you want a fallback while testing
+  // Leave as empty string "" if you don’t need it.
+  const SIGNED_URL = "";
 
   const elContent = document.getElementById('blog-content');
   const elStatus  = document.getElementById('blog-status');
-
-  if (!elContent) return; // Page doesn't have the blog card; do nothing.
+  if (!elContent) return; // Page doesn’t have the blog card
 
   const showStatus = (msg, isError = false) => {
     if (!elStatus) return;
@@ -413,26 +417,41 @@ formStatus.classList.remove('hidden');
     elStatus.classList.toggle('text-gray-400', !isError);
   };
 
+  async function fetchMarkdown(url, label) {
+    const res = await fetch(url, { cache: 'no-store' });
+    if (!res.ok) {
+      throw new Error(`${label}: HTTP ${res.status} ${res.statusText}`);
+    }
+    return res.text();
+  }
+
   async function loadBlog() {
     try {
       showStatus('Loading post…');
-      // no-store so you always see the latest file
-      const res = await fetch(SIGNED_URL, { cache: 'no-store' });
 
-      if (!res.ok) {
-        throw new Error(`HTTP ${res.status} ${res.statusText}`);
+      let md;
+      // 1) Try public S3 first
+      try {
+        md = await fetchMarkdown(PUBLIC_POST_URL, 'Public S3');
+      } catch (errPublic) {
+        // 2) If public fails and we have a signed URL, try that
+        if (SIGNED_URL) {
+          console.warn('Public fetch failed, trying signed URL fallback.', errPublic);
+          md = await fetchMarkdown(SIGNED_URL, 'Signed URL');
+        } else {
+          throw errPublic;
+        }
       }
 
-      const md = await res.text();
-      // marked is loaded from the CDN in index.html
-      elContent.innerHTML = marked.parse(md);
-      showStatus('Loaded.', false);
-      // Hide the status gently after a moment
+      // Render markdown (marked is loaded in index.html)
+      elContent.innerHTML = window.marked ? marked.parse(md) : md;
+
+      showStatus('Loaded.');
       setTimeout(() => elStatus && elStatus.classList.add('hidden'), 1200);
     } catch (err) {
       console.error('Blog load error:', err);
       showStatus(
-        'Could not load the blog post. The signed link may have expired — generate a new signed URL and update SIGNED_URL in script.js.',
+        'Could not load the blog post. Make sure the object exists at S3 /posts/, your bucket policy allows public read, and the URL is correct.',
         true
       );
     }
