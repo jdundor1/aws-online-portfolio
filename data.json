@@ -15,12 +15,15 @@
   ],
   "experience": [
     {
-      "title": "JDCRO Management",
-      "company": "JoeyDCares Rock Orchestra (Non-Profit)",
-      "dates": "2010 - 2023",
-      "responsibilities": [
-        "Provided inspirational leadership as Executive Director and Founder.",
-        "Managed organizational development, fundraising efforts, and curriculum coordination."
+  "title": "JDCRO Management",
+  "company": "JoeyDCares Rock Orchestra (Non-Profit)",
+  "dates": "2010 - 2023",
+  "responsibilities": [
+    "Provided inspirational leadership as Executive Director and Founder.",
+    "Managed organizational development, fundraising efforts, and curriculum coordination."
+    ],
+  "links": [
+    { "name": "JDCRO YouTube", "url": "https://www.youtube.com/playlist?list=PLqII6dhczoAFtDu1_uAnAbqNJ_HFjrKRO", "icon": "fab fa-youtube" }
       ]
     },
     {
