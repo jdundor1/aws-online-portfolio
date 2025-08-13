@@ -50,22 +50,48 @@ skillsContainer.appendChild(skillDiv);
 // Populate Experience section
 const experienceContainer = document.querySelector('#experience .space-y-8');
 if (experienceContainer) {
-experienceContainer.innerHTML = '';
-data.experience.forEach(exp => {
-const expDiv = document.createElement('div');
-expDiv.className = 'bg-gray-950 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300';
-const responsibilitiesHtml = exp.responsibilities.map(resp => `<li>${resp}</li>`).join('');
-expDiv.innerHTML = `
-<h3 class="font-semibold text-xl text-cyan-400">${exp.title}</h3>
-<p class="text-lg text-gray-200">${exp.company}</p>
-<p class="text-md text-gray-400 mb-4">${exp.dates}</p>
-<ul class="list-disc list-inside text-gray-200 space-y-2">
-${responsibilitiesHtml}
-</ul>
-`;
-experienceContainer.appendChild(expDiv);
-});
+  experienceContainer.innerHTML = '';
+  data.experience.forEach(exp => {
+    const expDiv = document.createElement('div');
+    expDiv.className = 'bg-gray-950 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300';
+
+    const responsibilitiesHtml = (exp.responsibilities || [])
+      .map(resp => `<li>${resp}</li>`).join('');
+
+    // Build links (supports absolute URLs and S3-relative paths like "folder/file.pdf")
+    let linksHtml = '';
+    if (exp.links && exp.links.length > 0) {
+      linksHtml += '<div class="mt-4 space-y-2 text-sm flex flex-col">';
+      exp.links.forEach(link => {
+        let linkUrl = link.url || '#';
+        if (linkUrl && !/^https?:\/\//i.test(linkUrl)) {
+          linkUrl = `${s3BaseUrl}${linkUrl}`;
+        }
+        const iconClass = link.icon ? link.icon : 'fas fa-link';
+        linksHtml += `
+          <a href="${linkUrl}"
+             target="_blank" rel="noopener noreferrer"
+             class="text-cyan-400 hover:underline flex items-center">
+            <i class="${iconClass}" aria-hidden="true"></i>
+            <span class="ml-1">${link.name || linkUrl}</span>
+          </a>`;
+      });
+      linksHtml += '</div>';
+    }
+
+    expDiv.innerHTML = `
+      <h3 class="font-semibold text-xl text-cyan-400">${exp.title}</h3>
+      <p class="text-lg text-gray-200">${exp.company}</p>
+      <p class="text-md text-gray-400 mb-4">${exp.dates}</p>
+      <ul class="list-disc list-inside text-gray-200 space-y-2">
+        ${responsibilitiesHtml}
+      </ul>
+      ${linksHtml}
+    `;
+    experienceContainer.appendChild(expDiv);
+  });
 }
+
 
 // Populate Projects section
 const projectsContainer = document.querySelector('#projects .grid');
