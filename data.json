@@ -92,6 +92,7 @@
         { "name": "Google Cloud Certified Professional Cloud Architect", "issueDate": "2023", "certificateFile": "certifications/gcp-cloud-architect.pdf" },
         { "name": "Google Cloud Certified Professional Cloud Security Engineer", "issueDate": "2024", "certificateFile": "certifications/gcp_security_engineer.pdf" },
         { "name": "Google Cloud Certified Professional Data Engineer", "issueDate": "2023", "certificateFile": "certifications/gcp-data-engineer.pdf" },
+        { "name": "Udemy Google Cloud Machine Learning Engineer Certification Prep", "issueDate": "2023", "certificateFile": "certifications/gcp-machine-learning.pdf" },
         { "name": "Google Cloud Certified Cloud Digital Leader", "issueDate": "2023", "certificateFile": "certifications/gcp-digital-cloud-leader.pdf" }
       ]
     },
