@@ -6,12 +6,30 @@
     ]
   },
   "skills": [
-    { "title": "AWS and Google Cloud Management", "description": "Proficient in managing a wide range of AWS and Google Cloud services for deployment and operations." },
-    { "title": "Instructional Design", "description": "Designing and developing effective learning programs and curricula." },
-    { "title": "UX Design", "description": "Crafting intuitive and engaging user experiences." },
-    { "title": "Project Management", "description": "Leading projects from conception to successful completion." },
-    { "title": "Programming Fundamentals", "description": "Foundational understanding of programming concepts and languages through CodeCademy coursework." },
-    { "title": "Organizational Leadership", "description": "Providing inspirational leadership and managing non-profit organizations like JDCRO." }
+    {
+      "title": "AWS and Google Cloud Management",
+      "description": "Proficient in managing a wide range of AWS and Google Cloud services for deployment and operations."
+    },
+    {
+      "title": "Instructional Design",
+      "description": "Designing and developing effective learning programs and curricula."
+    },
+    {
+      "title": "UX Design",
+      "description": "Crafting intuitive and engaging user experiences."
+    },
+    {
+      "title": "Project Management",
+      "description": "Leading projects from conception to successful completion."
+    },
+    {
+      "title": "Programming Fundamentals",
+      "description": "Foundational understanding of programming concepts and languages through CodeCademy coursework."
+    },
+    {
+      "title": "Organizational Leadership",
+      "description": "Providing inspirational leadership and managing non-profit organizations like JDCRO."
+    }
   ],
   "experience": [
     {
@@ -21,9 +39,6 @@
       "responsibilities": [
         "Provided inspirational leadership as Executive Director and Founder.",
         "Managed organizational development, fundraising efforts, and curriculum coordination."
-      ],
-      "links": [
-        { "name": "JDCRO YouTube", "url": "https://www.youtube.com/playlist?list=PLqII6dhczoAFtDu1_uAnAbqNJ_HFjrKRO", "icon": "fab fa-youtube" }
       ]
     },
     {
@@ -83,55 +98,104 @@
     {
       "name": "AWS Certified Solutions Architect - Professional",
       "issueDate": "March 2025",
+      "badgeFile": "certifications/aws-certified-solutions-architect-professional-badge.png",
       "certificateFile": "certifications/aws-certified-solutions-architect-pro.pdf"
     },
     {
       "name": "Google Cloud Platform Certifications",
       "issueDate": "2023-2024",
+      "badgeFile": "certifications/google-badge-1.png",
       "details": [
-        { "name": "Google Cloud Certified Professional Cloud Architect", "issueDate": "2023", "certificateFile": "certifications/gcp-cloud-architect.pdf" },
-        { "name": "Google Cloud Certified Professional Cloud Security Engineer", "issueDate": "2024", "certificateFile": "certifications/gcp_security_engineer.pdf" },
-        { "name": "Google Cloud Certified Professional Data Engineer", "issueDate": "2023", "certificateFile": "certifications/gcp-data-engineer.pdf" },
-        { "name": "Udemy Google Cloud Machine Learning Engineer Certification Prep", "issueDate": "2023", "certificateFile": "certifications/gcp-machine-learning.pdf" },
-        { "name": "Google Cloud Certified Cloud Digital Leader", "issueDate": "2023", "certificateFile": "certifications/gcp-digital-cloud-leader.pdf" }
+        {
+          "name": "Google Cloud Certified Professional Cloud Architect",
+          "issueDate": "2023",
+          "badgeFile": "certifications/google-badge-1.png",
+          "certificateFile": "certifications/gcp-cloud-architect.pdf"
+        },
+        {
+          "name": "Google Cloud Certified Professional Cloud Security Engineer",
+          "issueDate": "2024",
+          "badgeFile": "certifications/google-badge-2.png",
+          "certificateFile": "certifications/gcp_security_engineer.pdf"
+        },
+        {
+          "name": "Google Cloud Certified Professional Data Engineer",
+          "issueDate": "2023",
+          "badgeFile": "certifications/google-badge-3.png",
+          "certificateFile": "certifications/gcp-data-engineer.pdf"
+        },
+        {
+          "name": "Google Cloud Certified Cloud Digital Leader",
+          "issueDate": "2023",
+          "badgeFile": "certifications/google-badge-4.png",
+          "certificateFile": "certifications/gcp-cloud-digital-leader.pdf"
+        }
       ]
     },
     {
       "name": "Project Management Certifications",
       "issueDate": "2022-2025",
-      "customClass": "stack-cert",
+      "badgeFile": "certifications/pm-cert.png",
       "details": [
-        { "name": "PMP Certification", "issueDate": "August 2022 (Recertified August 2025)", "certificateFile": "certifications/pmp-certification.pdf" },
-        { "name": "Pro Scrum Master I", "issueDate": "November 2022", "certificateFile": "certifications/pro-scrum-master-i.pdf" },
-        { "name": "Pro Scrum Product Owner I", "issueDate": "November 2022", "certificateFile": "certifications/pro-scrum-product-owner-i.pdf" },
-        { "name": "Google Project Management", "issueDate": "2023", "certificateFile": "certifications/google-project-management.pdf" }
+        {
+          "name": "PMP Certification",
+          "issueDate": "August 2022 (Recertified August 2025)",
+          "badgeFile": "certifications/pm-cert.png",
+          "certificateFile": "certifications/pmp-certification.pdf"
+        },
+        {
+          "name": "Google Project Management",
+          "issueDate": "2023",
+          "badgeFile": "certifications/google-badge-5.png",
+          "certificateFile": "certifications/google-project-management.pdf"
+        }
       ]
     },
     {
       "name": "Certified in Cybersecurity (CC)",
       "issueDate": "October 2023",
-      "customClass": "stack-cert",
+      "badgeFile": "certifications/certified-in-cybersecurity-cc.png",
       "certificateFile": "certifications/ISC2-CC-Cert.jpeg"
     },
     {
-      "name": "Codecademy Language Certifications",
+      "name": "CodeCademy Language Certs",
+      "issueDate": "2021-2023",
+      "badgeFile": "certifications/codecademy-badge.png",
       "details": [
-        { "name": "Analyze Data with SQL", "certificateFile": "certifications/analyze_data_with_SQL.pdf", "icon": "fas fa-file-pdf" },
-        { "name": "Data Analysis with Pandas", "certificateFile": "certifications/data-analysis-pandas.pdf", "icon": "fas fa-file-pdf" },
-        { "name": "Learn HTML", "certificateFile": "certifications/html-course.pdf", "icon": "fas fa-file-pdf" },
-        { "name": "Intro to C#", "certificateFile": "certifications/intro-c-sharp.pdf", "icon": "fas fa-file-pdf" },
-        { "name": "Learn Kotlin", "certificateFile": "certifications/kotlin-cert.pdf", "icon": "fas fa-file-pdf" },
-        { "name": "Learn the Command Line", "certificateFile": "certifications/learn-command-line.pdf", "icon": "fas fa-file-pdf" },
-        { "name": "Learn JavaScript", "certificateFile": "certifications/learn-javascript.pdf", "icon": "fas fa-file-pdf" },
-        { "name": "Learn SQL", "certificateFile": "certifications/learn-sql.pdf", "icon": "fas fa-file-pdf" },
-        { "name": "Learn Python Three", "certificateFile": "certifications/learn-python-three.pdf", "icon": "fas fa-file-pdf" }
+        { "name": "Analyze Data with SQL", "certificateFile": "certifications/analyze_data_with_SQL.pdf" },
+        { "name": "Data Analysis with Pandas", "certificateFile": "certifications/data-analysis-pandas.pdf" },
+        { "name": "Learn HTML", "certificateFile": "certifications/html-course.pdf" },
+        { "name": "Intro to C#", "certificateFile": "certifications/intro-c-sharp.pdf" },
+        { "name": "Learn Kotlin", "certificateFile": "certifications/kotlin-cert.pdf" },
+        { "name": "Learn the Command Line", "certificateFile": "certifications/learn-command-line.pdf" },
+        { "name": "Learn JavaScript", "certificateFile": "certifications/learn-javascript.pdf" },
+        { "name": "Learn SQL", "certificateFile": "certifications/learn-sql.pdf" },
+        { "name": "Learn Python 3", "certificateFile": "certifications/learn-python-three.pdf" }
       ]
+    },
+    {
+      "name": "UX Certifications",
+      "issueDate": "January to August 2022",
+      "badgeFile": "certifications/ux-cert.png",
+      "certificateFile": null
     }
   ],
   "education": [
-    { "degree": "Masters of Education | Instructional Design and Technology", "school": "Western Governors University", "dates": "July 2020 - January 2021" },
-    { "degree": "Masters in the Art of Teaching | Music", "school": "University of the Arts – Philadelphia", "dates": "January 2004 - May 2005" },
-    { "degree": "Bachelor of Music | Professional Music", "school": "Berklee College of Music", "dates": "January 1999 - May 2002" }
+    {
+      "degree": "Masters of Education | Instructional Design and Technology",
+      "school": "Western Governors University",
+      "dates": "July 2020 - January 2021"
+    },
+    {
+      "degree": "Masters in the Art of Teaching | Music",
+      "school": "University of the Arts – Philadelphia",
+      "dates": "January 2004 - May 2005"
+    },
+    {
+      "degree": "Bachelor of Music | Professional Music",
+      "school": "Berklee College of Music",
+      "dates": "January 1999 - May 2002"
+    }
   ],
   "contact": {
     "email": "jdundor@wgu.edu",
@@ -142,7 +206,6 @@
       "title": "Building a Serverless Contact Form on AWS: A Step-by-Step Guide",
       "date": "August 6, 2025",
       "content": "In this post, I walk through the architecture and implementation of my portfolio's contact form, a project that demonstrates core serverless skills using AWS Amplify, API Gateway, Lambda, and DynamoDB. I discuss the key decisions made and the benefits of using a pay-per-use model for a high-availability, low-cost solution.",
-      "image": "blog/aws-serverless-contact-thumb.jpg",
       "links": [
         { "name": "View Project Architecture", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/aws-online-portfolio-slides.pdf", "icon": "fas fa-file-pdf" },
         { "name": "View GitHub Repository", "url": "https://github.com/jdundor1/aws-online-portfolio", "icon": "fab fa-github" }
@@ -152,10 +215,8 @@
       "title": "Why I Chose a Multi-Cloud Approach: AWS and Google Cloud",
       "date": "July 28, 2025",
       "content": "This post explores the strategic advantages of having a multi-cloud skill set. I discuss my experience and certifications with both AWS and Google Cloud Platform, and why having expertise in both ecosystems can make a professional more versatile and valuable to an organization.",
-      "image": "blog/multicloud-approach-thumb.jpg",
       "links": []
     }
   ],
-  "headshotFile": "resume/linkedin-headshot.jpg",
   "resumeFile": "resume/dundore-resume-2025.pdf"
 }
