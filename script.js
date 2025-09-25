@@ -234,7 +234,7 @@ ${topImg}
             certificationsContainer.appendChild(certDiv);
           });
         }
-
+        
         // Populate Education Section
         const educationContainer = document.getElementById('education-list');
         if (educationContainer) {
@@ -242,10 +242,12 @@ ${topImg}
           data.education.forEach(edu => {
             const eduItem = document.createElement('div');
             eduItem.className = 'bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300';
+            const descriptionHtml = edu.description ? `<p class="text-sm text-gray-300 mt-2">${edu.description}</p>` : '';
             eduItem.innerHTML = `
 <h3 class="text-xl font-semibold text-cyan-400">${edu.degree}</h3>
 <p class="text-lg text-gray-200">${edu.school}</p>
 <p class="text-md text-gray-400">${edu.dates}</p>
+${descriptionHtml}
 `;
             educationContainer.appendChild(eduItem);
           });
