@@ -17,7 +17,7 @@
     {
       "title": "Music Educator & Educational Technology Lead",
       "company": "Carroll County Public Schools",
-      "dates": "2005 - Present",
+      "dates": "2019 - Present",
       "responsibilities": [
         "Managed LMS/SIS platforms serving 380+ users with 85% objective success rate in 2023",
         "Improved student outcomes by 53% through MakeMusic technology integration",
@@ -28,7 +28,7 @@
     {
       "title": "Executive Director",
       "company": "JDCRO (JoeyDCares Rock Orchestra - Non-Profit)",
-      "dates": "2010 - 2023",
+      "dates": "2018 - Present",
       "responsibilities": [
         "Scaled organization from 10 → 50+ annual participants (400% growth)",
         "Managed $42K annual budget with full fiscal responsibility",
@@ -116,6 +116,15 @@
       "links": [
         { "name": "Impact Focusing on Music Theory has on Instrumental Performance", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/instructional-design-powerpoint.pdf", "icon": "fas fa-file-pdf" },
         { "name": "Teaching Phonics Training Presentation", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/teaching-phonics-training-presentation.pdf", "icon": "fas fa-file-pdf" }
+      ]
+    }
+  ],
+  "additionalWork": [
+    {
+      "title": "UX Design Case Study",
+      "description": "Applied design thinking and usability testing to improve the user experience of a digital platform. Focused on user workflows, accessibility, and engagement to align technical features with real-world needs. Demonstrates ability to bridge technical execution with user-centered design — skills that enhance presales, stakeholder communication, and solution adoption.",
+      "links": [
+        { "name": "View UX Case Study (PDF)", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/ux-design-case-study.pdf", "icon": "fas fa-file-pdf" }
       ]
     }
   ],
