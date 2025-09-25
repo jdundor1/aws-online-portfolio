@@ -126,6 +126,36 @@ ${projectLinksHtml}
           });
         }
 
+        // Populate Additional Work section
+        const additionalWorkContainer = document.querySelector('#additional-work .grid');
+        if (additionalWorkContainer && data.additionalWork) {
+          additionalWorkContainer.innerHTML = '';
+          data.additionalWork.forEach(work => {
+            const workDiv = document.createElement('div');
+            workDiv.className = 'bg-gray-800 p-6 rounded-lg shadow-md border-l-4 border-amber-500 hover:shadow-xl transition duration-300';
+
+            let workLinksHtml = '';
+            if (work.links && work.links.length > 0) {
+              workLinksHtml += '<div class="mt-4 space-y-2 text-sm flex flex-col">';
+              work.links.forEach(link => {
+                let linkUrl = link.url;
+                if (link.url && !link.url.startsWith('http')) {
+                  linkUrl = `${s3BaseUrl}${link.url}`;
+                }
+                workLinksHtml += `<a href="${linkUrl}" target="_blank" rel="noopener noreferrer" class="text-amber-400 hover:underline flex items-center mb-2"><i class="${link.icon}" aria-hidden="true"></i><span class="ml-1">${link.name}</span></a>`;
+              });
+              workLinksHtml += '</div>';
+            }
+
+            workDiv.innerHTML = `
+<h3 class="font-semibold text-xl mb-2 text-amber-400">${work.title}</h3>
+<p class="text-gray-300">${work.description}</p>
+${workLinksHtml}
+`;
+            additionalWorkContainer.appendChild(workDiv);
+          });
+        }
+
         // Populate Certifications section
         const certificationsContainer =
           document.querySelector('#certifications .certifications-container') ||
@@ -349,7 +379,7 @@ ${topImg}
           heroResumeLink.classList.remove('hidden');
         }
 
-        // >>> ADDED: Load headshot from S3 into the hero image <<<
+        // >>> ADDED: Load headshot from S3 into the hero image <
         const heroHeadshot = document.getElementById('heroHeadshot');
         if (heroHeadshot) {
           const path = data.headshotFile; // e.g., "resume/linkedin-headshot.jpg" or a full URL
@@ -441,12 +471,12 @@ ${topImg}
     `https://jd-portfolio-content-blog-us-east-1.s3.amazonaws.com/posts/${encodeURIComponent(PUBLIC_POST_KEY)}`;
 
   // Optional: paste a valid signed URL if you want a fallback while testing
-  // Leave as empty string "" if you don’t need it.
+  // Leave as empty string "" if you don't need it.
   const SIGNED_URL = "";
 
   const elContent = document.getElementById('blog-content');
   const elStatus  = document.getElementById('blog-status');
-  if (!elContent) return; // Page doesn’t have the blog card
+  if (!elContent) return; // Page doesn't have the blog card
 
   const showStatus = (msg, isError = false) => {
     if (!elStatus) return;
