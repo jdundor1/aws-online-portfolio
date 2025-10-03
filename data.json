@@ -14,55 +14,51 @@
     { "title": "Organizational Leadership", "description": "Providing inspirational leadership and managing organizations through digital transformation initiatives. Experience scaling nonprofits and training teams." },
     { "title": "Instructional Design & Training", "description": "Masters-level expertise in designing training programs, conducting action research studies, and developing scalable educational frameworks. Experience training 40+ staff members in technology adoption." }
   ],
-  "experience": [
-    {
-      "title": "Music Educator & Educational Technology Lead",
-      "company": "Carroll County Public Schools",
-      "dates": "2019 - Present",
-      "responsibilities": [
-        "Managed LMS/SIS platforms serving 380+ users with 85% objective success rate in 2023",
-        "Improved student outcomes by 53% through MakeMusic technology integration",
-        "Trained 40+ staff members in educational technology best practices",
-        "Led digital transformation initiatives across multiple school programs"
-      ]
-    },
-    {
-      "title": "Executive Director",
-      "company": "JDCRO (JoeyDCares Rock Orchestra - Non-Profit)",
-      "dates": "2018 - Present",
-      "responsibilities": [
-        "Scaled organization from 10 → 50+ annual participants (400% growth)",
-        "Managed $42K annual budget with full fiscal responsibility",
-        "Delivered 100+ community events with measurable impact",
-        "Developed strategic partnerships and community outreach programs"
-      ],
-      "links": [
-        { "name": "JDCRO YouTube", "url": "https://www.youtube.com/playlist?list=PLqII6dhczoAFtDu1_uAnAbqNJ_HFjrKRO", "icon": "fab fa-youtube" }
-      ]
-    },
-    {
-      "title": "Awesome Kids Program Management",
-      "company": "Awesome Kids Program",
-      "dates": "2013 - 2020",
-      "responsibilities": [
-        "Started with two students, grew to 50+.",
-        "Conducted hiring process with all employees.",
-        "Created classes and wrote curriculum for art, music, cooking, languages, math, engineering, photography.",
-        "Logistics for employee and bus schedules."
-      ]
-    },
-    {
-      "title": "Web Page Design Internship",
-      "company": "Innovate Connect, Holly Springs, North Carolina",
-      "dates": "Summer 2024",
-      "responsibilities": [
-        "Customized a WordPress theme using HTML and CSS modifications.",
-        "Used Photoshop to edit images for website display.",
-        "Produced and managed web content for an ongoing project.",
-        "Handled design, typesetting, and layout redesign to improve content presentation.",
-        "Conducted user testing to enhance usability."
-      ]
-    }
+"experience": [
+  {
+    "title": "Cloud Projects Portfolio",
+    "company": "Independent Technical Projects",
+    "dates": "2023 - Present",
+    "responsibilities": [
+      "Reduced hosting costs by 80% with AWS Amplify migration achieving 100% uptime",
+      "Built real-time GCP data pipeline processing 1,000+ events/second with sub-second latency",
+      "Developed AI chatbot reducing manual inquiries by 60% using Dialogflow CX + Vertex AI",
+      "Deployed serverless architectures using Lambda, API Gateway, Cloud Run, and BigQuery"
+    ]
+  },
+  {
+    "title": "Founder & Executive Director",
+    "company": "JoeyDCares Rock Orchestra (Non-Profit)",
+    "dates": "2010 - 2023",
+    "responsibilities": [
+      "Scaled organization from 10 → 50+ annual participants (400% growth)",
+      "Managed $42K annual budget and secured $10K+ in first-year fundraising",
+      "Delivered 100+ community events with 100% on-time, on-budget completion",
+      "Led cross-functional teams including staff, volunteers, and vendor management"
+    ]
+  },
+  {
+    "title": "Program Founder & Director",
+    "company": "Awesome Kids Program",
+    "dates": "2013 - 2020",
+    "responsibilities": [
+      "Built educational program from 2 students to 50+ participants",
+      "Managed hiring, curriculum development, and program operations",
+      "Coordinated complex logistics across multiple instructors and locations",
+      "Developed curriculum across 8+ subject areas"
+    ]
+  },
+  {
+    "title": "Technology Implementation Lead",
+    "company": "Carroll County Public Schools",
+    "dates": "2005 - Present",
+    "responsibilities": [
+      "Managed LMS/SIS platforms for 380+ users with 85% success rate",
+      "Improved outcomes by 53% through strategic technology integration",
+      "Trained 40+ staff members in digital platform adoption",
+      "Delivered 100+ stakeholder presentations on technology initiatives"
+    ]
+  }
   ],
   "projects": [
     {
