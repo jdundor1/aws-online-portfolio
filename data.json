@@ -1,9 +1,9 @@
 {
   "about": {
     "paragraphs": [
-      "I am a results-driven Cloud Engineer & Technical Project Manager, dually certified in AWS and Google Cloud, with a PMP and ISC² CC credential. I specialize in bridging the gap between executive vision and technical execution, delivering secure, scalable, and cost-efficient cloud solutions while enabling teams and stakeholders to achieve measurable outcomes.",
-      "Recent highlights include reducing hosting costs by 80% and achieving 100% uptime with an AWS Amplify portfolio migration, building a real-time data pipeline on Google Cloud processing 1,000+ events/second with sub-second latency, developing an AI-powered chatbot that reduced manual inquiries by 60%, managing LMS/SIS platforms for 380+ users with an 85% success rate, and scaling a nonprofit from 10 to 50+ annual participants (400% growth) while managing a $42K budget and delivering 100+ events."
-    ]
+      "I am a Technical Project Manager with PMP certification and extensive AWS and Google Cloud expertise. With 15+ years of stakeholder management and technology implementation experience, I specialize in bridging the gap between executive vision and technical execution, delivering secure, scalable, and cost-efficient solutions while enabling teams to achieve measurable outcomes.",
+      "My technical portfolio demonstrates hands-on cloud capabilities: I've reduced hosting costs by 80% and achieved 100% uptime with an AWS Amplify portfolio migration, built a real-time data pipeline on Google Cloud processing 1,000+ events/second with sub-second latency, and developed an AI-powered chatbot that reduced manual inquiries by 60%. In my professional work, I've managed technology platforms for 380+ users with an 85% success rate, and scaled a nonprofit from 10 to 50+ annual participants (400% growth) while managing a $42K budget and delivering 100+ events."
+      ]
   },
   "skills": [
     { "title": "AWS and Google Cloud Management", "description": "Proficient in managing a wide range of AWS and Google Cloud services for deployment and operations. Certified Solutions Architect Professional and Cloud Security Engineer." },
