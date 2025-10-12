@@ -26,6 +26,43 @@
       "Deployed serverless architectures using Lambda, API Gateway, Cloud Run, and BigQuery"
     ]
   },
+    {
+    "title": "Educator & Program Coordinator",
+    "company": "Carroll County Public Schools",
+    "dates": "2005 - Present",
+    "responsibilities": [
+      "Managed LMS/SIS platforms for 380+ users with 85% success rate",
+      "Improved outcomes by 53% through strategic technology integration",
+      "Delivered 100+ stakeholder presentations on technology initiatives"
+    ]
+  }
+{
+  "id": "innovate-connect-2024",
+  "company": "Innovate Connect",
+  "title": "Web Development Intern",
+  "location": "Remote",
+  "dates": "July 2024 - August 2024",
+  "current": false,
+  "type": "internship",
+  "description": "Completed 8-week professional web development internship building full-stack e-commerce solution for commercial bakery client.",
+  "highlights": [
+    "Developed e-commerce website using WordPress with responsive design and accessibility standards",
+    "Designed user interfaces and workflows using Figma and Excalidraw to meet client specifications",
+    "Collaborated with distributed team using Agile tools (Jira, Slack, Basecamp) in remote environment",
+    "Applied modern development practices including version control and professional code standards",
+    "Successfully delivered project within 8-week timeline with positive client feedback"
+  ],
+  "technologies": [
+    "WordPress",
+    "Figma",
+    "Excalidraw",
+    "Jira",
+    "Slack",
+    "Basecamp",
+    "VS Code",
+    "Agile"
+  ]
+},
   {
     "title": "Founder & Executive Director",
     "company": "JoeyDCares Rock Orchestra (Non-Profit)",
@@ -46,16 +83,6 @@
       "Managed hiring, curriculum development, and program operations",
       "Coordinated complex logistics across multiple instructors and locations",
       "Developed curriculum across 8+ subject areas"
-    ]
-  },
-  {
-    "title": "Educator & Program Coordinator",
-    "company": "Carroll County Public Schools",
-    "dates": "2005 - Present",
-    "responsibilities": [
-      "Managed LMS/SIS platforms for 380+ users with 85% success rate",
-      "Improved outcomes by 53% through strategic technology integration",
-      "Delivered 100+ stakeholder presentations on technology initiatives"
     ]
   }
   ],
