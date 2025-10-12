@@ -39,21 +39,16 @@
 {
   "title": "Web Development Intern",
   "company": "Innovate Connect",
-  "location": "Remote",
   "dates": "July 2024 - August 2024",
-  "current": false,
-  "type": "internship",
-  "description": "Completed 8-week professional web development internship building full-stack e-commerce solution for commercial bakery client.",
   "responsibilities": [
     "Developed e-commerce website using WordPress with responsive design and accessibility standards",
     "Designed user interfaces and workflows using Figma and Excalidraw to meet client specifications",
     "Collaborated with distributed team using Agile tools (Jira, Slack, Basecamp) in remote environment",
     "Applied modern development practices including version control and professional code standards",
     "Successfully delivered project within 8-week timeline with positive client feedback"
-    "Technologies:  WordPress, Figma, Excalidraw, Jira, Slack, Basecamp, VS Code, Agile"
     ]
   },
-  {
+{
     "title": "Founder & Executive Director",
     "company": "JoeyDCares Rock Orchestra (Non-Profit)",
     "dates": "2010 - 2023",
