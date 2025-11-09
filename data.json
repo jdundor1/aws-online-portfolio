@@ -3,7 +3,7 @@
     "paragraphs": [
       "I am a Technical Project Manager with PMP certification and extensive AWS and Google Cloud expertise. With 15+ years of stakeholder management and technology implementation experience, I specialize in bridging the gap between executive vision and technical execution, delivering secure, scalable, and cost-efficient solutions while enabling teams to achieve measurable outcomes.",
       "My technical portfolio demonstrates hands-on cloud capabilities: I've reduced hosting costs by 80% and achieved 100% uptime with an AWS Amplify portfolio migration, built a real-time data pipeline on Google Cloud processing 1,000+ events/second with sub-second latency, and developed an AI-powered chatbot that reduced manual inquiries by 60%. In my professional work, I've managed technology platforms for 380+ users with an 85% success rate, and scaled a nonprofit from 10 to 50+ annual participants (400% growth) while managing a $42K budget and delivering 100+ events."
-      ]
+    ]
   },
   "skills": [
     { "title": "AWS and Google Cloud Management", "description": "Proficient in managing a wide range of AWS and Google Cloud services for deployment and operations. Certified Solutions Architect Professional and Cloud Security Engineer." },
@@ -14,65 +14,65 @@
     { "title": "Organizational Leadership", "description": "Providing inspirational leadership and managing organizations through digital transformation initiatives. Experience scaling nonprofits and training teams." },
     { "title": "Instructional Design & Training", "description": "Masters-level expertise in designing training programs, conducting action research studies, and developing scalable educational frameworks. Experience training 40+ staff members in technology adoption." }
   ],
-"experience": [
-  {
-    "title": "Cloud Projects Portfolio",
-    "company": "Independent Technical Projects",
-    "dates": "2023 - Present",
-    "responsibilities": [
-      "Reduced hosting costs by 80% with AWS Amplify migration achieving 100% uptime",
-      "Built real-time GCP data pipeline processing 1,000+ events/second with sub-second latency",
-      "Developed AI chatbot reducing manual inquiries by 60% using Dialogflow CX + Vertex AI",
-      "Deployed serverless architectures using Lambda, API Gateway, Cloud Run, and BigQuery"
-    ]
-  },
+  "experience": [
     {
-    "title": "Educator & Program Coordinator",
-    "company": "Carroll County Public Schools",
-    "dates": "2005 - Present",
-    "responsibilities": [
-      "Managed LMS/SIS platforms for 380+ users with 85% success rate",
-      "Improved outcomes by 53% through strategic technology integration",
-      "Delivered 100+ stakeholder presentations on technology initiatives"
-    ]
-  },
-{
-  "title": "Web Development Intern",
-  "company": "Innovate Connect",
-  "dates": "July 2024 - August 2024",
-  "responsibilities": [
-    "Developed e-commerce website using WordPress with responsive design and accessibility standards",
-    "Designed user interfaces and workflows using Figma and Excalidraw to meet client specifications",
-    "Collaborated with distributed team using Agile tools (Jira, Slack, Basecamp) in remote environment",
-    "Applied modern development practices including version control and professional code standards",
-    "Successfully delivered project within 8-week timeline with positive client feedback"
-    ]
-  },
-{
-    "title": "Founder & Executive Director",
-    "company": "JoeyDCares Rock Orchestra (Non-Profit)",
-    "dates": "2010 - 2023",
-    "responsibilities": [
-      "Scaled organization from 10 → 50+ annual participants (400% growth)",
-      "Managed $42K annual budget and secured $10K+ in first-year fundraising",
-      "Delivered 100+ community events with 100% on-time, on-budget completion",
-      "Led cross-functional teams including staff, volunteers, and vendor management"
-    ]
-    "name": [
-      "JoeyDCares Rock Orchestra Youtube Channel", "url": "https://www.youtube.com/@JoeyDRockOrchestra"
-    ]
-  },
-  {
-    "title": "Program Founder & Director",
-    "company": "Awesome Kids Program",
-    "dates": "2013 - 2020",
-    "responsibilities": [
-      "Built educational program from 2 students to 50+ participants",
-      "Managed hiring, curriculum development, and program operations",
-      "Coordinated complex logistics across multiple instructors and locations",
-      "Developed curriculum across 8+ subject areas",
-    ]
-  }
+      "title": "Cloud Projects Portfolio",
+      "company": "Independent Technical Projects",
+      "dates": "2023 - Present",
+      "responsibilities": [
+        "Reduced hosting costs by 80% with AWS Amplify migration achieving 100% uptime",
+        "Built real-time GCP data pipeline processing 1,000+ events/second with sub-second latency",
+        "Developed AI chatbot reducing manual inquiries by 60% using Dialogflow CX + Vertex AI",
+        "Deployed serverless architectures using Lambda, API Gateway, Cloud Run, and BigQuery"
+      ]
+    },
+    {
+      "title": "Educator & Program Coordinator",
+      "company": "Carroll County Public Schools",
+      "dates": "2005 - Present",
+      "responsibilities": [
+        "Managed LMS/SIS platforms for 380+ users with 85% success rate",
+        "Improved outcomes by 53% through strategic technology integration",
+        "Delivered 100+ stakeholder presentations on technology initiatives"
+      ]
+    },
+    {
+      "title": "Web Development Intern",
+      "company": "Innovate Connect",
+      "dates": "July 2024 - August 2024",
+      "responsibilities": [
+        "Developed e-commerce website using WordPress with responsive design and accessibility standards",
+        "Designed user interfaces and workflows using Figma and Excalidraw to meet client specifications",
+        "Collaborated with distributed team using Agile tools (Jira, Slack, Basecamp) in remote environment",
+        "Applied modern development practices including version control and professional code standards",
+        "Successfully delivered project within 8-week timeline with positive client feedback"
+      ]
+    },
+    {
+      "title": "Founder & Executive Director",
+      "company": "JoeyDCares Rock Orchestra (Non-Profit)",
+      "dates": "2010 - 2023",
+      "responsibilities": [
+        "Scaled organization from 10 → 50+ annual participants (400% growth)",
+        "Managed $42K annual budget and secured $10K+ in first-year fundraising",
+        "Delivered 100+ community events with 100% on-time, on-budget completion",
+        "Led cross-functional teams including staff, volunteers, and vendor management"
+      ],
+      "links": [
+        { "name": "JoeyDCares Rock Orchestra Youtube Channel", "url": "https://www.youtube.com/@JoeyDRockOrchestra" }
+      ]
+    },
+    {
+      "title": "Program Founder & Director",
+      "company": "Awesome Kids Program",
+      "dates": "2013 - 2020",
+      "responsibilities": [
+        "Built educational program from 2 students to 50+ participants",
+        "Managed hiring, curriculum development, and program operations",
+        "Coordinated complex logistics across multiple instructors and locations",
+        "Developed curriculum across 8+ subject areas"
+      ]
+    }
   ],
   "projects": [
     {
