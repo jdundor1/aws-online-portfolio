@@ -1,8 +1,10 @@
 {
   "about": {
-    "paragraphs": [
-      "I am a Technical Project Manager with PMP certification and extensive AWS and Google Cloud expertise. With 15+ years of stakeholder management and technology implementation experience, I specialize in bridging the gap between executive vision and technical execution, delivering secure, scalable, and cost-efficient solutions while enabling teams to achieve measurable outcomes.",
-      "My technical portfolio demonstrates hands-on cloud capabilities: I've reduced hosting costs by 80% and achieved 100% uptime with an AWS Amplify portfolio migration, built a real-time data pipeline on Google Cloud processing 1,000+ events/second with sub-second latency, and developed an AI-powered chatbot that reduced manual inquiries by 60%. In my professional work, I've managed technology platforms for 380+ users with an 85% success rate, and scaled a nonprofit from 10 to 50+ annual participants (400% growth) while managing a $42K budget and delivering 100+ events."
+"paragraphs": [
+      "I am a Program Manager with PMP certification, AWS Solutions Architect Professional, and five Google Cloud Professional certifications. With 20+ years of professional experience including 13 years of nonprofit program management, I specialize in bridging complex technical solutions with stakeholder-driven program execution—delivering cloud architectures, coordinating cross-functional teams, and translating technical concepts for diverse audiences.",
+      "My unique value proposition combines program management rigor with hands-on cloud expertise. I bring proven ability to scale programs (400% growth over 13 years), manage budgets ($42K annual), deliver 100+ stakeholder presentations, and coordinate teams of 50+ members—backed by technical credentials that enable me to architect solutions, evaluate vendor proposals, and communicate effectively with both executive leadership and engineering teams.",
+      "Technical portfolio highlights include: AWS portfolio migration achieving 80% cost reduction with 100% uptime and sub-500ms API response times; real-time IoT data pipeline on Google Cloud using Pub/Sub, BigQuery, and Looker Studio; and AI-powered customer support chatbot using Dialogflow CX and Vertex AI (Gemini 2.0) reducing manual inquiries by 60%.",
+      "I'm currently seeking Program Manager, Solutions Engineer, or Pre-Sales Engineer opportunities where I can leverage my PMP methodology, multi-cloud architecture expertise, and proven stakeholder management skills to drive measurable outcomes for enterprise and government organizations."
     ]
   },
   "skills": [
