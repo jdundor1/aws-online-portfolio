@@ -14,7 +14,7 @@
     { "title": "Data Engineering", "description": "Building real-time data pipelines, ETL processes, and analytics solutions using cloud-native services like BigQuery and Looker Studio." },
     { "title": "Cybersecurity", "description": "ISC² CC certified with expertise in cloud security, identity management, and compliance frameworks." },
     { "title": "Organizational Leadership", "description": "Providing inspirational leadership and managing organizations through digital transformation initiatives. Experience scaling nonprofits and training teams." },
-    { "title": "Instructional Design & Training", "description": "Masters-level expertise in designing training programs, conducting action research studies, and developing scalable educational frameworks. Experience training 40+ staff members in technology adoption." }
+    { "title": "User Adoption & Implementation Strategy", "description": "Masters-level expertise in designing training programs, conducting action research studies, and developing scalable educational frameworks. Experience training 40+ staff members in technology adoption." }
   ],
   "experience": [
     {
@@ -29,7 +29,7 @@
       ]
     },
     {
-      "title": "Educator & Program Coordinator",
+      "title": "Educational Technology Program Lead",
       "company": "Carroll County Public Schools",
       "dates": "2005 - Present",
       "responsibilities": [
@@ -39,7 +39,7 @@
       ]
     },
     {
-      "title": "Web Development Intern",
+      "title": "Frontend Developer & UI Consultant",
       "company": "Innovate Connect",
       "dates": "July 2024 - August 2024",
       "responsibilities": [
