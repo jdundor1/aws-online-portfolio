@@ -126,6 +126,17 @@
   ],
   "additionalWork": [
     {
+  "title": "Translating Cloud ROI for Non-Technical Stakeholders",
+  "description": "An executive guide on shifting the cloud conversation from 'expenditure' to 'strategic investment.' Covers Operational Resilience, Time-to-Value, and AI Readiness.",
+  "links": [
+    {
+      "name": "Read Full Article",
+      "url": "cloud-roi.html",
+      "icon": "fas fa-newspaper"
+    }
+  ]
+},
+    {
       "title": "UX Design Case Study",
       "description": "Applied design thinking and usability testing to improve the user experience of a digital platform. Focused on user workflows, accessibility, and engagement to align technical features with real-world needs.",
       "links": [
