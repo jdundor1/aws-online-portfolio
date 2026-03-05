@@ -91,13 +91,9 @@
           "url": "https://endless-bonus-471618-i2.web.app/search",
           "icon": "fas fa-external-link-alt"
         },
-        {
-          "name": "GitHub Repository",
-          "url": "https://github.com/jdundor1/affiliate-ai-recommender",
-          "icon": "fab fa-github"
-        }
+        { "name": "GitHub Repository", "url": "https://github.com/jdundor1/affiliate-ai-recommender", "icon": "fab fa-github" }
       ]
-    }, // Correctly closes the first object and allows for the next
+    },
     {
       "title": "Serverless Cloud Infrastructure (AWS Amplify)",
       "description": "Deployed secure, serverless portfolio site on AWS Amplify. Reduced hosting costs by 80%, achieved 100% uptime, and enabled serverless form submissions in <500 ms.",
