@@ -81,16 +81,8 @@
       "title": "AI-Powered Cloud Ecosystem",
       "description": "A full-stack, monetized platform featuring semantic AI search, serverless architecture on GCP, and automated product management workflows.",
       "links": [
-        {
-          "name": "View Architecture Case Study (PDF)",
-          "url": "AI-Powered-Cloud-Ecosystem.pdf",
-          "icon": "fas fa-file-pdf"
-        },
-        {
-          "name": "Live Project Demo",
-          "url": "https://endless-bonus-471618-i2.web.app/search",
-          "icon": "fas fa-external-link-alt"
-        },
+        { "name": "View Architecture Case Study (PDF)", "url": "AI-Powered-Cloud-Ecosystem.pdf", "icon": "fas fa-file-pdf" },
+        { "name": "Live Project Demo", "url": "https://endless-bonus-471618-i2.web.app/search", "icon": "fas fa-external-link-alt" },
         { "name": "GitHub Repository", "url": "https://github.com/jdundor1/affiliate-ai-recommender", "icon": "fab fa-github" }
       ]
     },
