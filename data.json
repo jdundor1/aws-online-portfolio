@@ -1,10 +1,10 @@
 {
   "about": {
     "paragraphs": [
-      "I am a Program Manager with PMP certification, AWS Solutions Architect Professional, and five Google Cloud Professional certifications. With 20+ years of professional experience including 13 years of nonprofit program management, I specialize in bridging complex technical solutions with stakeholder-driven program execution—delivering cloud architectures, coordinating cross-functional teams, and translating technical concepts for diverse audiences.",
-      "My unique value proposition combines program management rigor with hands-on cloud expertise. I bring proven ability to scale programs (400% growth over 13 years), manage budgets ($42K annual), deliver 100+ stakeholder presentations, and coordinate teams of 50+ members—backed by technical credentials that enable me to architect solutions, evaluate vendor proposals, and communicate effectively with both executive leadership and engineering teams.",
-      "Technical portfolio highlights include: AWS portfolio migration achieving 80% cost reduction with 100% uptime and sub-500ms API response times; real-time IoT data pipeline on Google Cloud using Pub/Sub, BigQuery, and Looker Studio; and AI-powered customer support chatbot using Dialogflow CX and Vertex AI (Gemini 2.0) reducing manual inquiries by 60%.",
-      "I'm currently seeking Program Manager, Solutions Engineer, or Pre-Sales Engineer opportunities where I can leverage my PMP methodology, multi-cloud architecture expertise, and proven stakeholder management skills to drive measurable outcomes for enterprise and government organizations."
+      "I am a Technical Program Manager and Cloud Architect specializing in bridging the gap between engineering execution and executive strategy. With a PMP® certification, AWS Solutions Architect Professional credential, and multiple Google Cloud Professional certifications, I translate complex cloud infrastructure into measurable business outcomes [cite: 58-60, 66-68].",
+      "My value proposition combines 21 years of program management rigor with hands-on technical architecture. I have a proven track record of scaling initiatives, managing budgets, and leading cross-functional teams of 50+ members—backed by deep-dive engineering mastery that allows me to architect secure systems, evaluate vendor proposals, and drive ROI [cite: 59, 87-88].",
+      "Technical outcomes include: Architecting an AWS migration achieving an 80% cost reduction; engineering a RAG-based AI assistant using Vertex AI (Gemini) to reduce manual inquiries by 60%; and designing a data-driven governance framework that delivered a 53% increase in measurable growth metrics .",
+      "I am currently seeking Technical Program Manager, Solutions Architect, or Delivery Manager roles where I can leverage my PMP methodology and multi-cloud expertise to solve high-stakes infrastructure challenges for enterprise and government organizations."
     ]
   },
   "skills": [
