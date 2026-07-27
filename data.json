@@ -1,10 +1,7 @@
 {
   "about": {
     "paragraphs": [
-      "I am a Technical Program Manager and Cloud Architect specializing in bridging the gap between engineering execution and executive strategy. With a PMP® certification, AWS Solutions Architect Professional credential, and multiple Google Cloud Professional certifications, I translate complex cloud infrastructure into measurable business outcomes.",
-      "My value proposition combines 21 years of program management rigor with hands-on technical architecture. I have a proven track record of scaling initiatives, managing budgets, and leading cross-functional teams of 50+ members—backed by deep-dive engineering mastery that allows me to architect secure systems, evaluate vendor proposals, and drive ROI.",
-      "Technical outcomes include: Architecting an AWS migration achieving an 80% cost reduction; engineering a RAG-based AI assistant using Vertex AI (Gemini) to reduce manual inquiries by 60%; and designing a data-driven governance framework that delivered a 53% increase in measurable growth metrics .",
-      "I am currently seeking Technical Program Manager, Solutions Architect, or Delivery Manager roles where I can leverage my PMP methodology and multi-cloud expertise to solve high-stakes infrastructure challenges for enterprise and government organizations."
+      I am a PMP-certified Technical Program Manager transitioning into AI and cloud engineering through a portfolio of independent, hands-on projects. Using AWS, Google Cloud, and modern AI-assisted development tools, I design, build, test, and document cloud-native applications that demonstrate practical skills in AI integration, cloud architecture, and software development.
     ]
   },
   "skills": [
