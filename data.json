@@ -36,10 +36,10 @@
     }
   ],
   "experience": [
-    {
+      {
       "title": "Independent AI & Cloud Projects",
-      "company": "Personal Technical Portfolio",
-      "dates": "2023 - Present",
+      "company": "Self-Directed Portfolio",
+      "date": "2023 - Present",
       "responsibilities": [
         "Reduced hosting costs by 80% with AWS Amplify migration achieving 100% uptime",
         "Built real-time GCP data pipeline processing 1,000+ events/second with sub-second latency",
