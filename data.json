@@ -1,22 +1,44 @@
 {
   "about": {
     "paragraphs": [
-      "I am a PMP-certified Technical Program Manager transitioning into AI and cloud engineering through a portfolio of independent, hands-on projects. Using AWS, Google Cloud, and modern AI-assisted development tools, I design, build, test, and document cloud-native applications that demonstrate practical skills in AI integration, cloud architecture, and software development."
+      "I am a PMP-certified Technical Program Manager transitioning into AI and cloud engineering through a portfolio of independent, hands-on projects. Using AWS, Google Cloud, and modern AI-assisted development tools, I design, build, test, and document cloud-native applications that demonstrate practical skills in AI integration, cloud architecture, and software development.",
+      "My background in education, leadership, and project management enables me to translate complex technical concepts into practical solutions, collaborate with diverse stakeholders, and deliver technology initiatives with a focus on communication, continuous learning, and measurable results."
     ]
   },
   "skills": [
-    { "title": "AWS and Google Cloud Management", "description": "Proficient in managing a wide range of AWS and Google Cloud services for deployment and operations. Certified Solutions Architect Professional and Cloud Security Engineer." },
-    { "title": "Technical Project Management", "description": "PMP-certified project manager with experience leading cross-functional teams and delivering cloud solutions on time and within budget." },
-    { "title": "DevOps and CI/CD", "description": "Implementing automated deployment pipelines, infrastructure as code, and serverless architectures for scalable applications." },
-    { "title": "Data Engineering", "description": "Building real-time data pipelines, ETL processes, and analytics solutions using cloud-native services like BigQuery and Looker Studio." },
-    { "title": "Cybersecurity", "description": "ISC² CC certified with expertise in cloud security, identity management, and compliance frameworks." },
-    { "title": "Organizational Leadership", "description": "Providing inspirational leadership and managing organizations through digital transformation initiatives. Experience scaling nonprofits and training teams." },
-    { "title": "User Adoption & Implementation Strategy", "description": "Masters-level expertise in designing training programs, conducting action research studies, and developing scalable educational frameworks. Experience training 40+ staff members in technology adoption." }
+    {
+      "title": "AWS & Google Cloud",
+      "description": "Hands-on experience building independent cloud projects using AWS and Google Cloud services including serverless applications, analytics, AI, and security."
+    },
+    {
+      "title": "Technical Project Management",
+      "description": "PMP-certified project manager experienced leading cross-functional initiatives, stakeholder communication, Agile delivery, and technology adoption."
+    },
+    {
+      "title": "DevOps and CI/CD",
+      "description": "Experience implementing GitHub workflows, CI/CD concepts, serverless architectures, and automated deployments for independent cloud projects."
+    },
+    {
+      "title": "Data Engineering",
+      "description": "Building real-time data pipelines, ETL processes, and analytics solutions using cloud-native services like BigQuery and Looker Studio."
+    },
+    {
+      "title": "Cybersecurity",
+      "description": "ISC\u00b2 CC certified with expertise in cloud security, identity management, and compliance frameworks."
+    },
+    {
+      "title": "Organizational Leadership",
+      "description": "Providing inspirational leadership and managing organizations through digital transformation initiatives. Experience scaling nonprofits and training teams."
+    },
+    {
+      "title": "User Adoption & Implementation Strategy",
+      "description": "Masters-level expertise in designing training programs, conducting action research studies, and developing scalable educational frameworks. Experience training 40+ staff members in technology adoption."
+    }
   ],
   "experience": [
     {
-      "title": "Cloud Projects Portfolio",
-      "company": "Independent Technical Projects",
+      "title": "Independent AI & Cloud Projects",
+      "company": "Personal Technical Portfolio",
       "dates": "2023 - Present",
       "responsibilities": [
         "Reduced hosting costs by 80% with AWS Amplify migration achieving 100% uptime",
@@ -52,13 +74,16 @@
       "company": "JoeyDCares Rock Orchestra (Non-Profit)",
       "dates": "2010 - 2023",
       "responsibilities": [
-        "Scaled organization from 10 → 50+ annual participants (400% growth)",
+        "Scaled organization from 10 \u2192 50+ annual participants (400% growth)",
         "Managed $42K annual budget and secured $10K+ in first-year fundraising",
         "Delivered 100+ community events with 100% on-time, on-budget completion",
         "Led cross-functional teams including staff, volunteers, and vendor management"
       ],
       "links": [
-        { "name": "JoeyDCares Rock Orchestra Youtube Channel", "url": "https://www.youtube.com/@JoeyDRockOrchestra" }
+        {
+          "name": "JoeyDCares Rock Orchestra Youtube Channel",
+          "url": "https://www.youtube.com/@JoeyDRockOrchestra"
+        }
       ]
     },
     {
@@ -73,94 +98,182 @@
       ]
     }
   ],
-"projects": [
+  "projects": [
     {
-      "title": "AI-Powered Cloud Ecosystem",
+      "title": "AI Affiliate Recommender",
       "description": "A full-stack, monetized platform featuring semantic AI search, serverless architecture on GCP, and automated product management workflows.",
       "links": [
-        { "name": "View Architecture Case Study (PDF)", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/AI-Powered-Cloud-Ecosystem.pdf", "icon": "fas fa-file-pdf" },
-        { "name": "Live Project Demo", "url": "https://endless-bonus-471618-i2.web.app/search", "icon": "fas fa-external-link-alt" },
-        { "name": "GitHub Repository", "url": "https://github.com/jdundor1/affiliate-ai-recommender", "icon": "fab fa-github" }
+        {
+          "name": "View Architecture Case Study (PDF)",
+          "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/AI-Powered-Cloud-Ecosystem.pdf",
+          "icon": "fas fa-file-pdf"
+        },
+        {
+          "name": "Live Project Demo",
+          "url": "https://endless-bonus-471618-i2.web.app/search",
+          "icon": "fas fa-external-link-alt"
+        },
+        {
+          "name": "GitHub Repository",
+          "url": "https://github.com/jdundor1/affiliate-ai-recommender",
+          "icon": "fab fa-github"
+        }
       ]
     },
     {
-      "title": "Serverless Architecture & Cloud Cost Optimization",
+      "title": "AWS Online Portfolio",
       "description": "Architected a high-availability serverless migration on AWS. Optimized infrastructure to reduce operational hosting costs by 80% while maintaining 100% system uptime.",
       "links": [
-        { "name": "AWS Online Portfolio Project (Repo)", "url": "https://github.com/jdundor1/aws-online-portfolio", "icon": "fab fa-github" },
-        { "name": "AWS Online Portfolio Project (Slides)", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/aws-online-portfolio-project1.pdf", "icon": "fas fa-file-pdf" }
+        {
+          "name": "AWS Online Portfolio Project (Repo)",
+          "url": "https://github.com/jdundor1/aws-online-portfolio",
+          "icon": "fab fa-github"
+        },
+        {
+          "name": "AWS Online Portfolio Project (Slides)",
+          "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/aws-online-portfolio-project1.pdf",
+          "icon": "fas fa-file-pdf"
+        }
       ]
     },
     {
-      "title": "Enterprise Data Streaming & Real-Time Analytics",
+      "title": "Real-Time Data Pipeline",
       "description": "Developed an end-to-end data pipeline processing 1,000+ events/second. Utilized GCP Pub/Sub and BigQuery to provide real-time executive visibility and automated performance reporting.",
       "links": [
-        { "name": "Real-Time Data Pipeline (Repo)", "url": "https://github.com/jdundor1/gcp-real-time-data-pipeline", "icon": "fab fa-github" },
-        { "name": "Real-Time Data Pipeline (Slides)", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/real-time-data-pipeline-bigquery-cloud-functions.pdf", "icon": "fas fa-file-pdf" }
+        {
+          "name": "Real-Time Data Pipeline (Repo)",
+          "url": "https://github.com/jdundor1/gcp-real-time-data-pipeline",
+          "icon": "fab fa-github"
+        },
+        {
+          "name": "Real-Time Data Pipeline (Slides)",
+          "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/real-time-data-pipeline-bigquery-cloud-functions.pdf",
+          "icon": "fas fa-file-pdf"
+        }
       ]
     },
     {
-      "title": "RAG-Based Generative AI Architecture",
+      "title": "AI Customer Support Bot",
       "description": "Engineered a production-ready Retrieval-Augmented Generation (RAG) framework using Google Vertex AI (Gemini) and Dialogflow CX. Reduced manual support inquiries by 60% with sub-second response latency.",
       "links": [
-        { "name": "AI-Powered Chat Bot (Repo)", "url": "https://github.com/jdundor1/ai-customer-support-bot", "icon": "fab fa-github" },
-        { "name": "AI-Powered Chat Bot (Slides)", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/ai-powered-customer-support-bot.pdf", "icon": "fas fa-file-pdf" }
+        {
+          "name": "AI-Powered Chat Bot (Repo)",
+          "url": "https://github.com/jdundor1/ai-customer-support-bot",
+          "icon": "fab fa-github"
+        },
+        {
+          "name": "AI-Powered Chat Bot (Slides)",
+          "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/ai-powered-customer-support-bot.pdf",
+          "icon": "fas fa-file-pdf"
+        }
       ]
     },
     {
-      "title": "Event-Driven Computer Vision & Media Pipeline",
+      "title": "AWS Rekognition Label Detector",
       "description": "Built an automated image classification system using AWS Rekognition, Lambda, and S3. Reduced manual data entry and classification labor by 90% through event-driven scalability.",
       "links": [
-        { "name": "Rekognition Label Detector (Repo)", "url": "https://github.com/jdundor1/aws-rekognition-label-detector", "icon": "fab fa-github" },
-        { "name": "Rekognition Label Detector (Slides)", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/image-labels-generator-amazon-rekognition.pdf", "icon": "fas fa-file-pdf" }
+        {
+          "name": "Rekognition Label Detector (Repo)",
+          "url": "https://github.com/jdundor1/aws-rekognition-label-detector",
+          "icon": "fab fa-github"
+        },
+        {
+          "name": "Rekognition Label Detector (Slides)",
+          "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/image-labels-generator-amazon-rekognition.pdf",
+          "icon": "fas fa-file-pdf"
+        }
       ]
     },
     {
       "title": "Additional AWS & GCP Projects",
       "description": "Collection of cloud projects showcasing multi-cloud expertise and various services across both platforms.",
       "links": [
-        { "name": "Daily Task Scheduler (Repo)", "url": "https://github.com/jdundor1/daily-task-scheduler-partyrock", "icon": "fab fa-github" },
-        { "name": "Daily Task Scheduler (Slides)", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/daily-task-scheduler-aws-partyrock.pdf", "icon": "fas fa-file-pdf" },
-        { "name": "GCP Compute Engine (Repo)", "url": "https://github.com/jdundor1/gcp-compute-engine", "icon": "fab fa-github" },
-        { "name": "GCP Compute Engine (Slides)", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/getting-started-with-gcp_compute-engine.pdf", "icon": "fas fa-file-pdf" },
-        { "name": "Gemini mini-Project (Repo)", "url": "https://github.com/jdundor1/gemini-mini-project", "icon": "fab fa-github" },
-        { "name": "Gemini mini-Project (Slides)", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/gemini-mini-project.pdf", "icon": "fas fa-file-pdf" },
-        { "name": "GCP Cloud Resume Challenge (Repo)", "url": "https://github.com/jdundor1/gcp-cloud-resume-challenge", "icon": "fab fa-github" },
-        { "name": "GCP Cloud Resume Challenge (Slides)", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/gcp-cloud-resume-challenge-2023.pdf", "icon": "fas fa-file-pdf" }
+        {
+          "name": "Daily Task Scheduler (Repo)",
+          "url": "https://github.com/jdundor1/daily-task-scheduler-partyrock",
+          "icon": "fab fa-github"
+        },
+        {
+          "name": "Daily Task Scheduler (Slides)",
+          "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/daily-task-scheduler-aws-partyrock.pdf",
+          "icon": "fas fa-file-pdf"
+        },
+        {
+          "name": "GCP Compute Engine (Repo)",
+          "url": "https://github.com/jdundor1/gcp-compute-engine",
+          "icon": "fab fa-github"
+        },
+        {
+          "name": "GCP Compute Engine (Slides)",
+          "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/getting-started-with-gcp_compute-engine.pdf",
+          "icon": "fas fa-file-pdf"
+        },
+        {
+          "name": "Gemini mini-Project (Repo)",
+          "url": "https://github.com/jdundor1/gemini-mini-project",
+          "icon": "fab fa-github"
+        },
+        {
+          "name": "Gemini mini-Project (Slides)",
+          "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/gemini-mini-project.pdf",
+          "icon": "fas fa-file-pdf"
+        },
+        {
+          "name": "GCP Cloud Resume Challenge (Repo)",
+          "url": "https://github.com/jdundor1/gcp-cloud-resume-challenge",
+          "icon": "fab fa-github"
+        },
+        {
+          "name": "GCP Cloud Resume Challenge (Slides)",
+          "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/gcp-cloud-resume-challenge-2023.pdf",
+          "icon": "fas fa-file-pdf"
+        }
       ]
     }
   ],
   "additionalWork": [
     {
-  "title": "Translating Cloud ROI for Non-Technical Stakeholders",
-  "description": "An executive guide on shifting the cloud conversation from 'expenditure' to 'strategic investment.' Covers Operational Resilience, Time-to-Value, and AI Readiness.",
-  "links": [
-    {
-      "name": "Read Full Article",
-      "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/cloud-roi.html",
-      "icon": "fas fa-newspaper"
-    }
-  ]
-},
+      "title": "Translating Cloud ROI for Non-Technical Stakeholders",
+      "description": "An executive guide on shifting the cloud conversation from 'expenditure' to 'strategic investment.' Covers Operational Resilience, Time-to-Value, and AI Readiness.",
+      "links": [
+        {
+          "name": "Read Full Article",
+          "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/cloud-roi.html",
+          "icon": "fas fa-newspaper"
+        }
+      ]
+    },
     {
       "title": "UX Design Case Study",
       "description": "Applied design thinking and usability testing to improve the user experience of a digital platform. Focused on user workflows, accessibility, and engagement to align technical features with real-world needs.",
       "links": [
-        { "name": "View UX Case Study (PDF)", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/ux-design-case-study.pdf", "icon": "fas fa-file-pdf" }
+        {
+          "name": "View UX Case Study (PDF)",
+          "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/ux-design-case-study.pdf",
+          "icon": "fas fa-file-pdf"
+        }
       ]
     },
     {
       "title": "Capstone: Impact of Music Theory Instruction on Student Performance",
       "description": "Designed and conducted an action research study evaluating the impact of curriculum changes on student learning outcomes.",
       "links": [
-        { "name": "View Research Study (PDF)", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/instructional-design-powerpoint.pdf", "icon": "fas fa-file-pdf" }
+        {
+          "name": "View Research Study (PDF)",
+          "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/instructional-design-powerpoint.pdf",
+          "icon": "fas fa-file-pdf"
+        }
       ]
     },
     {
       "title": "Training Guide: Teaching Phonics Framework",
       "description": "Developed a step-by-step training framework for educators to deliver phonics instruction. Created a structured, user-friendly presentation to support teacher adoption.",
       "links": [
-        { "name": "View Training Guide (PDF)", "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/teaching-phonics-training-presentation.pdf", "icon": "fas fa-file-pdf" }
+        {
+          "name": "View Training Guide (PDF)",
+          "url": "https://jdundor1-portfolio-assets.s3.us-east-1.amazonaws.com/projects/teaching-phonics-training-presentation.pdf",
+          "icon": "fas fa-file-pdf"
+        }
       ]
     }
   ],
@@ -172,14 +285,39 @@
       "icon": "fas fa-certificate"
     },
     {
-      "name": "Google Cloud Platform Certifications",
+      "name": "Google Cloud Certifications (Earned 2023\u20132024)",
       "issueDate": "2023-2024",
       "details": [
-        { "name": "Google Cloud Certified Professional Cloud Architect", "issueDate": "2023", "certificateFile": "certifications/gcp-cloud-architect.pdf", "icon": "fas fa-file-pdf" },
-        { "name": "Google Cloud Certified Professional Cloud Security Engineer", "issueDate": "2024", "certificateFile": "certifications/gcp_security_engineer.pdf", "icon": "fas fa-file-pdf" },
-        { "name": "Google Cloud Certified Professional Data Engineer", "issueDate": "2023", "certificateFile": "certifications/gcp-data-engineer.pdf", "icon": "fas fa-file-pdf" },
-        { "name": "Udemy Google Cloud Machine Learning Engineer Certification Prep", "issueDate": "2023", "certificateFile": "certifications/gcp-machine-learning.pdf", "icon": "fas fa-file-pdf" },
-        { "name": "Google Cloud Certified Cloud Digital Leader", "issueDate": "2023", "certificateFile": "certifications/gcp-digital-cloud-leader.pdf", "icon": "fas fa-file-pdf" }
+        {
+          "name": "Google Cloud Certified Professional Cloud Architect",
+          "issueDate": "2023",
+          "certificateFile": "certifications/gcp-cloud-architect.pdf",
+          "icon": "fas fa-file-pdf"
+        },
+        {
+          "name": "Google Cloud Certified Professional Cloud Security Engineer",
+          "issueDate": "2024",
+          "certificateFile": "certifications/gcp_security_engineer.pdf",
+          "icon": "fas fa-file-pdf"
+        },
+        {
+          "name": "Google Cloud Certified Professional Data Engineer",
+          "issueDate": "2023",
+          "certificateFile": "certifications/gcp-data-engineer.pdf",
+          "icon": "fas fa-file-pdf"
+        },
+        {
+          "name": "Udemy Google Cloud Machine Learning Engineer Certification Prep",
+          "issueDate": "2023",
+          "certificateFile": "certifications/gcp-machine-learning.pdf",
+          "icon": "fas fa-file-pdf"
+        },
+        {
+          "name": "Google Cloud Certified Cloud Digital Leader",
+          "issueDate": "2023",
+          "certificateFile": "certifications/gcp-digital-cloud-leader.pdf",
+          "icon": "fas fa-file-pdf"
+        }
       ]
     },
     {
@@ -187,10 +325,30 @@
       "issueDate": "2022-2025",
       "customClass": "stack-cert",
       "details": [
-        { "name": "PMP Certification", "issueDate": "August 2022 (Recertified August 2025)", "certificateFile": "certifications/pmp-certification.pdf", "icon": "fas fa-file-pdf" },
-        { "name": "Pro Scrum Master I", "issueDate": "November 2022", "certificateFile": "certifications/pro-scrum-master-i.pdf", "icon": "fas fa-file-pdf" },
-        { "name": "Pro Scrum Product Owner I", "issueDate": "November 2022", "certificateFile": "certifications/pro-scrum-product-owner-i.pdf", "icon": "fas fa-file-pdf" },
-        { "name": "Google Project Management", "issueDate": "2023", "certificateFile": "certifications/google-project-management.pdf", "icon": "fas fa-file-pdf" }
+        {
+          "name": "PMP Certification",
+          "issueDate": "August 2022 (Recertified August 2025)",
+          "certificateFile": "certifications/pmp-certification.pdf",
+          "icon": "fas fa-file-pdf"
+        },
+        {
+          "name": "Pro Scrum Master I",
+          "issueDate": "November 2022",
+          "certificateFile": "certifications/pro-scrum-master-i.pdf",
+          "icon": "fas fa-file-pdf"
+        },
+        {
+          "name": "Pro Scrum Product Owner I",
+          "issueDate": "November 2022",
+          "certificateFile": "certifications/pro-scrum-product-owner-i.pdf",
+          "icon": "fas fa-file-pdf"
+        },
+        {
+          "name": "Google Project Management",
+          "issueDate": "2023",
+          "certificateFile": "certifications/google-project-management.pdf",
+          "icon": "fas fa-file-pdf"
+        }
       ]
     },
     {
@@ -203,27 +361,71 @@
     {
       "name": "Codecademy Language Certifications",
       "details": [
-        { "name": "Analyze Data with SQL", "certificateFile": "certifications/analyze_data_with_SQL.pdf", "icon": "fas fa-file-pdf" },
-        { "name": "Data Analysis with Pandas", "certificateFile": "certifications/data-analysis-pandas.pdf", "icon": "fas fa-file-pdf" },
-        { "name": "Learn HTML", "certificateFile": "certifications/html-course.pdf", "icon": "fas fa-file-pdf" },
-        { "name": "Intro to C#", "certificateFile": "certifications/intro-c-sharp.pdf", "icon": "fas fa-file-pdf" },
-        { "name": "Learn Kotlin", "certificateFile": "certifications/kotlin-cert.pdf", "icon": "fas fa-file-pdf" },
-        { "name": "Learn the Command Line", "certificateFile": "certifications/learn-command-line.pdf", "icon": "fas fa-file-pdf" },
-        { "name": "Learn JavaScript", "certificateFile": "certifications/learn-javascript.pdf", "icon": "fas fa-file-pdf" },
-        { "name": "Learn SQL", "certificateFile": "certifications/learn-sql.pdf", "icon": "fas fa-file-pdf" },
-        { "name": "Learn Python Three", "certificateFile": "certifications/learn-python-three.pdf", "icon": "fas fa-file-pdf" }
+        {
+          "name": "Analyze Data with SQL",
+          "certificateFile": "certifications/analyze_data_with_SQL.pdf",
+          "icon": "fas fa-file-pdf"
+        },
+        {
+          "name": "Data Analysis with Pandas",
+          "certificateFile": "certifications/data-analysis-pandas.pdf",
+          "icon": "fas fa-file-pdf"
+        },
+        {
+          "name": "Learn HTML",
+          "certificateFile": "certifications/html-course.pdf",
+          "icon": "fas fa-file-pdf"
+        },
+        {
+          "name": "Intro to C#",
+          "certificateFile": "certifications/intro-c-sharp.pdf",
+          "icon": "fas fa-file-pdf"
+        },
+        {
+          "name": "Learn Kotlin",
+          "certificateFile": "certifications/kotlin-cert.pdf",
+          "icon": "fas fa-file-pdf"
+        },
+        {
+          "name": "Learn the Command Line",
+          "certificateFile": "certifications/learn-command-line.pdf",
+          "icon": "fas fa-file-pdf"
+        },
+        {
+          "name": "Learn JavaScript",
+          "certificateFile": "certifications/learn-javascript.pdf",
+          "icon": "fas fa-file-pdf"
+        },
+        {
+          "name": "Learn SQL",
+          "certificateFile": "certifications/learn-sql.pdf",
+          "icon": "fas fa-file-pdf"
+        },
+        {
+          "name": "Learn Python Three",
+          "certificateFile": "certifications/learn-python-three.pdf",
+          "icon": "fas fa-file-pdf"
+        }
       ]
     }
   ],
   "education": [
-    { 
-      "degree": "Masters of Education | Learning and Technology", 
-      "school": "Western Governors University", 
-      "dates": "July 2020 - January 2021", 
-      "description": "Focus in Instructional Design, Educational Technology, and Digital Learning Systems. Capstone project: Impact of Music Theory Instruction on Student Performance — designed and executed an action research study applying data analysis to evaluate curriculum effectiveness."
+    {
+      "degree": "Masters of Education | Learning and Technology",
+      "school": "Western Governors University",
+      "dates": "July 2020 - January 2021",
+      "description": "Focus in Instructional Design, Educational Technology, and Digital Learning Systems. Capstone project: Impact of Music Theory Instruction on Student Performance \u2014 designed and executed an action research study applying data analysis to evaluate curriculum effectiveness."
     },
-    { "degree": "Masters in the Art of Teaching | Music", "school": "University of the Arts – Philadelphia", "dates": "January 2004 - May 2005" },
-    { "degree": "Bachelor of Music | Professional Music", "school": "Berklee College of Music", "dates": "January 1999 - May 2002" }
+    {
+      "degree": "Masters in the Art of Teaching | Music",
+      "school": "University of the Arts \u2013 Philadelphia",
+      "dates": "January 2004 - May 2005"
+    },
+    {
+      "degree": "Bachelor of Music | Professional Music",
+      "school": "Berklee College of Music",
+      "dates": "January 1999 - May 2002"
+    }
   ],
   "contact": {
     "email": "joe@joedundore.com",
