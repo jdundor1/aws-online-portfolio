@@ -1,106 +1,108 @@
 {
   "about": {
     "paragraphs": [
-      "I am a PMP-certified Technical Program Manager transitioning into AI and cloud engineering through a portfolio of independent, hands-on projects. Using AWS, Google Cloud, and modern AI-assisted development tools, I design, build, test, and document cloud-native applications that demonstrate practical skills in AI integration, cloud architecture, and software development.",
-      "My background in education, leadership, and project management enables me to translate complex technical concepts into practical solutions, collaborate with diverse stakeholders, and deliver technology initiatives with a focus on communication, continuous learning, and measurable results."
+      "I'm a PMP-certified technical project and program management professional with 20+ years of experience leading programs, managing teams, coordinating stakeholders, and supporting technology adoption. My background combines organizational leadership, Agile project delivery, and hands-on independent AWS, Google Cloud, and AI projects.",
+      "I founded and directed JoeyDCares Rock Orchestra and Awesome Kids Program, managing operations, partnerships, staff, and program growth. At JoeyDCares, six Rockin' The Cause benefit concerts generated $42,000 in net proceeds donated to charities after expenses. At Awesome Kids, enrollment grew from 2 to 50+ students and monthly revenue increased from approximately $500 to $5,000.",
+      "I hold the PMP and AWS Certified Solutions Architect – Professional certifications, along with multiple Google Cloud credentials. I bring practical experience coordinating a client WordPress e-commerce project, using Jira and Agile workflows, and developing cloud and AI portfolio solutions. I'm interested in technical project management, program leadership, cloud initiatives, AI enablement, and technology implementation."
     ]
   },
   "skills": [
     {
-      "title": "AWS & Google Cloud",
-      "description": "Hands-on experience building independent cloud projects using AWS and Google Cloud services including serverless applications, analytics, AI, and security."
-    },
-    {
-      "title": "Technical Project Management",
-      "description": "PMP-certified project manager experienced leading cross-functional initiatives, stakeholder communication, Agile delivery, and technology adoption."
-    },
-    {
-      "title": "DevOps and CI/CD",
-      "description": "Experience implementing GitHub workflows, CI/CD concepts, serverless architectures, and automated deployments for independent cloud projects."
-    },
-    {
-      "title": "Data Engineering",
-      "description": "Building real-time data pipelines, ETL processes, and analytics solutions using cloud-native services like BigQuery and Looker Studio."
-    },
-    {
-      "title": "Cybersecurity",
-      "description": "ISC\u00b2 CC certified with expertise in cloud security, identity management, and compliance frameworks."
+      "title": "Technical Project & Program Management",
+      "description": "PMP-certified; project planning, Agile delivery, Jira, requirements gathering, stakeholder coordination, and cross-functional execution."
     },
     {
       "title": "Organizational Leadership",
-      "description": "Providing inspirational leadership and managing organizations through digital transformation initiatives. Experience scaling nonprofits and training teams."
+      "description": "Founded and scaled two programs, managed operations and partnerships, and led staff, volunteers, and program initiatives."
     },
     {
-      "title": "User Adoption & Implementation Strategy",
-      "description": "Masters-level expertise in designing training programs, conducting action research studies, and developing scalable educational frameworks. Experience training 40+ staff members in technology adoption."
+      "title": "AWS & Google Cloud",
+      "description": "Hands-on independent projects using AWS, Google Cloud, serverless services, data engineering, and cloud cost optimization."
+    },
+    {
+      "title": "AI & Automation",
+      "description": "Independent work with Vertex AI, Gemini, Dialogflow CX, RAG concepts, Cloud Run, and workflow automation."
+    },
+    {
+      "title": "Technology Implementation",
+      "description": "Digital platform adoption, staff training, process improvement, and data-informed performance monitoring."
+    },
+    {
+      "title": "Data & Analytics",
+      "description": "BigQuery, Pub/Sub, Looker Studio, performance tracking, and cloud-based analytics projects."
+    },
+    {
+      "title": "Stakeholder & Vendor Management",
+      "description": "Requirements communication, vendor coordination, budgeting, fundraising, partnerships, and operational risk planning."
     }
   ],
   "experience": [
-      {
-      "title": "Independent AI & Cloud Projects",
-      "dates": "2023 - Present",
-      "responsibilities": [
-        "Reduced hosting costs by 80% with AWS Amplify migration achieving 100% uptime",
-        "Built real-time GCP data pipeline processing 1,000+ events/second with sub-second latency",
-        "Developed AI chatbot reducing manual inquiries by 60% using Dialogflow CX + Vertex AI",
-        "Deployed serverless architectures using Lambda, API Gateway, Cloud Run, and BigQuery"
-      ]
-    },
     {
-      "title": "Educational Technology Program Lead",
+      "title": "Program Lead & Technical Mentor",
       "company": "Carroll County Public Schools",
-      "dates": "2005 - Present",
+      "dates": "August 2005 – Present",
       "responsibilities": [
-        "Managed LMS/SIS platforms for 380+ users with 85% success rate",
-        "Improved outcomes by 53% through strategic technology integration",
-        "Delivered 100+ stakeholder presentations on technology initiatives"
+        "Supported building-level adoption of LMS, SIS, and digital instructional platforms; provided technology training and guidance to colleagues.",
+        "Developed a performance framework supporting approximately 380 learners annually using SaaS assessments and custom tracking.",
+        "Reported a 53% improvement in measured performance outcomes through structured assessment and targeted interventions.",
+        "Coordinated program activities, schedules, resources, and communications with families, administrators, and colleagues."
       ]
     },
     {
-      "title": "Frontend Developer & UI Consultant",
+      "title": "Technical Project Manager (Contract)",
       "company": "Innovate Connect",
-      "dates": "July 2024 - August 2024",
+      "dates": "June 2024 – August 2024",
       "responsibilities": [
-        "Developed e-commerce website using WordPress with responsive design and accessibility standards",
-        "Designed user interfaces and workflows using Figma and Excalidraw to meet client specifications",
-        "Collaborated with distributed team using Agile tools (Jira, Slack, Basecamp) in remote environment",
-        "Applied modern development practices including version control and professional code standards",
-        "Successfully delivered project within 8-week timeline with positive client feedback"
+        "Coordinated the software development lifecycle for a client WordPress e-commerce solution, including requirements, UI/UX mockups, implementation priorities, and stakeholder delivery.",
+        "Supported Agile sprint planning and task tracking in Jira.",
+        "Delivered a responsive, accessible solution aligned with client requirements and agreed project scope."
       ]
     },
     {
       "title": "Founder & Executive Director",
-      "company": "JoeyDCares Rock Orchestra (Non-Profit)",
-      "dates": "2010 - 2023",
+      "company": "JoeyDCares Rock Orchestra",
+      "dates": "2010 – 2023",
       "responsibilities": [
-        "Scaled organization from 10 \u2192 50+ annual participants (400% growth)",
-        "Managed $42K annual budget and secured $10K+ in first-year fundraising",
-        "Delivered 100+ community events with 100% on-time, on-budget completion",
-        "Led cross-functional teams including staff, volunteers, and vendor management"
+        "Grew participation from approximately 10 to more than 50 members over 13 years.",
+        "Planned and coordinated 100+ performances, community events, and initiatives.",
+        "Organized six Rockin’ The Cause benefit concerts, generating a combined $42,000 in net proceeds donated to various charities after event expenses.",
+        "Provided additional charity performances without charging for the organization’s time or performances.",
+        "Led volunteers, performers, sponsors, vendors, and community partners; managed operations with an estimated annual budget of approximately $5,000."
       ],
       "links": [
         {
-          "name": "JoeyDCares Rock Orchestra Youtube Channel",
+          "name": "JoeyDCares Rock Orchestra YouTube Channel",
           "url": "https://www.youtube.com/@JoeyDRockOrchestra"
         }
       ]
     },
     {
-      "title": "Program Founder & Director",
+      "title": "Founder & Program Director",
       "company": "Awesome Kids Program",
-      "dates": "2013 - 2020",
+      "dates": "2013 – 2020",
       "responsibilities": [
-        "Built educational program from 2 students to 50+ participants",
-        "Managed hiring, curriculum development, and program operations",
-        "Coordinated complex logistics across multiple instructors and locations",
-        "Developed curriculum across 8+ subject areas"
+        "Grew K–6 program enrollment from 2 to 50+ students and monthly revenue from approximately $500 to $5,000.",
+        "Built and supervised a team of approximately 15 adult instructors and high-school staff.",
+        "Developed programming across eight or more subject areas, including STEM, coding, robotics, arts, and enrichment.",
+        "Introduced technology including Scratch, Minecraft Education, Ozobot, LEGO robotics, and CAD/3D printing."
+      ]
+    },
+    {
+      "title": "Cloud & AI Solutions Architect — Independent Portfolio Projects",
+      "company": "Independent / Personal Projects",
+      "dates": "2023 – Present",
+      "responsibilities": [
+        "Designed and built self-directed AWS, Google Cloud, and generative AI portfolio projects; these were not paid client engagements.",
+        "Implemented AWS hosting improvements, reporting approximately 80% lower hosting costs compared with the prior setup.",
+        "Developed conversational AI prototypes with Vertex AI, Gemini, Dialogflow CX, and Cloud Run integrations.",
+        "Designed a Pub/Sub, Cloud Run, and BigQuery streaming pipeline targeting 1,000+ events per second."
       ]
     }
   ],
   "projects": [
     {
       "title": "AI Affiliate Recommender",
-      "description": "A full-stack, monetized platform featuring semantic AI search, serverless architecture on GCP, and automated product management workflows.",
+      "description": "Independent AI-assisted product recommendation platform and cloud development project. Explore the technical architecture, implementation notes, and source code.",
       "links": [
         {
           "name": "AI-Powered Cloud Ecosystem - Executive Case Study (PDF)",
@@ -121,7 +123,7 @@
     },
     {
       "title": "AWS Online Portfolio",
-      "description": "Architected a high-availability serverless migration on AWS. Optimized infrastructure to reduce operational hosting costs by 80% while maintaining 100% system uptime.",
+      "description": "Independent AWS hosting and serverless portfolio project. Reported approximately 80% lower hosting costs compared with the previous setup; see repository and project presentation for details.",
       "links": [
         {
           "name": "AWS Online Portfolio Project (Repo)",
@@ -137,7 +139,7 @@
     },
     {
       "title": "Real-Time Data Pipeline",
-      "description": "Developed an end-to-end data pipeline processing 1,000+ events/second. Utilized GCP Pub/Sub and BigQuery to provide real-time executive visibility and automated performance reporting.",
+      "description": "Independent Google Cloud streaming analytics pipeline using Pub/Sub and BigQuery, designed with a target throughput of 1,000+ events per second. Includes reporting and visualization components.",
       "links": [
         {
           "name": "Real-Time Data Pipeline (Repo)",
@@ -153,7 +155,7 @@
     },
     {
       "title": "AI Customer Support Bot",
-      "description": "Engineered a production-ready Retrieval-Augmented Generation (RAG) framework using Google Vertex AI (Gemini) and Dialogflow CX. Reduced manual support inquiries by 60% with sub-second response latency.",
+      "description": "Independent conversational AI prototype using Vertex AI, Gemini, and Dialogflow CX with serverless integrations; explores automated responses and RAG concepts.",
       "links": [
         {
           "name": "AI-Powered Chat Bot (Repo)",
@@ -169,7 +171,7 @@
     },
     {
       "title": "AWS Rekognition Label Detector",
-      "description": "Built an automated image classification system using AWS Rekognition, Lambda, and S3. Reduced manual data entry and classification labor by 90% through event-driven scalability.",
+      "description": "Independent event-driven image-labeling project using Amazon Rekognition, Lambda, and S3 to explore automated classification workflows.",
       "links": [
         {
           "name": "Rekognition Label Detector (Repo)",
@@ -284,7 +286,7 @@
       "icon": "fas fa-certificate"
     },
     {
-      "name": "Google Cloud Certifications (Earned 2023\u20132024)",
+      "name": "Google Cloud Certifications (Earned 2023–2024)",
       "issueDate": "2023-2024",
       "details": [
         {
@@ -413,11 +415,11 @@
       "degree": "Masters of Education | Learning and Technology",
       "school": "Western Governors University",
       "dates": "July 2020 - January 2021",
-      "description": "Focus in Instructional Design, Educational Technology, and Digital Learning Systems. Capstone project: Impact of Music Theory Instruction on Student Performance \u2014 designed and executed an action research study applying data analysis to evaluate curriculum effectiveness."
+      "description": "Focus in Instructional Design, Educational Technology, and Digital Learning Systems. Capstone project: Impact of Music Theory Instruction on Student Performance — designed and executed an action research study applying data analysis to evaluate curriculum effectiveness."
     },
     {
       "degree": "Masters in the Art of Teaching | Music",
-      "school": "University of the Arts \u2013 Philadelphia",
+      "school": "University of the Arts – Philadelphia",
       "dates": "January 2004 - May 2005"
     },
     {
@@ -428,7 +430,8 @@
   ],
   "contact": {
     "email": "joe@joedundore.com",
-    "linkedin": "https://www.linkedin.com/in/joedundore"
+    "linkedin": "https://www.linkedin.com/in/joedundore",
+    "github": "https://github.com/jdundor1"
   },
   "headshotFile": "resume/linkedin-headshot.jpg",
   "resumeFile": "resume/Joe_Dundore_Technical_Program_Manager_2026.pdf"
