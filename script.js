@@ -377,8 +377,11 @@ ${descriptionHtml}
         // Add Resume Link to Hero Section Button
         const heroResumeLink = document.getElementById('heroResumeLink');
         if (heroResumeLink && data.resumeFile) {
-          heroResumeLink.href = `${s3BaseUrl}${data.resumeFile}`;
-          heroResumeLink.classList.remove('hidden');
+          const resumeUrl = /^https?:\/\//i.test(data.resumeFile) ? data.resumeFile : `${s3BaseUrl}${data.resumeFile}`;
+          fetch(resumeUrl, { method: 'HEAD' }).then(response => {
+            if (response.ok) { heroResumeLink.href = resumeUrl; heroResumeLink.classList.remove('hidden'); }
+            else { heroResumeLink.classList.add('hidden'); }
+          }).catch(() => { heroResumeLink.classList.add('hidden'); });
         }
 
         // >>> ADDED: Load headshot from S3 into the hero image <
