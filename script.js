@@ -378,10 +378,10 @@ ${descriptionHtml}
         const heroResumeLink = document.getElementById('heroResumeLink');
         if (heroResumeLink && data.resumeFile) {
           const resumeUrl = /^https?:\/\//i.test(data.resumeFile) ? data.resumeFile : `${s3BaseUrl}${data.resumeFile}`;
-          fetch(resumeUrl, { method: 'HEAD' }).then(response => {
-            if (response.ok) { heroResumeLink.href = resumeUrl; heroResumeLink.classList.remove('hidden'); }
-            else { heroResumeLink.classList.add('hidden'); }
-          }).catch(() => { heroResumeLink.classList.add('hidden'); });
+          // Link directly to the PDF. A cross-origin HEAD check can fail due to
+          // S3 CORS settings even when the PDF opens normally in a browser.
+          heroResumeLink.href = resumeUrl;
+          heroResumeLink.classList.remove('hidden');
         }
 
         // >>> ADDED: Load headshot from S3 into the hero image <
